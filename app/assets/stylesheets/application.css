@@ -14,24 +14,60 @@
  *= require_self
  */
 
-.login_form_container {
-  display: flex;
-  justify-content: center;
+
+
+.session-form-master {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+
 }
 
 .login-form {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  display: block;
+
 }
 
 .login-input {
-  margin-left: 20px;
+  border-radius: 3px;
+  width: 75%;
+  height: 22px;
+  font-size: 14px;
+  border: 1px solid #999;
+  padding: 5px 9px;
+
+}
+
+.session-submit {
+  width: 80%;
+  background-color: #D32323;
+  font-size: 14px;
+  color: white;
+  padding: 10px 15px 10px;
+  border-radius: 5px;
+  vertical-align: middle;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid #999;
 }
 
 .login-form-box {
-  outline: 1px solid black;
+  display: center;
   padding: 20px;
 }
 
@@ -79,22 +115,63 @@
   align-items: center;
 }
 
-/* .logo {
-  width: 100px;
+.logo {
+  width: 200px;
   height: 100px;
-
+  text-decoration: none;
   background-size: cover;
-  font-size: 18px;
-
+  font-size: 200px;
+  font-family: cursive;
+  font-style: oblique;
+  font-weight: 400;
+  color: blue;
   display: block;
   position: relative;
-  left: 15%;
-  top: 110px;
-} */
+  left: 40%;
+  top: 150px;
+}
 
 .homepage {
-  background-image: url(https://res.cloudinary.com/bbchui/image/upload/v1498774338/splash_prsfou.jpg);
+  background-image: url('/assets/restaurant.jpg');
   background-size: cover;
   background-position: center;
   height: 600px;
+}
+
+.loginNav {
+
+  height: 64px;
+  background-color: #d32323;
+  display: flex;
+  align-items: center;
+}
+
+.yeep {
+  color: black;
+  text-decoration: none;
+  margin: 0 auto;
+  font-size: 28px;
+  font-weight: bold;
+  font-style: italic;
+  font-family: fantasy;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  width: 500px;
+
+}
+
+.heading {
+  color: #d32323;
+}
+
+.legal-copy {
+  width: 80%;
+  margin: auto;
 }
