@@ -3,11 +3,16 @@ import { Link } from 'react-router-dom';
 
 const Greeting = ({currentUser, logout}) => {
   const sessionLinks = () => (
-    <nav className="login-signup">
-      <Link to="/login">Login</Link>
-      &nbsp;or&nbsp;
-      <Link to="/signup">Sign up!</Link>
-    </nav>
+    <div className="homepage">
+      <nav className="auth">
+        <Link className="logo" to="/">Yeep</Link>
+        <div className="login-signup">
+          <Link className="loginbtn" to="/login">Login</Link>
+
+          <Link className="signupbtn" to="/signup">Sign Up</Link>
+        </div>
+      </nav>
+    </div>
   );
 
   const personalGreeting = () => (

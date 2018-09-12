@@ -13,3 +13,88 @@
  *= require_tree .
  *= require_self
  */
+
+.login_form_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.login-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.login-input {
+  margin-left: 20px;
+}
+
+.login-form-box {
+  outline: 1px solid black;
+  padding: 20px;
+}
+
+.login-signup {
+  display: flex;
+  position: absolute;
+  width: 75%;
+  z-index: 50;
+  justify-content: flex-end;
+  top: 30px;
+}
+
+.auth {
+  width: 100%;
+  height: 86px;
+
+  top: 0px;
+  left: 0px;
+}
+
+.loginbtn {
+  width: 50px;
+  height: 20px;
+  font-size: 14px;
+  z-index: 50;
+  padding: 7px 12px 8px;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.signupbtn {
+
+  width: 50px;
+  height: 20px;
+  border-radius: 6px;
+  border: 2px solid brown;
+  font-size: 14px;
+  z-index: 50;
+  padding: 7px 12px 8px;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+/* .logo {
+  width: 100px;
+  height: 100px;
+
+  background-size: cover;
+  font-size: 18px;
+
+  display: block;
+  position: relative;
+  left: 15%;
+  top: 110px;
+} */
+
+.homepage {
+  background-image: url(https://res.cloudinary.com/bbchui/image/upload/v1498774338/splash_prsfou.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+}
