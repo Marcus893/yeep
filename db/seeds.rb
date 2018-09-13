@@ -12,7 +12,7 @@ User.delete_all
 
 Business.create!(
   body: 'alamo square, many dogs',
-  name: 'holy ground'
+  name: 'holy ground',
   lat: 37.775769,
   lng: -122.434960,
   # picture_url: 'https://c2.staticflickr.com/4/3035/2309664044_486f5a0327_z.jpg?zz=1'
@@ -37,6 +37,6 @@ Business.create!(
 User.create!(
   username: 'starwarz',
   password: 'hunter12',
-  profile_url: 'www.disfjs.com',
+
   img_url: 'www.oifewf.com'
 )

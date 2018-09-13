@@ -1,12 +1,12 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
 
-class SessionForm extends React.Component {
+class LoginForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: 'Username',
-      password: 'Password'
+      email: '',
+      password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -45,7 +45,7 @@ class SessionForm extends React.Component {
         <div className="session-form-master">
           <div className="login-form-container">
             <form onSubmit={this.handleSubmit} className="login-form-box">
-              <h2 className="heading">{this.props.formType} to Yeep</h2>
+              <h2 className="heading">Log In to Yeep</h2>
               <p className="subheading">
                 New to Yeep?
                 <Link to="/signup">Sign up</Link>
@@ -54,16 +54,16 @@ class SessionForm extends React.Component {
               {this.renderErrors()}
               <div className="login-form">
                 <br/>
-                <input type="text" value={this.state.username} onChange={this.update('username')} className="login-input" />
+                <input type="text" value={this.state.email} onChange={this.update('email')} className="login-input" placeholder="Email"/>
                 <br/>
-                <input type="password" value={this.state.password} onChange={this.update('password')} className="login-input" />
+                <input type="text" value={this.state.password} onChange={this.update('password')} className="login-input" placeholder="Password"/>
                 <br/>
                 <input className="session-submit" type="submit" value={this.props.formType} />
               </div>
             </form>
           </div>
 
-          <div class="picture-container">
+          <div className="picture-container">
             <img src="https://s3-media4.fl.yelpcdn.com/assets/2/www/img/1e82406ff345/signup/signup_illustration.png" />
           </div>
         </div>
@@ -73,4 +73,4 @@ class SessionForm extends React.Component {
   }
 }
 
-export default withRouter(SessionForm);
+export default withRouter(LoginForm);
