@@ -5,6 +5,8 @@ import GreetingContainer from './greeting/greeting_container';
 import Footer from './footer/footer';
 import SignupFormContainer from './session_form/signup_form_container';
 import LoginFormContainer from './session_form/login_form_container';
+// import SearchContainer from './search/search_container';
+// import BusinessShowContainer from './business_show/business_show_container';
 import { AuthRoute, ProtectedRoute} from '../util/route_util';
 
 const App = () => (

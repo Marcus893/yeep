@@ -1,4 +1,4 @@
-/*
+  /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -18,6 +18,7 @@
 html {
   background-color: #f2f2f2;
 }
+
 .session-form-master {
   text-align: center;
   margin-left: auto;
@@ -124,19 +125,15 @@ html {
 }
 
 .logo {
-  width: 200px;
-  height: 100px;
   text-decoration: none;
-  background-size: cover;
-  font-size: 200px;
-  font-family: cursive;
-  font-style: oblique;
-  font-weight: 400;
-  color: blue;
-  display: block;
-  position: relative;
-  left: 40%;
-  top: 150px;
+  font-size: 100px;
+  font-style: italic;
+  font-family: fantasy;
+  font-weight: 600;
+  color: white;
+  position: absolute;
+  margin-left: 300px;
+  padding-top: 100px;
 }
 
 .homepage {
@@ -313,188 +310,252 @@ small {
   line-height: 1.5em;
 }
 
+/* map */
+.map {
+  width: 500px;
+  height: 500px;
+}
+
+.single-business-map {
+  height: 200px;
+  width: 200px;
+}
+
+.map-container {
+  height: 500px;
+  width: 500px;
+}
+
+
 /* search bar */
 
-.form {
-  display: block;
+.search-container {
+  width: 960px;
+  height: 63px;
+  position: relative;
+  top: 215px;
+  margin: 0 auto;
+
 }
 
-.arrange-equal {
+.search {
+  width: 100%;
+  height: 100%;
   display: flex;
-  min-width: 100%;
-  table-layout: auto;
+  align-items: center;
 }
 
-.arrange-unit {
-  flex: 1;
-  min-width: 0;
-  min-height: 0;
-  display: block;
-  -webkit-box-flex: 1;
-  box-sizing: border-box;
-  vertical-align: top;
-}
-
-.arrange {
-  display: table;
-  min-width: 100%;
-  table-layout: auto;
-}
-
-.arrange-unit-fill {
-  width: 100%;
-  box-sizing: border-box;
-  display: table-cell;
-  vertical-align: top;
-}
-
-.search-near {
-  position: relative;
-}
-
-.form-input-near {
-  padding: 11px;
-  box-shadow: none;
-  border: none;
-  border-radius: 0;
-  background: #fff;
-  font-size: 18px;
-  cursor: text;
-  position: relative;
-  overflow: hidden;
-}
-
-.search-suggestions {
-  position: relative;
-}
-
-.search-input {
-  border-radius: 4px 0 0 4px;
-  position: relative;
-  padding: 11px;
-  box-shadow: none;
-  border: none;
-  background: #fff;
-  font-size: 18px;
-  cursor: text;
-  overflow: hidden;
-  box-sizing: border-box;
-  width: 100%;
-  margin: 0 0 18px;
-  display: block;
-  line-height: 1.29em;
-}
-
-.input-text {
-  margin-right: 12px;
+.header {
   color: #666;
   float: left;
-  font-weight: 700;
-  cursor: default;
-  user-select: none;
+  font-weight: bold;
+  font-size: 24px;
+  background-color: white;
+  height: 35px;
+  border-radius: 4px 0 0 4px;
+  line-height: 34px;
+  padding: 6px 10px 6px 10px;
+  border-top: 2px solid #9A9A9A;
+  border-bottom: 2px solid #EEEEEE;
 }
 
-.input-holder {
-  position: relative;
-  display: block;
+.keywords {
+  width: 416px;
+  height: 45px;
+  padding-left: 10px;
+  margin: 0px;
+  border-left: 0px;
+  font-size: 18px;
+}
+
+.location {
+  width: 416px;
+  height: 45px;
+  padding-left: 5px;
+  margin: 0px;
+  border-left: 0px;
+  font-size: 18px;
+}
+
+.submit {
+  width: 54px;
+  height: 51px;
+  border-radius: 0 5px 5px 0;
+  border: 0;
+  background: #bd1f1f;
+  padding: 17px 15px 15px;
+  box-shadow: none;
+}
+
+.svg-search {
+  width: 24px;
+  height: 24px;
+  fill: white;
+  background-color: #BD1F1F;
+}
+
+/*center container*/
+
+.center-container {
+  max-width: 960px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.city-nav {
+  width: 960px;
+  height: 68px;
+  padding-top: 36px;
+  text-align: center;
+  border-bottom: 1px solid gray;
+}
+
+.city-name {
+  color: #D32323;
+  font-size: 22px;
+  font-weight: bold;
+  width: -webkit-fill-available;
+}
+
+.hot-businesses-container {
+  padding-top: 22px;
+  text-align: center;
+  width: 960px;
+  height: 384px;
+}
+
+.header3 {
+  color: #D32323;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.new-biz-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 12px;
+  height: 352px;
+}
+
+.biz-box {
+  width: 299px;
+  height: 322px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.photo-box {
+  max-width: 298px;
+  max-height: 180px;
   overflow: hidden;
 }
 
-.style1 {
-  position: absolute;
-  color: rgb(200, 200, 200);
-  -webkit-text-fill-color: rgb(200, 200, 200);
+.biz-img {
+  width: 298px;
+  height: 180px;
+  border-radius: 3px;
+}
+
+.info-box {
+  text-align: left;
+  text-indent: 12px;
+  font-size: 12px;
+  width: 298px;
+  height: 160px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  line-height: 1px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.small-header {
   width: 100%;
-  box-sizing: border-box;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  display: inline-block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
-  font-style: normal;
-  line-height: 23.22px;
-  font-weight: 400;
-  letter-spacing: 0px;
-  background-color: rgba(0, 0, 0, 0);
-  font-kerning: auto;
-  vertical-align: baseline;
-  padding: 0px;
-  border-width: 0px;
+  margin-top: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.style2 {
+.pub-stars {
+  width: 110px;
+  height: 18px;
+  margin-left: 10px;
+  background: url(https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png) 0 194px;
+  background-size: 132px 560px;
   display: inline-block;
-  background: transparent;
-  position: relative;
-  width: 100%;
-  box-sizing: border-box;
+  vertical-align: middle;
 }
 
-.list-container {
-  position: absolute;
-  width: 100%;
-  top: 100%;
-  left: 0;
-  z-index: 2!important;
+.reviews-counter {
+  width: 54%;
   margin: 0;
-  padding: 0;
-  border-top: 1px solid #ccc;
+  line-height: 19px;
+  font-size: 12px;
 }
 
-.suggestions-list {
-  margin: -3px 0 0;
+.price-counter {
+  letter-spacing: 2px;
   font-size: 14px;
-  line-height: 1.28571em;
-  padding: 0;
-  background-color: #fff;
-  border-top: none;
-  list-style: none;
-  margin-top: 0!important;
-  box-shadow: 0 21px 38px rgba(0,0,0,.2);
-  border-radius: 0 0 4px 4px;
-  max-height: 430px;
-  overflow-y: auto;
+  margin: 0px;
 }
 
-.btn {
-  border-radius: 0 4px 4px 0;
-  border: 0;
-  background: #d32323;
-  padding: 14px 20px 13px;
-  box-shadow: none;
+.category-link {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.fire {
+  width: 200px;
+  height: 20px;
+  margin: 0px;
+}
+
+.address {
+  font-size: 14px;
+}
+
+.main-categories {
+  text-align: center;
+  font-size: 10px;
+  display: inline-block;
+  margin-top: 25px;
+  width: 960px;
+  height: auto;
+  background-color: #f5f5f5;
+}
+
+.category-boxes-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 40px 0 40px;
+}
+
+.category-box {
+  margin: 10px 20px 10px 20px;
+  border-radius: 6px;
+  width: 217px;
+  height: 137px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  box-sizing: border-box;
 }
 
 .icon {
-  width: 24px;
-  height: 24px;
-  margin: -12px 0;
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-  top: -.1em;
-  overflow: hidden;
-}
-
-.icon_svg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  fill: inherit;
-  display: block;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.u-offscreen {
-  clip: rect(0 0 0 0)!important;
-  position: absolute!important;
-  left: -9999px!important;
-  top: auto!important;
-  overflow: hidden!important;
-  width: 1px!important;
-  height: 1px!important;
+  height: 72px;
+  width: 72px;
 }

@@ -3,7 +3,7 @@ class Api::BusinessesController < ApplicationController
 
   def index
     businesses = businesses ? Business.in_bounds(bounds) : Business.all
-
+    businesses = businesses.where(category: params[:category])
     @businesses = businesses.includes(:reviews)
     render :index
   end
@@ -20,7 +20,7 @@ class Api::BusinessesController < ApplicationController
   private
 
   def business_params
-    params.require(:business).permit(:lat, :lng, :body)
+    params.require(:business).permit(:lat, :lng, :body, :pic_url, :name, :category)
   end
 
   def bounds
