@@ -35,13 +35,13 @@ class Footer extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="main-footer-city"></div>
-            <small className="main-footer-copyright">
-              Copyright 2018 Yeep Inc. Yeep and related marks are registered trademarks of Yeep.
-            </small>
-            </div>
           </div>
         </div>
+        <div className="main-footer-city"></div>
+        <small className="main-footer-copyright">
+          Copyright 2018 Yeep Inc. Yeep and related marks are registered trademarks of Yeep.
+        </small>
+      </div>
 
     );
   }

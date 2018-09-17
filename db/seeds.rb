@@ -99,6 +99,21 @@ Review.create!(
 )
 
 Review.create!(
+  business_id: Business.first.id,
+  author_id: User.last.id,
+  body: "that's the flavor I've been searching for !!!",
+  rating: 5
+)
+
+
+Review.create!(
+  business_id: Business.last.id,
+  author_id: User.first.id,
+  body: "very bad service!!!",
+  rating: 2
+)
+
+Review.create!(
   business_id: Business.last.id,
   author_id: User.last.id,
   body: "great services",

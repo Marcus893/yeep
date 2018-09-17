@@ -5,24 +5,41 @@ const Greeting = ({currentUser, logout}) => {
   const sessionLinks = () => (
     <div className="main-page">
       <div className="homepage">
-        <Link className="logo" to="/">Yeep</Link>
         <nav className="auth">
+          <div className="write-a-review">
+            <Link className="reviewbtn" to="/writeareview">Write a Review</Link>
+          </div>
           <div className="login-signup">
             <Link className="loginbtn" to="/login">Log In</Link>
-
             <Link className="signupbtn" to="/signup">Sign Up</Link>
           </div>
         </nav>
+        <div className="logo-container">
+          <Link className="logo" to="/">Yeep</Link>
+        </div>
         <div className="search-container">
           <form className="search">
             <span className="header">Find</span>
             <input type="text" className="keywords" placeholder="dry cleaners, burgers, spas..." />
             <span className="header">Near</span>
             <input type="text" className="location" placeholder="Civic Center, Manhattan, NY" />
-            <button className="submit" >
+            <button type="submit" className="submit" >
               <i className="fa fa-search"></i>
             </button>
           </form>
+        </div>
+        <div className="tags-container">
+          <div className="tags">
+            <a href="#/search?Restaurants">
+              <h3><i className="fa fa-cutlery"></i>Restaurant</h3>
+            </a>
+            <a href="#/search?Nightlife">
+              <h3><i className="fa fa-glass"></i>Nightlife</h3>
+            </a>
+            <a href="#/search?HomeServices">
+              <h3><i className="fa fa-wrench"></i>Home Services</h3>
+            </a>
+          </div>
         </div>
       </div>
       <div className="center-container">
@@ -39,7 +56,7 @@ const Greeting = ({currentUser, logout}) => {
                 </a>
               </div>
               <div className="info-box">
-                <a className="small-header" href="#/biz/1">Fizgerald Pub</a>
+                <a className="small-header" href="#/businesses/1">Fizgerald Pub</a>
                 <div className="pub-stars"></div>
                 <p className="reviews-counter">4 reviews</p>
                 <p className="price-counter">$</p>
@@ -55,7 +72,7 @@ const Greeting = ({currentUser, logout}) => {
                 </a>
               </div>
               <div className="info-box">
-                <a className="small-header" href="#/biz/2">Sushi Ryusei</a>
+                <a className="small-header" href="#/businesses/2">Sushi Ryusei</a>
                 <div className="pub-stars"></div>
                 <p className="reviews-counter">17 reviews</p>
                 <p className="price-counter">$</p>
@@ -71,7 +88,7 @@ const Greeting = ({currentUser, logout}) => {
                 </a>
               </div>
               <div className="info-box">
-                <a className="small-header" href="#/biz/3">Handy</a>
+                <a className="small-header" href="#/businesses/3">Handy</a>
                 <div className="pub-stars"></div>
                 <p className="reviews-counter">8 reviews</p>
                 <p className="price-counter">$</p>
@@ -106,7 +123,7 @@ const Greeting = ({currentUser, logout}) => {
               <h3>Auto</h3>
             </div>
             <div className="category-box">
-              <a href="#/search?HomeService"><img className="icon" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/homepage/52d0e24aea08/assets/img/categories/72x72_home_services.png" /></a>
+              <a href="#/search?HomeServices"><img className="icon" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/homepage/52d0e24aea08/assets/img/categories/72x72_home_services.png" /></a>
               <h3>HomeService</h3>
             </div>
           </div>

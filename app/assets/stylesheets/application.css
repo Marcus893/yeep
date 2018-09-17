@@ -16,20 +16,19 @@
 
 
 html {
-  background-color: #f2f2f2;
+  background-color: white;
 }
 
 .session-form-master {
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 100px;
+  margin-top: 0px;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
   justify-content: space-around;
-  align-items: flex-start;
-
+  align-items: center;
+  width: 65%;
+  height: 600px;
+  margin-left: 15%;
+  padding: 40px 0 0 0;
 }
 
 .login-form {
@@ -78,73 +77,99 @@ html {
 .login-signup {
   display: flex;
   position: absolute;
-  width: 75%;
-  z-index: 50;
   justify-content: flex-end;
   top: 30px;
+  right: 150px;
 }
 
 .auth {
-  width: 100%;
+  max-width: 1000px;
   height: 86px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
 
-  top: 0px;
-  left: 0px;
+.write-a-review {
+  display: flex;
+  position: absolute;
+  justify-content: flex-start;
+  top: 30px;
+}
+
+.reviewbtn {
+  color: #fff;
+  display: block;
+  padding: 9px 12px 10px;
+  font-size: 16px;
+  font-weight: 700;
+  background: none;
+ border-bottom: 2px solid transparent;
+
+}
+
+.reviewbtn:hover {
+  border-bottom: 2px solid #fff;
 }
 
 .loginbtn {
   color: #fff;
   display: block;
   padding: 9px 12px 10px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.28571em;
   font-weight: 700;
   background: none;
   border-radius: 0;
   border-bottom: 2px solid transparent;
   padding-bottom: 8px;
-  text-decoration: none;
+}
+
+.loginbtn:hover {
+  border-bottom: 2px solid #fff;
 }
 
 .signupbtn {
-  background: transparent;
-  -webkit-box-shadow: none;
-  box-shadow: none;
   border-radius: 4px;
   border: 2px solid #fff;
   margin-top: -2px;
-  padding: 7px 24px 8px;
+  padding: 10px 24px 8px;
   color: #fff;
   display: block;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.28571em;
   font-weight: 700;
-  background: none;
-  padding-bottom: 8px;
-  text-decoration: none;
+}
+
+
+.logo-container {
+  margin: 0 auto;
+  position: relative;
+  top: 70px;
+  width: 200px;
 }
 
 .logo {
-  text-decoration: none;
   font-size: 100px;
+  color: white;
   font-style: italic;
   font-family: fantasy;
-  font-weight: 600;
-  color: white;
-  position: absolute;
-  margin-left: 300px;
-  padding-top: 100px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
 }
+
 
 .homepage {
   background-image: url('/assets/restaurant.jpg');
   background-size: cover;
   background-position: center;
   height: 600px;
+  justify-content: space-between;
+  margin: 0 auto;
 }
 
 .loginNav {
-
   height: 64px;
   background-color: #d32323;
   display: flex;
@@ -153,7 +178,6 @@ html {
 
 .yeep {
   color: black;
-  text-decoration: none;
   margin: 0 auto;
   font-size: 28px;
   font-weight: bold;
@@ -161,16 +185,6 @@ html {
   font-family: fantasy;
 }
 
-img {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  width: 500px;
-
-}
 
 .heading {
   color: #d32323;
@@ -236,12 +250,14 @@ select {
   height: 200px;
   background-color: #f2f2f2;
   border-top: 1px solid #999;
+  align-items: center;
 }
 
 
 .content-container {
   width: 960px;
   margin: 0 auto;
+  background-color: #f2f2f2;
 }
 
 .main-footer {
@@ -260,49 +276,18 @@ select {
   width: 250px;
 }
 
-
-h3 {
-  word-wrap: break-word!important;
-  word-break: break-word!important;
-  overflow-wrap: break-word!important;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.3125em;
-  color: #d32323;
-}
-
-ul {
-  list-style: none;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  padding: 0px;
-}
-
-.footer-menu-item {
-  margin-bottom: 6px;
-}
-
-li {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
 .main-footer-city {
   background: url(https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_styleguide/573fa19c8435/assets/img/structural/footer_cityscape.png) no-repeat center bottom;
-  background-size: 660px 140px;
-  margin: 42px auto 18px;
   height: 80px;
+  width: 100%;
+  background-color: #f2f2f2;
 }
 
 .main-footer-copyright {
   display: block;
-  margin-top: 18px;
   text-align: center;
+  width: 100%;
+  background-color: #f2f2f2;
 }
 
 small {
@@ -333,7 +318,7 @@ small {
   width: 960px;
   height: 63px;
   position: relative;
-  top: 215px;
+  top: 150px;
   margin: 0 auto;
 
 }
@@ -387,11 +372,32 @@ small {
   box-shadow: none;
 }
 
-.svg-search {
-  width: 24px;
-  height: 24px;
-  fill: white;
-  background-color: #BD1F1F;
+/* tags */
+
+.tags-container {
+  top: 150px;
+  position: relative;
+  margin: 0 auto;
+  height: 30px;
+}
+
+.tags {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+  height: 100%;
+  width: 400px;
+}
+
+.tags h3 {
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
 }
 
 /*center container*/
@@ -516,6 +522,7 @@ small {
   width: 200px;
   height: 20px;
   margin: 0px;
+  color: red;
 }
 
 .address {
@@ -558,4 +565,325 @@ small {
 .icon {
   height: 72px;
   width: 72px;
+}
+
+/* business-show */
+
+.single-business-show {
+  min-width: 1020px;
+  font-family: "Arimo", sans-serif;
+  padding-bottom: 36px;
+}
+
+.nav-container {
+  background-color: pink;
+  height: 91px;
+  width: 100%;
+}
+
+.nav-upper {
+  width: 100%;
+  height: 64px;
+  background-color: #d32323;
+}
+
+.nav-lower {
+  width: 100%;
+  height: 27px;
+  background-color: #bd1f1f;
+}
+
+.upper-inner-container {
+  width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-bar-container {
+  min-width: 70%;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar {
+  min-width: 70%;
+  display: flex;
+  justify-content: center;
+}
+
+.lower-inner-container {
+  width: 960px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.business-container {
+  margin: 0 auto;
+  min-width: 990px;
+}
+
+.business-elements {
+  height: 410px;
+  background-color: #f5f5f5;
+  margin-bottom: 80px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.business-show {
+  padding: 30px 15px 24px;
+  height: 440px;
+  width: 960px;
+  margin: 0 auto;
+}
+
+.business-info {
+  display: flex;
+  height: 112px;
+  align-items: center;
+  line-height: 1.3125em;
+}
+
+.info-left {
+  width: 525px;
+  height: 112px;
+  padding-right: 30px
+}
+
+.review {
+  margin-top: 10px;
+  display: flex;
+  line-height: 24px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.star {
+  height: 18px;
+  width: 132px;
+  background: url(https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png) 0 194px;
+  margin-right: 7px;
+}
+
+.price-tag {
+  font-size: 16px;
+}
+
+.info-right {
+  width: 405px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.reviewbtn {
+  height: 38px;
+  width: 172px;
+  border: 1px solid #8d0005;
+  background-color: #d32323;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  margin-right: 20px;
+}
+
+.map-and-pic {
+  height: 315px;
+  display: flex;
+}
+
+.map-box-container {
+  width: 32%;
+  border: 1px solid #ccc;
+  background-color: white;
+}
+
+.map-box {
+  padding: 5px;
+}
+
+.map {
+  height: 135px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+#map-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.address {
+  height: 150px;
+}
+
+.info {
+  position: relative;
+  margin-top: 70px;
+}
+
+.info a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.info li {
+  margin: 4px;
+}
+
+
+
+.icon {
+  margin-right: 8px;
+}
+
+.address-info {
+  font-weight: bold;
+  line-height: 20px;
+}
+
+.pic-container {
+  width: 71%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pic-box {
+  width: 660px;
+  height: 220px;
+  position: absolute;
+  display: flex;
+}
+
+.img {
+  width: 100%;
+  transition: transform .2s;
+  overflow: hidden;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.15);
+}
+
+.business-lowerhalf {
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: 66% 32%;
+  grid-auto-rows: minmax(200px, auto);
+  grid-column-gap: 1.228em;
+  width: 960px;
+  margin: 0 auto;
+}
+
+.business-reviews {
+  padding-right: 15px;
+}
+
+.business-reviews h2 {
+  font-weight: 700;
+  color: #d32323;
+  margin-bottom: 6px;
+  padding-bottom: 6px;
+  font-size: 22px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.review-list {
+  list-style: none;
+}
+
+.review {
+  margin: 0;
+  padding: 18px 0;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 17px;
+}
+
+.review-container {
+  display: flex;
+}
+
+.user-info {
+  height: 100px;
+  padding: 0 15px 0 0;
+  min-height: 1px;
+  box-sizing: border-box;
+  width: 37.5%;
+  display: flex;
+}
+
+.profile-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+}
+
+.profile-img img {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  object-fit: cover;
+  display: block;
+}
+
+.info {
+  margin-left: 10px;
+  margin-top: 0px; 
+}
+
+.info section {
+  margin-bottom: 5px;
+}
+
+.name {
+  font-weight: 700;
+}
+
+.review-count {
+  display: flex;
+  align-items: center;
+}
+
+.light-weight {
+  font-weight: 400;
+  margin-left: 3px;
+  font-size: 12px;
+}
+
+.photo-count {
+  display: flex;
+  align-items: center;
+}
+
+.review-info {
+  height: auto;
+  padding: 0 0 0 15px;
+  box-sizing: border-box;
+  width: 62.5%;
+}
+
+.review-content {
+  min-height: 135px;
+}
+
+.rate {
+  display: flex;
+  align-items: center;
+  width: auto;
+  margin: 6px 0;
+}
+
+.date {
+  color: #666;
+  font-size: 14px;
+}
+
+.body {
+  margin-bottom: 12px;
+  font-size: 14px;
 }
