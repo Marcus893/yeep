@@ -34,28 +34,56 @@ class ReviewForm extends React.Component {
   render() {
     return (
       <div className="review-form">
-        <form onSubmit={this.handleSubmit}>
-          <label>Rating</label>
-          <br/>
-          <input
-            type="number"
-            value={this.state.rating}
-            onChange={this.update("rating")}
-          />
-          <br/>
+        <div className="heading">
+          <div className="heading-container">
+            <div className="logo"><a href="#/">yeep</a></div>
+            <h1>Write a review</h1>
+          </div>
+        </div>
+        <div className="content-container">
+          <a href="#/businesses/:businessId">business name</a>
+          <form className="form-container" onSubmit={this.handleSubmit}>
+            <div className="rating">
+              <div className="rating-stars">
+                <li className="rating-star">
+                  <input id="rating-1" type="radio" value="1"></input>
+                  <label id="rating-1">Fuck NO</label>
+                </li>
+                <li className="rating-star">
+                  <input id="rating-2" type="radio" value="2"></input>
+                  <label id="rating-2">It could do better</label>
+                </li>
+                <li className="rating-star">
+                  <input id="rating-3" type="radio" value="3"></input>
+                  <label id="rating-3">It's OK</label>
+                </li>
+                <li className="rating-star">
+                  <input id="rating-4" type="radio" value="4"></input>
+                  <label id="rating-4">Great!</label>
+                </li>
+                <li className="rating-star">
+                  <input id="rating-5" type="radio" value="5"></input>
+                  <label id="rating-5">Amazing!!!</label>
+                </li>
+              </div>
+              <span><p>Select Your Rating</p></span>
+            </div>
+            <br/>
 
-          <label>Comment</label>
-          <br/>
 
-          <textarea
-            cols="30"
-            rows="10"
-            value={this.state.body}
-            onChange={this.update("body")}
-          />
-          <br/>
-          <input type="submit" />
-        </form>
+            <textarea cols="100"
+              rows="50"
+              value={this.state.body}
+              onChange={this.update("body")}
+              placeholder="Your review helps others learn about great local businesses.
+
+              Please don't review this business if you received a freebie for writing this review, or if you're connected in any way to the owner or employees."
+              maxlength="500"
+              ></textarea>
+            <br/>
+            <input type="submit" value="Post" />
+          </form>
+        </div>
         <button onClick={this.navigateToBusinessShow}>Cancel</button>
       </div>
     );

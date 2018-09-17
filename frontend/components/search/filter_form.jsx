@@ -1,18 +1,30 @@
 import React from 'react';
 
-const handleChange = (filter, updateFilter) => e => (
-  updateFilter(filter, parseInt(e.currentTarget.value))
-);
 
-const FilterForm = ({category, updateFilter }) => (
-  <div>
-    <span className="filter">Filter results:</span>
-    <br/>
-    <label>Categories</label>
-    <input type="text" value={category} onChange={handleChange('category', updateFilter)} />
-    <br/>
+class FilterForm extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      category: props.category,
+    };
+  }
 
-  </div>
-);
+  handleChange(filter, updateFilter) {
+    return e => (
+      updateFilter(filter, e.currentTarget.value)
+    );
+  }
+
+ render() {
+    return (<div>
+      <span className="filter">Filter results:</span>
+      <br/>
+      <label>Categories</label>
+      <input type="text" value={this.props.category} onChange={this.handleChange('category', this.props.updateFilter)} />
+      <br/>
+
+     </div>);
+  }
+}
 
 export default FilterForm;

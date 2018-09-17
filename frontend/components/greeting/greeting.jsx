@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Greeting = ({currentUser, logout}) => {
+
   const sessionLinks = () => (
     <div className="main-page">
       <div className="homepage">
@@ -23,9 +24,9 @@ const Greeting = ({currentUser, logout}) => {
             <input type="text" className="keywords" placeholder="dry cleaners, burgers, spas..." />
             <span className="header">Near</span>
             <input type="text" className="location" placeholder="Civic Center, Manhattan, NY" />
-            <button type="submit" className="submit" >
+            <Link type="submit" className="submit" to="/search">
               <i className="fa fa-search"></i>
-            </button>
+            </Link>
           </form>
         </div>
         <div className="tags-container">

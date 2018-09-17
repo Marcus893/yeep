@@ -11,26 +11,26 @@ Business.delete_all
 User.delete_all
 
 Business.create!(
-  body: 'alamo square, many dogs',
-  name: 'holy ground',
+  body: 'nice cozy pub',
+  name: 'Fizgerald Pub',
   lat: 37.775769,
   lng: -122.434960,
-  category: 'restaurant',
-  pic_url: 'https://c2.staticflickr.com/4/3035/2309664044_486f5a0327_z.jpg?zz=1'
+  category: 'nightlife',
+  pic_url: 'https://www.chelseapub.ca/public/images/gallery/dd4c40bd83bda793d99d6be019825787.jpg'
 )
 
 Business.create!(
-  body: 'UN plaza, food truck access',
-  name: 'Bens pizza',
+  body: 'UN square, amazing sushi',
+  name: 'Sushi Ryusei',
   lat: 37.779760,
   lng: -122.413820,
   category: 'restaurant',
-  pic_url: 'http://www.concretedecor.net/CD/assets/Image/archives/CD1405/1405i_Page_32_Image_0001_600.jpg'
+  pic_url: 'https://cdn.vox-cdn.com/uploads/chorus_image/image/38664864/miami-lure-fishbar-sushi-414.0.jpg'
 )
 
 Business.create!(
-  body: 'Ocean Beach, gnarly breh',
-  name: 'Tylers seafood',
+  body: 'cheap and fast home services',
+  name: 'Handy',
   lat: 37.769996,
   lng: -122.511281,
   category: 'restaurant',
@@ -78,7 +78,7 @@ User.create!(
   lastname: 'Ryan',
   email: '39eru@gmail.com',
   zipcode: 837998,
-  password: '123456',
+  password: '947843',
   img_url: 'www.iodjebf.com'
 )
 
@@ -87,8 +87,17 @@ User.create!(
   lastname: 'Hiss',
   email: '39e9ri@gmail.com',
   zipcode: 837998,
-  password: '123456',
-  img_url: 'www.iodjebf.com'
+  password: '938473',
+  img_url: 'www.iodifj9.com'
+)
+
+User.create!(
+  firstname: 'Lisa',
+  lastname: 'May',
+  email: 'ifj9rew@gmail.com',
+  zipcode: 93485,
+  password: '439584549',
+  img_url: 'www.idjsofi.com'
 )
 
 Review.create!(
@@ -99,19 +108,13 @@ Review.create!(
 )
 
 Review.create!(
-  business_id: Business.first.id,
-  author_id: User.last.id,
+  business_id: Business.second.id,
+  author_id: User.second.id,
   body: "that's the flavor I've been searching for !!!",
   rating: 5
 )
 
 
-Review.create!(
-  business_id: Business.last.id,
-  author_id: User.first.id,
-  body: "very bad service!!!",
-  rating: 2
-)
 
 Review.create!(
   business_id: Business.last.id,

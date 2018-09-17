@@ -724,9 +724,11 @@ a {
   height: 150px;
 }
 
-.info {
+.page-info {
   position: relative;
-  margin-top: 70px;
+  margin-top: 80px;
+  margin-left: -30px;
+
 }
 
 .info a {
@@ -738,9 +740,7 @@ a {
   margin: 4px;
 }
 
-
-
-.icon {
+.fa-icon {
   margin-right: 8px;
 }
 
@@ -833,7 +833,7 @@ a {
 
 .info {
   margin-left: 10px;
-  margin-top: 0px; 
+  margin-top: 0px;
 }
 
 .info section {
@@ -886,4 +886,148 @@ a {
 .body {
   margin-bottom: 12px;
   font-size: 14px;
+}
+
+.hours-price {
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 18px;
+  display: flex;
+}
+
+.hours-icon {
+  width: 34px;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.content {
+  border-bottom: 1px solid #e6e6e6;
+  height: inherit;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.key {
+  margin-right: 12px;
+  width: 100px;
+}
+
+.value {
+  font-weight: 700;
+  width: 200px;
+}
+
+.price-icon {
+  color: #999;
+  padding-right: 10px;
+  margin-left: 8px;
+}
+
+.hours-info {
+  margin-left: 30px;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.hour-table {
+  border-spacing: 0;
+  display: table;
+  border-collapse: separate;
+  border-color: grey;
+}
+
+.more-info {
+  margin-left: 30px;
+  font-size: 14px;
+}
+
+.business-page {
+  display: flex;
+}
+
+li {
+  display: flex;
+
+}
+
+h3 {
+  color: red;
+}
+
+dd {
+  font-weight: bold;
+}
+
+dl {
+  display: flex;
+}
+
+/* review form */
+
+.review-form {
+  font-family: "Arimo", sans-serif;
+  padding-bottom: 36px;
+}
+
+.heading {
+  background-color: #d32323;
+  height: 64px;
+  margin-bottom: 30px;
+}
+
+.heading-container {
+  max-width: 960px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+.form-container {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: text;
+  padding: 18px;
+  max-width: 630px;
+  margin-bottom: 20px;
+}
+
+.rating {
+  height: 30px;
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.rating-star {
+  padding-left: 3px;
+  float: left;
+  height: 30px;
+  width: 30px;
+}
+
+.form-container textarea {
+  height: 100px;
+  width: 100%;
+  font-size: 18px;
+  border: 0;
+  outline: none;
+  padding: 0;
+  resize: none;
+  min-height: 258px;
+}
+
+.rating-stars {
+  width: 162px;
+  height: 100%;
+  background-image: url(/assets/review_star-434c198b09da005418046fa42086f1dbf54b1bd47ac4dbe90535c9095ff9a823.png);
+  list-style: none;
+  display: flex;
 }

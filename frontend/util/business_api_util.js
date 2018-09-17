@@ -1,10 +1,10 @@
-export const fetchBusinesses = data => (
-  $.ajax({
+export const fetchBusinesses = data => {
+  return $.ajax({
     method: 'GET',
     url: 'api/businesses',
     data
-  })
-);
+  });
+};
 
 export const fetchBusiness = id => (
   $.ajax({

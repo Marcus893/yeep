@@ -29,11 +29,13 @@ export const createReview = review => dispatch => (
   ))
 );
 
-export const fetchBusinesses = filters => dispatch => (
-  APIUtil.fetchBusinesses(filters).then(businesses => (
-    dispatch(receiveBusinesses(businesses))
-  ))
-);
+export const fetchBusinesses = filters => {
+  return dispatch => {
+  return APIUtil.fetchBusinesses(filters).then(businesses => (
+      dispatch(receiveBusinesses(businesses))
+    ));
+  };
+};
 
 export const fetchBusiness = id => dispatch => (
   APIUtil.fetchBusiness(id).then(payload => (

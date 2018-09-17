@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
+import {fetchBusinesses} from './actions/business_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -19,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   window.getState = store.getState;
   window.dispatch = store.dispatch;
+  window.getBusinesses = fetchBusinesses;
 
   ReactDOM.render(<Root store={store} />, document.getElementById('root'));
 });

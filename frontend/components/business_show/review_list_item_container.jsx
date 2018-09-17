@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 const Review = ({ review, author }) => {
   const { rating, body } = review;
   return (
-    <div>
+    <div className="business-page">
       <ul>
         <li className="review">
           <div className="review-container">
@@ -110,8 +110,6 @@ const Review = ({ review, author }) => {
             </div>
           </div>
         </li>
-
-
       </ul>
     </div>
   );
