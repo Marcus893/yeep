@@ -5,16 +5,17 @@ import { ProtectedRoute } from '../../util/route_util';
 import { ReviewLink } from '../../util/review_util';
 import ReviewListItemContainer from './review_list_item_container';
 
-const BusinessShow = ({ business, businessId, fetchBusiness, reviews }) => {
+const BusinessShow = ({ business, businessId, fetchBusiness, reviews, authors }) => {
   const businesses = { [businessId]: business };
 
-  const reviewList = (reviews) => (
-    reviews.map(review => (
-      <ReviewListItemContainer
+  const reviewList = (reviews, authors) => (
+    reviews.map(review => {
+      return <ReviewListItemContainer
         review={review}
         key={review.id}
-      />
-    ))
+        author={authors[review.author_id]}
+      />;
+  })
   );
 
   return(
@@ -67,11 +68,17 @@ const BusinessShow = ({ business, businessId, fetchBusiness, reviews }) => {
               </section>
             </div>
             <div className="info-right">
-              <a href="#/writeareview/:businessId">
-                <button className="reviewbtn">
-                  <span><i className="fa fa-star" aria-hidden="true"></i>Write a Review</span>
-                </button>
-              </a>
+              <div className="reviewbtn">
+                <i className="fa fa-star"></i>
+                <ReviewLink
+                  component={ReviewFormContainer}
+                  to={`/businesses/${businessId}/review`}
+                  label="Write a Review" />
+                <ProtectedRoute
+                  path="/businesses/:businessId/review"
+                  component={ReviewFormContainer}
+                />
+              </div>
             </div>
           </div>
           <div className="map-and-pic">
@@ -118,7 +125,7 @@ const BusinessShow = ({ business, businessId, fetchBusiness, reviews }) => {
             <div className="pic-container">
               <div className="pic-box">
                 <div className="img">
-                  <img src="https://s3-media1.fl.yelpcdn.com/bphoto/0ZEIObaE-lO10kYe_nGQfQ/o.jpg" />
+                  <img src={business.pic_url} />
                 </div>
               </div>
             </div>
@@ -131,7 +138,7 @@ const BusinessShow = ({ business, businessId, fetchBusiness, reviews }) => {
       <div className="business-reviews">
         <h2>Recommended Reviews<span> for {business.name}</span></h2>
           <div className="review-list">
-            {reviewList(reviews)}
+            {reviewList(reviews, authors)}
           </div>
       </div>
       <div className="sidebar">
@@ -259,17 +266,6 @@ const BusinessShow = ({ business, businessId, fetchBusiness, reviews }) => {
       </div>
     </div>
 
-    <div className="details">
-      <ReviewLink
-        component={ReviewFormContainer}
-        to={`/businesses/${businessId}/review`}
-        label="Leave a Review"
-      />
-      <ProtectedRoute
-        path="/businesses/:businessId/review"
-        component={ReviewFormContainer}
-      />
-    </div>
   </div>
 );
 };

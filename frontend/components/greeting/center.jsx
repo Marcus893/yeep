@@ -1,19 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Center from './center'
 
-const Greeting = ({currentUser, logout}) => {
+class Center extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
-  const sessionLinks = () => (
-    <div className="main-page">
+  render() {
+    return (<div className="main-page">
       <div className="homepage">
         <nav className="auth">
           <div className="write-a-review">
             <Link className="reviewbtn" to="/writeareview">Write a Review</Link>
           </div>
           <div className="login-signup">
-            <Link className="loginbtn" to="/login">Log In</Link>
-            <Link className="signupbtn" to="/signup">Sign Up</Link>
+            <h2 className="header-name">Hi {this.props.currentUser.firstname}</h2>
+            <button className="loginbtn" onClick={this.props.logout}>Log Out</button>
           </div>
         </nav>
         <div className="logo-container">
@@ -95,7 +97,7 @@ const Greeting = ({currentUser, logout}) => {
                 <p className="reviews-counter">8 reviews</p>
                 <p className="price-counter">$</p>
                 <a className="category-link" href="#/search?HomeService">HomeService</a>
-                <p className="address">Serving New York and the Surrounding Area</p>
+                <p className="address">Serving New York and the Surounding Area</p>
                 <p className="fire"><i className="fa fa-fire"></i>  opened 8 weeks ago</p>
               </div>
             </div>
@@ -131,10 +133,8 @@ const Greeting = ({currentUser, logout}) => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>);
+  }
+}
 
-  return currentUser ? <Center currentUser={currentUser} logout={logout} /> : sessionLinks();
-};
-
-export default Greeting;
+export default Center;

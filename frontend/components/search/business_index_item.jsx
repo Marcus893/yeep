@@ -14,17 +14,37 @@ class IndexItem extends React.Component {
   }
 
   render() {
-    const { average_rating, body, pic_url } = this.props.business;
+    const { average_rating, body, pic_url, name, category } = this.props.business;
     return (
-      <div className="business-index-item" onClick={this.handleClick} >
+      <li className="business-index-item" onClick={this.handleClick} >
         <div className="index-item-info">
-          <span className="index-item-category">Rating:</span>
-          <span className="index-item-copy">{average_rating || 'No reviews yet'}</span>
-          <span className="index-item-category">Body:</span>
-          <span className="index-item-copy">{body}</span>
+          <div className="pic-container">
+            <img src={pic_url} />
+          </div>
+          <div className="info-container">
+            <div className="info-top">
+              <div className="info-left">
+                <h1><a href={`#/businesses/${this.props.business.businessId}`}>{name}</a></h1>
+                <section className="review">
+                  <div className="star"></div>
+                  <span className="review-count">{average_rating} reviews</span>
+                </section>
+                <section className="price-tag">
+                  <span>$$ {category}</span>
+                </section>
+              </div>
+              <div className="info-right">
+                <span>(737) 934-3874</span>
+                <span>838 Peanut St</span>
+                <span>New York, NY</span>
+              </div>
+            </div>
+            <div className='info-bottom'>
+              <p>Great place to visit, will definitely... <a href={`#/businesses/${this.props.business.businessId}`}>read more</a></p>
+            </div>
+          </div>
         </div>
-        <img src={pic_url}/>
-      </div>
+      </li>
     );
   }
 }

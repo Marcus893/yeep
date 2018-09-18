@@ -31,7 +31,14 @@ class ReviewForm extends React.Component {
     return e => this.setState({ [property]: e.currentTarget.value });
   }
 
+  componentDidMount() {
+    this.props.fetchBusiness(this.props.match.params.businessId);
+  }
+
   render() {
+    const businessId = this.props.match.params.businessId;
+    const business = this.props.businesses[businessId];
+    const businessName = business ? business.name : "";
     return (
       <div className="review-form">
         <div className="heading">
@@ -41,13 +48,13 @@ class ReviewForm extends React.Component {
           </div>
         </div>
         <div className="content-container">
-          <a href="#/businesses/:businessId">business name</a>
+          <a href={`#/businesses/${businessId}`}>{businessName}</a>
           <form className="form-container" onSubmit={this.handleSubmit}>
             <div className="rating">
               <div className="rating-stars">
                 <li className="rating-star">
                   <input id="rating-1" type="radio" value="1"></input>
-                  <label id="rating-1">Fuck NO</label>
+                  <label id="rating-1">Just NO</label>
                 </li>
                 <li className="rating-star">
                   <input id="rating-2" type="radio" value="2"></input>
@@ -78,7 +85,7 @@ class ReviewForm extends React.Component {
               placeholder="Your review helps others learn about great local businesses.
 
               Please don't review this business if you received a freebie for writing this review, or if you're connected in any way to the owner or employees."
-              maxlength="500"
+              maxLength="500"
               ></textarea>
             <br/>
             <input type="submit" value="Post" />

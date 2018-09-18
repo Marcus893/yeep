@@ -7,7 +7,8 @@ const mapStateToProps = (state, { match }) => {
   const businessId = parseInt(match.params.businessId);
   const business = selectBusiness(state.entities, businessId);
   const reviews = selectReviewsForBusiness(state.entities, business);
-  return { businessId, business, reviews };
+  const authors = state.entities.users;
+  return { businessId, business, reviews, authors};
 };
 
 const mapDispatchToProps = dispatch => ({

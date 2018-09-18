@@ -7,11 +7,14 @@ const Search = ({ businesses, category, updateFilter }) => (
   <div className="user-pane">
     <div className="upper-bar">
       <FilterForm category={category} updateFilter={updateFilter} />
-      <BusinessIndex businesses={businesses} />
     </div>
-
-    <div className="right-map">
-      <BusinessMap businesses={businesses} updateFilter={updateFilter} singleBusiness={false} />
+    <div className="main-content">
+      <BusinessIndex businesses={businesses} />
+      <div className="right-map">
+        <div className="map-box">
+          <BusinessMap businesses={businesses} updateFilter={updateFilter} singleBusiness={false} />
+        </div>
+      </div>
     </div>
   </div>
 );
