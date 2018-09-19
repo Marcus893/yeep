@@ -24,7 +24,7 @@ class Center extends React.Component {
         <div className="search-container">
           <form className="search">
             <span className="header">Find</span>
-            <input type="text" className="keywords" placeholder="dry cleaners, burgers, spas..." />
+            <input type="text" className="keywords" placeholder="restaurant, nightlife, dry cleaning..." />
             <span className="header">Near</span>
             <input type="text" className="location" placeholder="Civic Center, Manhattan, NY" />
             <Link type="submit" className="submit" to="/search">

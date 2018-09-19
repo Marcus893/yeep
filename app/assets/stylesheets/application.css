@@ -98,20 +98,20 @@ html {
 }
 
 .review-btn {
-  height: 38px;
-  width: 172px;
-  border: 1px solid #8d0005;
-  background-color: #d32323;
-  color: white;
-  font-family: "Roboto", sans-serif;
+  color: #fff;
+  display: block;
+  padding: 9px 12px 10px;
+  font-size: 16px;
   font-weight: 700;
-  border-radius: 3px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.3);
-  margin-right: 20px;
-  justify-content: space-between;
+  background: none;
+  vertical-align: baseline;
+  border-radius: 0;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 8px;
+}
+
+.review-btn:hover {
+  border-bottom: 2px solid #fff;
 }
 
 .reviewbtn a {
@@ -646,6 +646,7 @@ a {
   height: 440px;
   width: 960px;
   margin: 0 auto;
+  justify-content: flex-end;
 }
 
 .business-info {
@@ -700,8 +701,6 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.3);
-  margin-right: 20px;
 }
 
 .map-and-pic {

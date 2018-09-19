@@ -25,7 +25,7 @@ class FilterForm extends React.Component {
             <div className="search-bar-container">
               <form className="search-bar">
                 <span className="header">Find</span>
-                <input className="keywords" type="text" value={this.props.category} onChange={this.handleChange('category', this.props.updateFilter)} placeholder="dry cleaners, burgers, spas..." />
+                <input className="keywords" type="text" value={this.props.category} onChange={this.handleChange('category', this.props.updateFilter)} placeholder="restaurant, nightlife, dry cleaning..." />
                 <span className="header">Near</span>
                 <input type="text" className="location" placeholder="Civic Center, Manhattan, NY" />
                 <Link type="submit" className="submit" to="/search">

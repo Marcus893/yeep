@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import BusinessMap from '../business_map/business_map';
 import ReviewFormContainer from './review_form_container';
 import { ProtectedRoute } from '../../util/route_util';
@@ -27,12 +28,12 @@ const BusinessShow = ({ business, businessId, fetchBusiness, reviews, authors })
           <div className="search-bar-container">
             <form className="search-bar">
               <span className="header">Find</span>
-              <input type="text" className="keywords" placeholder="dry cleaners, burgers, spas..." />
+              <input type="text" className="keywords" placeholder="restaurant, nightlife, dry cleaning..." />
               <span className="header">Near</span>
               <input type="text" className="location" placeholder="Civic Center, Manhattan, NY" />
-              <button type="submit" className="submit" >
+              <Link type="submit" className="submit" to="/search">
                 <i className="fa fa-search"></i>
-              </button>
+              </Link>
             </form>
           </div>
         </div>
