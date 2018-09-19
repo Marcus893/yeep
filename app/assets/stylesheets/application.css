@@ -151,6 +151,10 @@ html {
   color: #d32323;
   font-weight: 700;
   padding: 9px 12px 10px;
+  display: block;
+  font-size: 16px;
+  line-height: 1.28571em;
+  padding-bottom: 8px;
 }
 
 
@@ -478,6 +482,7 @@ a {
 }
 
 .info-box {
+  align-items: baseline;
   text-align: left;
   text-indent: 12px;
   font-size: 12px;
@@ -494,6 +499,7 @@ a {
   width: 100%;
   font-size: 18px;
   margin-top: 18px;
+  margin-bottom: 10px;
   font-weight: bold;
   text-decoration: none;
   cursor: pointer;
@@ -502,7 +508,9 @@ a {
 .pub-stars {
   width: 110px;
   height: 18px;
+  margin-top: 10px;
   margin-left: 10px;
+  margin-bottom: 10px;
   background: url(https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png) 0 194px;
   background-size: 132px 560px;
   display: inline-block;
@@ -511,7 +519,7 @@ a {
 
 .reviews-counter {
   width: 54%;
-  margin: 0;
+  margin: 0 auto;
   line-height: 19px;
   font-size: 12px;
 }
@@ -519,13 +527,14 @@ a {
 .price-counter {
   letter-spacing: 2px;
   font-size: 14px;
-  margin: 0px;
+  margin-top: 10px;
 }
 
 .category-link {
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
+  margin-top: 10px;
 }
 
 .fire {
