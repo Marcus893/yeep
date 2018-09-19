@@ -47,7 +47,8 @@ class LoginForm extends React.Component {
             <form onSubmit={this.handleSubmit} className="login-form-box">
               <h2 className="heading">Log In to Yeep</h2>
               <p className="subheading">
-                New to Yeep?
+                New to Yeep? &nbsp;
+            
                 <Link to="/signup">Sign up</Link>
               </p>
               <p className="legal-copy">By logging in, you agree to Yeep's Terms of Service and Private Policy.</p>

@@ -41,7 +41,7 @@ class ReviewForm extends React.Component {
     const businessName = business ? business.name : "";
     return (
       <div className="review-form">
-        <div className="heading">
+        <div className="review-heading">
           <div className="heading-container">
             <div className="logo"><a href="#/">yeep</a></div>
             <h1>Write a review</h1>
