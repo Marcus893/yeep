@@ -11,7 +11,7 @@ class Center extends React.Component {
       <div className="homepage">
         <nav className="auth">
           <div className="write-a-review">
-            <Link className="reviewbtn" to="/writeareview">Write a Review</Link>
+            <Link className="review-btn" to="/writeareview">Write a Review</Link>
           </div>
           <div className="login-signup">
             <h2 className="header-name">Hi {this.props.currentUser.firstname}</h2>

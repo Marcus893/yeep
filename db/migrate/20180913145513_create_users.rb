@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :lastname, null: false
       t.string :email, null: false
       t.integer :zipcode, null: false
-      t.string :img_url, default: "http://financialspectrum.com.au/wp-content/uploads/Headshot-Placeholder.png"
+      t.string :img_url, default: "https://s3-media3.fl.yelpcdn.com/assets/srv0/yelp_styleguide/bf5ff8a79310/assets/img/default_avatars/user_medium_square.png"
       t.string :password_digest, null: false
       t.string :session_token, null: false
 

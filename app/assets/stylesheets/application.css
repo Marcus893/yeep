@@ -97,7 +97,7 @@ html {
   top: 30px;
 }
 
-.reviewbtn {
+.review-btn {
   height: 38px;
   width: 172px;
   border: 1px solid #8d0005;
@@ -375,13 +375,11 @@ small {
 }
 
 .submit {
-  width: 54px;
-  height: 51px;
-  border-radius: 0 5px 5px 0;
-  border: 0;
-  background: #bd1f1f;
-  padding: 17px 15px 15px;
+  background-color: #d32323;
+  padding: 10px 20px 10px;
   box-shadow: none;
+  border-radius: 0 4px 4px 0;
+  height: 30px;
 }
 
 /* tags */
@@ -1129,4 +1127,95 @@ dl {
   min-height: 400px;
   width: 300px;
   padding: 0 15px;
+}
+
+/* write a review */
+
+.top-container {
+  width: 990px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  align-items: center
+}
+
+.top-left {
+  padding: 0 15px;
+}
+
+.top-left h1 {
+  font-weight: 700;
+  margin-bottom: 6px;
+  font-size: 35px;
+  line-height: 1.2em;
+  padding-top: 6px;
+}
+
+.top-left p {
+  padding: 12px 0;
+  margin-bottom: 6px;
+  font-size: 16px;
+  line-height: 1.3125em;
+}
+
+.searchbar-container {
+  width: 630px;
+  height: 30px;
+}
+
+.searchbar {
+  display: flex;
+  align-items: center;
+}
+
+.searchbar label {
+  margin-right: 5px;
+}
+
+.search-find {
+  box-sizing: border-box;
+  display: inline-block;
+  zoom: 1;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 1.28571em;
+  width: 45%;
+  padding: 6px 6px;
+  margin: 3px 0;
+  border: 1px solid #999;
+  border-radius: 3px;
+  background-color: white;
+}
+
+.search-input input {
+  border: 0px;
+}
+
+.search-title {
+  margin-right: 10px;
+  font-weight: 700;
+}
+
+.search-loc {
+  box-sizing: border-box;
+  display: inline-block;
+  zoom: 1;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 1.28571em;
+  width: 45%;
+  padding: 6px 6px;
+  margin: 3px 0;
+  border: 1px solid #999;
+  border-radius: 3px;
+  background-color: white;
+}
+
+.top-image {
+  padding: 0 15px;
+  width: 33.33333%;
+}
+
+.white-space {
+  height: 400px;
 }
