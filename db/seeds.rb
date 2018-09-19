@@ -92,8 +92,8 @@ User.create!(
 )
 
 User.create!(
-  firstname: 'Lisa',
-  lastname: 'May',
+  firstname: 'Justin',
+  lastname: 'Wu',
   email: 'ifj9rew@gmail.com',
   zipcode: 93485,
   password: '439584549',

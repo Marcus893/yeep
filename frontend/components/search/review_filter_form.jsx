@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 
 class ReviewFilterForm extends React.Component {
@@ -27,9 +28,9 @@ class ReviewFilterForm extends React.Component {
                 <input className="keywords" type="text" value={this.props.category} onChange={this.handleChange('category', this.props.updateFilter)} placeholder="dry cleaners, burgers, spas..." />
                 <span className="header">Near</span>
                 <input type="text" className="location" placeholder="Civic Center, Manhattan, NY" />
-                <button type="submit" className="submit" >
+                <Link type="submit" className="submit" to="/search">
                   <i className="fa fa-search"></i>
-                </button>
+                </Link>
               </form>
             </div>
           </div>
@@ -65,9 +66,9 @@ class ReviewFilterForm extends React.Component {
                   <span className="search-title">Near</span>
                   <span className="search-input"><input type="text" /></span>
                 </label>
-                <button className="search-btn" type="submit">
+                <Link type="submit" className="button" to="/search">
                   <i className="fa fa-search"></i>
-                </button>
+                </Link>
               </form>
             </div>
           </div>

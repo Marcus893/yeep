@@ -1168,6 +1168,18 @@ dl {
   align-items: center;
 }
 
+.button {
+  padding: 7px 9px;
+  border: 1px solid #8d0005;
+  background-color: #d90007;
+  vertical-align: middle;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  background: linear-gradient(#d90007, #c91400);
+  border-radius: 3px;
+  position: relative;
+  bottom: 1px;
+}
+
 .searchbar label {
   margin-right: 5px;
 }
