@@ -144,14 +144,14 @@ const BusinessShow = ({ business, businessId, fetchBusiness, reviews, authors })
       </div>
       <div className="sidebar">
         <div className="hours-price">
-          <ul>
+
             <li>
               <div className="hours-icon">
                 <i className="fa fa-clock-o"></i>
               </div>
               <div className="content">
                 <span className="key">Today</span>
-                <span className="value"> Today 11:00 am - 10:00 pm</span>
+                <span className="value">11:00 am - 10:00 pm</span>
               </div>
             </li>
             <li>
@@ -163,7 +163,7 @@ const BusinessShow = ({ business, businessId, fetchBusiness, reviews, authors })
                 <span className="value">Inexpensive</span>
               </div>
             </li>
-          </ul>
+
         </div>
         <div className="hours-info">
           <h3>Hours</h3>

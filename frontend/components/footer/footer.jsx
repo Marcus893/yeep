@@ -12,26 +12,26 @@ class Footer extends React.Component {
               <div className="main-footer-item">
                 <div className="footer-menu">
                   <h3 className="footer-menu-header">About</h3>
-                  <ul className="footer-menu-list">
+
                     <li className="footer-menu-item"><Link to="https://">About Me</Link></li>
                     <li className="footer-menu-item"><a href="https://www.linkedin.com/in/caida-ding/">My LinkedIn</a></li>
                     <li className="footer-menu-item"><a href="https://github.com/Caida001">My Github</a></li>
                     <li className="footer-menu-item"><a href="http://www.google.com">My Resume</a></li>
                     <li className="footer-menu-item"><Link to="">Angel List</Link></li>
-                  </ul>
+
                 </div>
               </div>
               <div className="main-footer-item">
                 <div className="footer-menu">
                   <h3 className="footer-menu-header">Discover</h3>
-                  <ul className="footer-menu-list">
+
                     <li className="footer-menu-item"><Link to="">Nightlife</Link></li>
                     <li className="footer-menu-item"><Link to="">Restaurants</Link></li>
                     <li className="footer-menu-item"><Link to="">Shopping</Link></li>
                     <li className="footer-menu-item"><Link to="">Gyms</Link></li>
                     <li className="footer-menu-item"><Link to="">Hotels</Link></li>
                     <li className="footer-menu-item"><Link to="">Dry Cleaning</Link></li>
-                  </ul>
+      
                 </div>
               </div>
             </div>

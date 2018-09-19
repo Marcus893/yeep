@@ -671,6 +671,11 @@ a {
   padding-right: 30px
 }
 
+.info-left h1{
+  width: 500px;
+
+}
+
 .review {
   margin-top: 10px;
   display: flex;
@@ -696,6 +701,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  margin-left: 400px;
 }
 
 .reviewbtn {
@@ -911,12 +917,22 @@ a {
   font-size: 14px;
 }
 
+.sidebar {
+  font-family: inherit;
+  position: relative;
+}
+
 .hours-price {
   border: 1px solid #e6e6e6;
   border-radius: 4px;
   font-size: 14px;
   margin-bottom: 18px;
+}
+
+.hours-price li {
   display: flex;
+  align-items: center;
+  height: 36px;
 }
 
 .hours-icon {
@@ -924,12 +940,15 @@ a {
   display: flex;
   justify-content: center;
   font-weight: 700;
+  color: #999;
+  padding-right: 10px;
+  margin-left: 8px;
 }
 
 .content {
   border-bottom: 1px solid #e6e6e6;
   height: inherit;
-  width: 100%;
+  width: 76%;
   display: flex;
   align-items: center;
 }
@@ -945,6 +964,10 @@ a {
 }
 
 .price-icon {
+  width: 34px;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
   color: #999;
   padding-right: 10px;
   margin-left: 8px;
