@@ -19,6 +19,10 @@ html {
   background-color: white;
 }
 
+h2 {
+  color: black;
+}
+
 .session-form-master {
   text-align: center;
   margin-top: 0px;
@@ -359,6 +363,7 @@ small {
   border-top: 2px solid #9A9A9A;
   border-bottom: 2px solid #EEEEEE;
 }
+
 
 .keywords {
   width: 416px;
@@ -1023,6 +1028,32 @@ dl {
   background-color: #d32323;
   height: 64px;
   margin-bottom: 30px;
+
+}
+
+.content-wrapper {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+.content-wrapper a {
+  color: #0073bb;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.post-review-btn {
+  font-weight: 700;
+  text-align: center;
+  min-width: 240px;
+  height: 48px;
+  color: white;
+  border-color: #8d0005;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  background-color: #d90007;
+  background: linear-gradient(#d90007, #c91400);
+  border-radius: 3px;
 }
 
 .heading-container {
@@ -1033,6 +1064,15 @@ dl {
   display: flex;
   align-items: center;
   color: black;
+
+}
+
+.heading-container h1 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 23px;
+  margin-left: 50px;
 }
 
 .form-container {
@@ -1057,6 +1097,7 @@ dl {
   float: left;
   height: 30px;
   width: 30px;
+  margin-right: 80px;
 }
 
 .form-container textarea {

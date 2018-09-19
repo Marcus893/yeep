@@ -43,11 +43,11 @@ class ReviewForm extends React.Component {
       <div className="review-form">
         <div className="review-heading">
           <div className="heading-container">
-            <div className="logo"><a href="#/">yeep</a></div>
+            <div><a href="#/"><h2>yeep</h2></a></div>
             <h1>Write a review</h1>
           </div>
         </div>
-        <div className="content-container">
+        <div className="content-wrapper">
           <a href={`#/businesses/${businessId}`}>{businessName}</a>
           <form className="form-container" onSubmit={this.handleSubmit}>
             <div className="rating">
@@ -58,7 +58,7 @@ class ReviewForm extends React.Component {
                 </li>
                 <li className="rating-star">
                   <input id="rating-2" type="radio" value="2"></input>
-                  <label id="rating-2">It could do better</label>
+                  <label id="rating-2">Could've been better</label>
                 </li>
                 <li className="rating-star">
                   <input id="rating-3" type="radio" value="3"></input>
@@ -73,7 +73,7 @@ class ReviewForm extends React.Component {
                   <label id="rating-5">Amazing!!!</label>
                 </li>
               </div>
-              <span><p>Select Your Rating</p></span>
+
             </div>
             <br/>
 
@@ -88,10 +88,10 @@ class ReviewForm extends React.Component {
               maxLength="500"
               ></textarea>
             <br/>
-            <input type="submit" value="Post" />
+            <input className="post-review-btn" type="submit" value="Post Review" />
+
           </form>
         </div>
-        <button onClick={this.navigateToBusinessShow}>Cancel</button>
       </div>
     );
  }
