@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import SearchBar from './search_bar';
 
 
 class FilterForm extends React.Component {
@@ -23,15 +24,7 @@ class FilterForm extends React.Component {
           <div className="upper-inner-container">
             <a href="#/"><h2>yeep</h2></a>
             <div className="search-bar-container">
-              <form className="search-bar">
-                <span className="header">Find</span>
-                <input className="keywords" type="text" value={this.props.category} onChange={this.handleChange('category', this.props.updateFilter)} placeholder="restaurant, nightlife, dry cleaning..." />
-                <span className="header">Near</span>
-                <input type="text" className="location" placeholder="Civic Center, Manhattan, NY" />
-                <Link type="submit" className="submit" to="/search">
-                  <i className="fa fa-search"></i>
-                </Link>
-              </form>
+              <SearchBar category={this.props.category} updateFilter={this.props.updateFilter} />
             </div>
           </div>
         </div>

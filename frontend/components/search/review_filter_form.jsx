@@ -1,19 +1,26 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import SearchBar from './search_bar';
 
 
 class ReviewFilterForm extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      category: props.category,
+      category: props.category.slice(0),
     };
   }
 
-  handleChange(filter, updateFilter) {
+  // handleChange(filter, updateFilter) {
+  //   return e => (
+  //     updateFilter(filter, e.currentTarget.value)
+  //   );
+  // }
+
+  handleChange() {
     return e => (
-      updateFilter(filter, e.currentTarget.value)
-    );
+      this.setState({ category: e.currentTarget.value }
+      ));
   }
 
  render() {
@@ -23,15 +30,7 @@ class ReviewFilterForm extends React.Component {
           <div className="upper-inner-container">
             <a href="#/"><h2>yeep</h2></a>
             <div className="search-bar-container">
-              <form className="search-bar">
-                <span className="header">Find</span>
-                <input className="keywords" type="text" value={this.props.category} onChange={this.handleChange('category', this.props.updateFilter)} placeholder="restaurant, nightlife, dry cleaning..." />
-                <span className="header">Near</span>
-                <input type="text" className="location" placeholder="Civic Center, Manhattan, NY" />
-                <Link type="submit" className="submit" to="/search">
-                  <i className="fa fa-search"></i>
-                </Link>
-              </form>
+              <SearchBar category={this.props.category} updateFilter={this.props.updateFilter} />
             </div>
           </div>
         </div>
@@ -60,7 +59,7 @@ class ReviewFilterForm extends React.Component {
               <form className="searchbar">
                 <label className="search-find">
                   <span className="search-title">Find</span>
-                  <span className="search-input"><input type="text" value={this.props.category} onChange={this.handleChange('category', this.props.updateFilter)} /></span>
+                  <span className="search-input"><input type="text" value={this.state.category} onChange={this.handleChange()} /></span>
                 </label>
                 <label className='search-loc'>
                   <span className="search-title">Near</span>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SearchBar from '../search/search_bar';
 
 class Center extends React.Component {
   constructor(props) {
@@ -22,15 +23,7 @@ class Center extends React.Component {
           <Link className="logo" to="/">Yeep</Link>
         </div>
         <div className="search-container">
-          <form className="search">
-            <span className="header">Find</span>
-            <input type="text" className="keywords" placeholder="restaurant, nightlife, dry cleaning..." />
-            <span className="header">Near</span>
-            <input type="text" className="location" placeholder="Civic Center, Manhattan, NY" />
-            <Link type="submit" className="submit" to="/search">
-              <i className="fa fa-search"></i>
-            </Link>
-          </form>
+          <SearchBar category={this.props.category} updateFilter={this.props.updateFilter} />
         </div>
         <div className="tags-container">
           <div className="tags">

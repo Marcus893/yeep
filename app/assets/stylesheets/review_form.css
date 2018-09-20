@@ -1,0 +1,83 @@
+.review-form {
+  font-family: "Arimo", sans-serif;
+  padding-bottom: 36px;
+}
+
+.review-heading {
+  background-color: #d32323;
+  height: 64px;
+  margin-bottom: 30px;
+
+}
+
+.content-wrapper {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+.content-wrapper a {
+  color: #0073bb;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.post-review-btn {
+  font-weight: 700;
+  text-align: center;
+  min-width: 240px;
+  height: 48px;
+  color: white;
+  border-color: #8d0005;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  background-color: #d90007;
+  background: linear-gradient(#d90007, #c91400);
+  border-radius: 3px;
+}
+
+.heading-container {
+  max-width: 960px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  color: black;
+
+}
+
+.heading-container h1 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 23px;
+  margin-left: 50px;
+}
+
+.form-container {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: text;
+  padding: 18px;
+  max-width: 630px;
+  margin-bottom: 20px;
+}
+
+.rating {
+  height: 50px;
+  width: 550px;
+  border-bottom: 1px solid #999999;
+  margin-left: 0px;
+  margin-top: 7px;
+}
+
+.form-container textarea {
+  height: 100px;
+  width: 100%;
+  font-size: 18px;
+  border: 0;
+  outline: none;
+  padding: 0;
+  resize: none;
+  min-height: 258px;
+}

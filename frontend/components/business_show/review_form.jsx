@@ -1,11 +1,12 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import StarRatingComponent from 'react-star-rating-component';
 
 class ReviewForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      rating: 5,
+      rating: 0,
       body: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -35,10 +36,15 @@ class ReviewForm extends React.Component {
     this.props.fetchBusiness(this.props.match.params.businessId);
   }
 
+  onStarClick(nextValue, prevValue, name) {
+    this.setState({rating: nextValue});
+  }
+
   render() {
     const businessId = this.props.match.params.businessId;
     const business = this.props.businesses[businessId];
     const businessName = business ? business.name : "";
+    const { rating } = this.state;
     return (
       <div className="review-form">
         <div className="review-heading">
@@ -51,28 +57,7 @@ class ReviewForm extends React.Component {
           <a href={`#/businesses/${businessId}`}>{businessName}</a>
           <form className="form-container" onSubmit={this.handleSubmit}>
             <div className="rating">
-              <div className="rating-stars">
-                <li className="rating-star">
-                  <input id="rating-1" type="radio" value="1"></input>
-                  <label id="rating-1">Just NO</label>
-                </li>
-                <li className="rating-star">
-                  <input id="rating-2" type="radio" value="2"></input>
-                  <label id="rating-2">Could've been better</label>
-                </li>
-                <li className="rating-star">
-                  <input id="rating-3" type="radio" value="3"></input>
-                  <label id="rating-3">It's OK</label>
-                </li>
-                <li className="rating-star">
-                  <input id="rating-4" type="radio" value="4"></input>
-                  <label id="rating-4">Great!</label>
-                </li>
-                <li className="rating-star">
-                  <input id="rating-5" type="radio" value="5"></input>
-                  <label id="rating-5">Amazing!!!</label>
-                </li>
-              </div>
+              <StarRatingComponent name="rate1" starCount={5} value={rating} onStarClick={this.onStarClick.bind(this)} />
 
             </div>
             <br/>

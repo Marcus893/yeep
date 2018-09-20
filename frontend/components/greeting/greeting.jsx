@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Center from './center'
+import Center from './center';
+import SearchBar from '../search/search_bar';
 
-const Greeting = ({currentUser, logout}) => {
+const Greeting = ({currentUser, logout, category, updateFilter}) => {
 
   const sessionLinks = () => (
     <div className="main-page">
@@ -20,25 +21,17 @@ const Greeting = ({currentUser, logout}) => {
           <Link className="logo" to="/">Yeep</Link>
         </div>
         <div className="search-container">
-          <form className="search">
-            <span className="header">Find</span>
-            <input type="text" className="keywords" placeholder="restaurant, nightlife, dry cleaning..." />
-            <span className="header">Near</span>
-            <input type="text" className="location" placeholder="Civic Center, Manhattan, NY" />
-            <Link type="submit" className="submit" to="/search">
-              <i className="fa fa-search"></i>
-            </Link>
-          </form>
+          <SearchBar category={category} updateFilter={updateFilter} />
         </div>
         <div className="tags-container">
           <div className="tags">
-            <a href="#/search?Restaurants">
+            <a href="#/search">
               <h3><i className="fa fa-cutlery"></i>Restaurant</h3>
             </a>
-            <a href="#/search?Nightlife">
+            <a href="#/search">
               <h3><i className="fa fa-glass"></i>Nightlife</h3>
             </a>
-            <a href="#/search?HomeServices">
+            <a href="#/search">
               <h3><i className="fa fa-wrench"></i>Home Services</h3>
             </a>
           </div>
@@ -105,27 +98,27 @@ const Greeting = ({currentUser, logout}) => {
           <h3 className="header3">Browse Business By category</h3>
           <div className="category-boxes-container">
             <div className="category-box">
-              <a href="#/search?Restaurant"><img className="icon" src="https://s3-media1.fl.yelpcdn.com/assets/srv0/homepage/80b92cd513f0/assets/img/categories/72x72_restaurants.png" /></a>
+              <a href="#/search"><img className="icon" src="https://s3-media1.fl.yelpcdn.com/assets/srv0/homepage/80b92cd513f0/assets/img/categories/72x72_restaurants.png" /></a>
               <h3>Restaurants</h3>
             </div>
             <div className="category-box">
-              <a href="#/search?Shopping"><img className="icon" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/homepage/ad1f85392c04/assets/img/categories/72x72_shopping.png" /></a>
+              <a href="#/search"><img className="icon" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/homepage/ad1f85392c04/assets/img/categories/72x72_shopping.png" /></a>
               <h3>Shopping</h3>
             </div>
             <div className="category-box">
-              <a href="#/search?Nightlife"><img className="icon" src="https://s3-media1.fl.yelpcdn.com/assets/srv0/homepage/4ee31d03d5b2/assets/img/categories/72x72_nightlife.png" /></a>
+              <a href="#/search"><img className="icon" src="https://s3-media1.fl.yelpcdn.com/assets/srv0/homepage/4ee31d03d5b2/assets/img/categories/72x72_nightlife.png" /></a>
               <h3>Nightlife</h3>
             </div>
             <div className="category-box">
-              <a href="#/search?Beauty"><img className="icon" src="https://s3-media1.fl.yelpcdn.com/assets/srv0/homepage/dda5bcbe7e6c/assets/img/categories/72x72_beauty.png" /></a>
+              <a href="#/search"><img className="icon" src="https://s3-media1.fl.yelpcdn.com/assets/srv0/homepage/dda5bcbe7e6c/assets/img/categories/72x72_beauty.png" /></a>
               <h3>Beauty</h3>
             </div>
             <div className="category-box">
-              <a href="#/search?Auto"><img className="icon" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/homepage/59b42d70fa94/assets/img/categories/72x72_automotive.png" /></a>
+              <a href="#/search"><img className="icon" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/homepage/59b42d70fa94/assets/img/categories/72x72_automotive.png" /></a>
               <h3>Auto</h3>
             </div>
             <div className="category-box">
-              <a href="#/search?HomeServices"><img className="icon" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/homepage/52d0e24aea08/assets/img/categories/72x72_home_services.png" /></a>
+              <a href="#/search"><img className="icon" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/homepage/52d0e24aea08/assets/img/categories/72x72_home_services.png" /></a>
               <h3>HomeService</h3>
             </div>
           </div>
@@ -134,7 +127,7 @@ const Greeting = ({currentUser, logout}) => {
     </div>
   );
 
-  return currentUser ? <Center currentUser={currentUser} logout={logout} /> : sessionLinks();
+  return currentUser ? <Center currentUser={currentUser} logout={logout} category={category} updateFilter={updateFilter} /> : sessionLinks();
 };
 
 export default Greeting;
