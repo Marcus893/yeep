@@ -1,24 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Summary: This app is a yelp clone aim at having the same functionalities as yelp, users can signup/login as well as search for businessses they are interested in. The maps give the locations of the businesses and the reviews on the business page summarize how good or bad the business is.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Link: https://firstyeep.herokuapp.com/#/
