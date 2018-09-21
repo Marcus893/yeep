@@ -14,8 +14,8 @@ Review.delete_all
 b1 = Business.create!(
   body: 'nice cozy pub',
   name: 'Fizgerald Pub',
-  lat: 37.775769,
-  lng: -122.434960,
+  lat: 40.740067,
+  lng: -73.982470,
   category: 'nightlife',
   pic_url: 'https://www.chelseapub.ca/public/images/gallery/dd4c40bd83bda793d99d6be019825787.jpg'
 )
@@ -23,8 +23,8 @@ b1 = Business.create!(
 b2 = Business.create!(
   body: 'There\'s no cover.',
   name: 'Rooftop 93',
-  lat: 32.775769,
-  lng: -273.434960,
+  lat: 40.717019,
+  lng: -73.995165,
   category: 'nightlife',
   pic_url: 'https://s3-media4.fl.yelpcdn.com/bphoto/mA3457kUSZwEEB7g0EEvLQ/ls.jpg'
 )
@@ -32,8 +32,8 @@ b2 = Business.create!(
 b3 = Business.create!(
   body: 'UN square, amazing sushi',
   name: 'Sushi Ryusei',
-  lat: 37.779760,
-  lng: -122.413820,
+  lat: 40.748378,
+  lng: -73.975209,
   category: 'restaurants',
   pic_url: 'https://cdn.vox-cdn.com/uploads/chorus_image/image/38664864/miami-lure-fishbar-sushi-414.0.jpg'
 )
@@ -41,8 +41,8 @@ b3 = Business.create!(
 b4 = Business.create!(
   body: 'Don\'t miss the shrimp and the sliders',
   name: 'Holy Ground',
-  lat: 33.779760,
-  lng: -113.4123820,
+  lat: 40.716095,
+  lng: -74.008585,
   category: 'restaurants',
   pic_url: 'https://s3-media1.fl.yelpcdn.com/bphoto/wrOGPch2IZZ0xc0nJfzt8Q/ls.jpg'
 )
@@ -50,8 +50,8 @@ b4 = Business.create!(
 b5 = Business.create!(
   body: 'cheap and fast home services',
   name: 'Handy',
-  lat: 37.769996,
-  lng: -122.511281,
+  lat: 40.764979,
+  lng: -73.977895,
   category: 'home service',
   pic_url: 'https://pas-wordpress-media.s3.amazonaws.com/content/uploads/2018/01/cleaning-service.jpg'
 )
@@ -59,8 +59,8 @@ b5 = Business.create!(
 b6 = Business.create!(
   body: 'fast house cleaning service',
   name: 'YiWan home services',
-  lat: 37.723296,
-  lng: -122.511281,
+  lat: 40.758359,
+  lng: -73.93170,
   category: 'home service',
   pic_url: 'http://wecleandubai.com/wp-content/uploads/2018/08/15-Most-Neglected-Areas-to-Clean-in-Business-Environment.jpg'
 )
@@ -68,8 +68,8 @@ b6 = Business.create!(
 b7 = Business.create!(
   body: 'cheap and discount!',
   name: 'Richair home solutions',
-  lat: 37.768796,
-  lng: -122.598381,
+  lat: 40.775893,
+  lng: -73.958990,
   category: 'home service',
   pic_url: 'https://www.maids.com/media/1255/bigstock-197197558.jpg'
 )
@@ -77,8 +77,8 @@ b7 = Business.create!(
 b8 = Business.create!(
   body: 'dry cleaning automatic',
   name: 'Alba dry cleaning',
-  lat: 37.987996,
-  lng: -122.519481,
+  lat: 40.711222,
+  lng: -74.006211,
   category: 'dry cleaning',
   pic_url: 'https://s3-media2.fl.yelpcdn.com/bphoto/0QhM6FZgIZD8GNUj-0iTOw/ls.jpg'
 )
@@ -86,8 +86,8 @@ b8 = Business.create!(
 b9 = Business.create!(
   body: 'AutoCraft specializes in high quality and unique auto customization from a team who has been in the business for decades. We provide services as simple as window tinting and …',
   name: 'Autocraft NYC',
-  lat: 27.937996,
-  lng: -136.592481,
+  lat: 40.764102,
+  lng: -73.997508,
   category: 'auto',
   pic_url: 'https://s3-media4.fl.yelpcdn.com/bphoto/Mxz_Ml6dIZYoDymTGuj0Qg/ls.jpg'
 )
@@ -95,8 +95,8 @@ b9 = Business.create!(
 b10 = Business.create!(
   body: 'They have really cool original gear.',
   name: 'Hard Turn',
-  lat: 22.357996,
-  lng: -136.593981,
+  lat: 40.758745,
+  lng: -73.985923,
   category: 'shopping',
   pic_url: 'https://s3-media1.fl.yelpcdn.com/bphoto/Y6vIRdiXaZ2amYS7Tmeb_g/ls.jpg'
 )
@@ -104,8 +104,8 @@ b10 = Business.create!(
 b11 = Business.create!(
   body: 'This is the Asian version of Sephora in a way.',
   name: 'Ume Cosme',
-  lat: 32.357736,
-  lng: -103.573981,
+  lat: 40.748434,
+  lng: -73.988383,
   category: 'beauty',
   pic_url: 'https://s3-media4.fl.yelpcdn.com/bphoto/s0JgcsrDlIEnH-lFjmY13A/ls.jpg'
 )

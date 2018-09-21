@@ -11,12 +11,6 @@ class ReviewFilterForm extends React.Component {
     };
   }
 
-  // handleChange(filter, updateFilter) {
-  //   return e => (
-  //     updateFilter(filter, e.currentTarget.value)
-  //   );
-  // }
-
   handleChange() {
     return e => (
       this.setState({ category: e.currentTarget.value }
@@ -37,13 +31,13 @@ class ReviewFilterForm extends React.Component {
         <div className="nav-lower">
           <div className="lower-inner-container">
             <div className="tags">
-              <a href="#/search?Restaurants">
+              <a href="#/search">
                 <h3><i className="fa fa-cutlery"></i>Restaurant</h3>
               </a>
-              <a href="#/search?Nightlife">
+              <a href="#/search">
                 <h3><i className="fa fa-glass"></i>Nightlife</h3>
               </a>
-              <a href="#/search?HomeServices">
+              <a href="#/search">
                 <h3><i className="fa fa-wrench"></i>Home Services</h3>
               </a>
             </div>

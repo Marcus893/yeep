@@ -10,10 +10,10 @@ const getCoordsObj = latLng => ({
 
 const mapOptions = {
   center: {
-    lat: 37.773972,
-    lng: -122.431297
+    lat: 40.748493,
+    lng: -73.985950
   },
-  zoom: 13
+  zoom: 12
 };
 
 class BusinessMap extends React.Component {
@@ -55,6 +55,7 @@ class BusinessMap extends React.Component {
   }
 
   handleMarkerClick(business) {
+    
     this.props.history.push(`businesses/${business.id}`);
   }
 

@@ -1,0 +1,25 @@
+.tags-container {
+  top: 150px;
+  position: relative;
+  margin: 0 auto;
+  height: 30px;
+}
+
+.tags {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+  height: 100%;
+  width: 400px;
+}
+
+.tags h3 {
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+}

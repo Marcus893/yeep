@@ -1,0 +1,14 @@
+.map {
+  width: 500px;
+  height: 500px;
+}
+
+.single-business-map {
+  height: 200px;
+  width: 200px;
+}
+
+.map-container {
+  height: 300px;
+  width: 300px;
+}

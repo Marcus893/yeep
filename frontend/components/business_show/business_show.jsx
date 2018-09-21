@@ -22,8 +22,8 @@ class BusinessShow extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.business.id != nextProps.match.businessId) {
-      this.props.fetchBusiness(nextProps.match.businessId);
+    if (this.props.business.id != nextProps.match.params.businessId) {
+      this.props.fetchBusiness(nextProps.match.params.businessId);
     }
   }
 

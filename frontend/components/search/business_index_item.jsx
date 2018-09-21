@@ -1,6 +1,5 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import BusinessShowContainer from '../business_show/business_show_container';
 
 class IndexItem extends React.Component {
   constructor(props) {
@@ -16,15 +15,15 @@ class IndexItem extends React.Component {
   render() {
     const { average_rating, body, pic_url, name, category } = this.props.business;
     return (
-      <li className="business-index-item" onClick={this.handleClick} >
+      <li className="business-index-item" >
         <div className="index-item-info">
-          <div className="pic-container">
+          <div className="pic-container" onClick={this.handleClick}>
             <img src={pic_url} />
           </div>
           <div className="info-container">
             <div className="info-top">
               <div className="info-left">
-                <h1><a href={`#/businesses/${this.props.business.businessId}`}>{name}</a></h1>
+                <h1><a href={`#/businesses/${this.props.business.id}`}>{name}</a></h1>
                 <section className="review">
                   <div className="star"></div>
                   <span className="review-count">{average_rating} reviews</span>
