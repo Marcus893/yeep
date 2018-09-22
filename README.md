@@ -4,6 +4,4 @@ Summary: This app is a yelp clone aim at having the same functionalities as yelp
 
 Link: https://firstyeep.herokuapp.com/#/
 
-Technology: backend--ruby, ruby on rails 
-            frontend--javascript, react, redux, HTML, CSS
-            database--postgresql
+Technology: backend--ruby, ruby on rails        frontend--javascript, react, redux, HTML, CSS   database--postgresql
