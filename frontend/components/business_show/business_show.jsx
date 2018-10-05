@@ -6,6 +6,7 @@ import { ProtectedRoute } from '../../util/route_util';
 import { ReviewLink } from '../../util/review_util';
 import ReviewListItemContainer from './review_list_item_container';
 
+
 // business, businessId, fetchBusiness, reviews, authors
 
 class BusinessShow extends React.Component {
@@ -35,6 +36,13 @@ class BusinessShow extends React.Component {
       author={this.props.authors[review.author_id]}
     />})}
 
+  handleClick(cate, updateFilter){
+      return e => (
+        updateFilter("category", cate),
+        this.props.history.push('/search')
+      );
+    }
+
   render() {
 
 
@@ -59,13 +67,13 @@ class BusinessShow extends React.Component {
         <div className="nav-lower">
           <div className="lower-inner-container">
             <div className="tags">
-              <a href="#/search">
+              <a onClick={this.handleClick("restaurants", this.props.updateFilter)}>
                 <h3><i className="fa fa-cutlery"></i>Restaurant</h3>
               </a>
-              <a href="#/search">
+              <a onClick={this.handleClick("nightlife", this.props.updateFilter)}>
                 <h3><i className="fa fa-glass"></i>Nightlife</h3>
               </a>
-              <a href="#/search">
+              <a onClick={this.handleClick("home service", this.props.updateFilter)}>
                 <h3><i className="fa fa-wrench"></i>Home Services</h3>
               </a>
             </div>
@@ -80,10 +88,7 @@ class BusinessShow extends React.Component {
                 <h1>{this.props.business.name}</h1>
                 <section className="review">
                   <div className="star"></div>
-                  <span>8 reviews</span>
-                </section>
-                <section className="price-tag">
-                  <span>$$</span>
+                  <span>{this.props.reviews.length} {this.props.reviews.length <= 1 ? 'review' : 'reviews' }</span>
                 </section>
               </div>
               <div className="info-right">
@@ -119,15 +124,15 @@ class BusinessShow extends React.Component {
                     <ul className="page-info">
                       <li>
                         <span className="fa-icon"><i className="fa fa-map-marker" aria-hidden="true"></i></span>
-                        <span className="address-info">1370 Broadway, New York, NY 10012</span>
+                        <span className="address-info">{this.props.business.address}</span>
                       </li>
                       <li>
                         <span className="fa-icon"><i className="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span>
-                        <a>Get Directions</a>
+                        <a href="http://www.google.com/maps">Get Directions</a>
                       </li>
                       <li>
                         <span className="fa-icon"><i className="fa fa-phone" aria-hidden="true"></i></span>
-                        <span>(873) 098-3893</span>
+                        <span>{this.props.business.phone}</span>
                       </li>
                       <li>
                         <span className="fa-icon"><i className="fa fa-mobile" aria-hidden="true"></i></span>
@@ -143,7 +148,7 @@ class BusinessShow extends React.Component {
               </div>
               <div className="pic-container">
                 <div className="pic-box">
-                  <div className="img">
+                  <div className="img-box">
                     <img src={this.props.business.pic_url} />
                   </div>
                 </div>

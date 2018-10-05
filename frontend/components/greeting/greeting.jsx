@@ -11,10 +11,11 @@ const Greeting = ({currentUser, logout, category, updateFilter, history}) => {
       history.push('/search')
     );
   }
-
   const sessionLinks = () => (
+
     <div className="main-page">
       <div className="homepage">
+      
         <nav className="auth">
           <div className="write-a-review">
             <Link className="review-btn" to="/writeareview">Write a Review</Link>
@@ -46,7 +47,7 @@ const Greeting = ({currentUser, logout, category, updateFilter, history}) => {
       </div>
       <div className="center-container">
         <div className="city-nav">
-          <h1 className="city-name">Yelp Brooklyn</h1>
+          <h1 className="city-name">Yeep Brooklyn</h1>
         </div>
         <div className="hot-businesses-container">
           <h3 className="header3">Hot & New Businesses</h3>
@@ -62,7 +63,7 @@ const Greeting = ({currentUser, logout, category, updateFilter, history}) => {
                 <div className="pub-stars"></div>
                 <p className="reviews-counter">4 reviews</p>
                 <p className="price-counter">$</p>
-                <a className="category-link" href="#/search?Nightlife">Nightlife</a>
+                <a className="category-link" onClick={handleClick("nightlife", updateFilter)}>Nightlife</a>
                 <p className="address">138 E 28th St, New York, NY 10021</p>
                 <p className="fire"><i className="fa fa-fire"></i>  opened 3 weeks ago</p>
               </div>
@@ -78,7 +79,7 @@ const Greeting = ({currentUser, logout, category, updateFilter, history}) => {
                 <div className="pub-stars"></div>
                 <p className="reviews-counter">17 reviews</p>
                 <p className="price-counter">$</p>
-                <a className="category-link" href="#/search?Restaurant">Restaurant</a>
+                <a className="category-link" onClick={handleClick("restaurant", updateFilter)}>Restaurant</a>
                 <p className="address">160 E 38th St, New York, NY 10016</p>
                 <p className="fire"><i className="fa fa-fire"></i>  opened 5 weeks ago</p>
               </div>
@@ -94,7 +95,7 @@ const Greeting = ({currentUser, logout, category, updateFilter, history}) => {
                 <div className="pub-stars"></div>
                 <p className="reviews-counter">8 reviews</p>
                 <p className="price-counter">$</p>
-                <a className="category-link" href="#/search?HomeService">HomeService</a>
+                <a className="category-link" onClick={handleClick("home service", updateFilter)}>HomeService</a>
                 <p className="address">Serving New York and the Surrounding Area</p>
                 <p className="fire"><i className="fa fa-fire"></i>  opened 8 weeks ago</p>
               </div>

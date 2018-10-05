@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_14_184241) do
+ActiveRecord::Schema.define(version: 2018_09_25_012252) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,10 +20,12 @@ ActiveRecord::Schema.define(version: 2018_09_14_184241) do
     t.float "lat"
     t.float "lng"
     t.text "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.string "pic_url"
     t.string "category"
+    t.string "address"
+    t.string "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -40,7 +42,7 @@ ActiveRecord::Schema.define(version: 2018_09_14_184241) do
     t.string "lastname", null: false
     t.string "email", null: false
     t.integer "zipcode", null: false
-    t.string "img_url"
+    t.string "img_url", default: "https://s3-media3.fl.yelpcdn.com/assets/srv0/yelp_styleguide/bf5ff8a79310/assets/img/default_avatars/user_medium_square.png"
     t.string "password_digest", null: false
     t.string "session_token", null: false
     t.datetime "created_at", null: false

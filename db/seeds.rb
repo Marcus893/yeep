@@ -17,7 +17,9 @@ b1 = Business.create!(
   lat: 40.740067,
   lng: -73.982470,
   category: 'nightlife',
-  pic_url: 'https://www.chelseapub.ca/public/images/gallery/dd4c40bd83bda793d99d6be019825787.jpg'
+  pic_url: 'https://www.chelseapub.ca/public/images/gallery/dd4c40bd83bda793d99d6be019825787.jpg',
+  address: '336 3rd Ave, New York, NY 10010',
+  phone: '(212) 679-6931'
 )
 
 b2 = Business.create!(
@@ -26,7 +28,9 @@ b2 = Business.create!(
   lat: 40.717019,
   lng: -73.995165,
   category: 'nightlife',
-  pic_url: 'https://s3-media4.fl.yelpcdn.com/bphoto/mA3457kUSZwEEB7g0EEvLQ/ls.jpg'
+  pic_url: 'https://s3-media4.fl.yelpcdn.com/bphoto/mA3457kUSZwEEB7g0EEvLQ/ls.jpg',
+  address: '93 Bowery, New York, NY 10002',
+  phone: '(212) 966-9033'
 )
 
 b3 = Business.create!(
@@ -34,8 +38,10 @@ b3 = Business.create!(
   name: 'Sushi Ryusei',
   lat: 40.748378,
   lng: -73.975209,
-  category: 'restaurants',
-  pic_url: 'https://cdn.vox-cdn.com/uploads/chorus_image/image/38664864/miami-lure-fishbar-sushi-414.0.jpg'
+  category: 'restaurant',
+  pic_url: 'https://cdn.vox-cdn.com/uploads/chorus_image/image/38664864/miami-lure-fishbar-sushi-414.0.jpg',
+  address: '216 E 39th St, New York, NY 10016',
+  phone: '(212) 983-8880'
 )
 
 b4 = Business.create!(
@@ -43,8 +49,10 @@ b4 = Business.create!(
   name: 'Holy Ground',
   lat: 40.716095,
   lng: -74.008585,
-  category: 'restaurants',
-  pic_url: 'https://s3-media1.fl.yelpcdn.com/bphoto/wrOGPch2IZZ0xc0nJfzt8Q/ls.jpg'
+  category: 'restaurant',
+  pic_url: 'https://s3-media1.fl.yelpcdn.com/bphoto/wrOGPch2IZZ0xc0nJfzt8Q/ls.jpg',
+  address: '112 Reade St, New York, NY 10013',
+  phone: '(646) 882-0666'
 )
 
 b5 = Business.create!(
@@ -53,7 +61,9 @@ b5 = Business.create!(
   lat: 40.764979,
   lng: -73.977895,
   category: 'home service',
-  pic_url: 'https://pas-wordpress-media.s3.amazonaws.com/content/uploads/2018/01/cleaning-service.jpg'
+  pic_url: 'https://pas-wordpress-media.s3.amazonaws.com/content/uploads/2018/01/cleaning-service.jpg',
+  address: '60 2nd Ave, New York, NY 10022',
+  phone: '(718) 427-4640'
 )
 
 b6 = Business.create!(
@@ -62,7 +72,9 @@ b6 = Business.create!(
   lat: 40.758359,
   lng: -73.93170,
   category: 'home service',
-  pic_url: 'http://wecleandubai.com/wp-content/uploads/2018/08/15-Most-Neglected-Areas-to-Clean-in-Business-Environment.jpg'
+  pic_url: 'http://wecleandubai.com/wp-content/uploads/2018/08/15-Most-Neglected-Areas-to-Clean-in-Business-Environment.jpg',
+  address: '247 W 38th St #601, New York, NY 10018',
+  phone: '(212) 876-1000'
 )
 
 b7 = Business.create!(
@@ -71,7 +83,9 @@ b7 = Business.create!(
   lat: 40.775893,
   lng: -73.958990,
   category: 'home service',
-  pic_url: 'https://www.maids.com/media/1255/bigstock-197197558.jpg'
+  pic_url: 'https://www.maids.com/media/1255/bigstock-197197558.jpg',
+  address: '322 8th Ave, New York, NY 10001',
+  phone: '(212) 255-5025'
 )
 
 b8 = Business.create!(
@@ -80,7 +94,9 @@ b8 = Business.create!(
   lat: 40.711222,
   lng: -74.006211,
   category: 'dry cleaning',
-  pic_url: 'https://s3-media2.fl.yelpcdn.com/bphoto/0QhM6FZgIZD8GNUj-0iTOw/ls.jpg'
+  pic_url: 'https://s3-media2.fl.yelpcdn.com/bphoto/0QhM6FZgIZD8GNUj-0iTOw/ls.jpg',
+  address: '140 Nassau St, New York, NY 10038',
+  phone: '(212) 608-0111'
 )
 
 b9 = Business.create!(
@@ -89,7 +105,9 @@ b9 = Business.create!(
   lat: 40.764102,
   lng: -73.997508,
   category: 'auto',
-  pic_url: 'https://s3-media4.fl.yelpcdn.com/bphoto/Mxz_Ml6dIZYoDymTGuj0Qg/ls.jpg'
+  pic_url: 'https://s3-media4.fl.yelpcdn.com/bphoto/Mxz_Ml6dIZYoDymTGuj0Qg/ls.jpg',
+  address: '621 W 46th St, New York, NY 10036',
+  phone: '(212) 255-8939'
 )
 
 b10 = Business.create!(
@@ -98,7 +116,9 @@ b10 = Business.create!(
   lat: 40.758745,
   lng: -73.985923,
   category: 'shopping',
-  pic_url: 'https://s3-media1.fl.yelpcdn.com/bphoto/Y6vIRdiXaZ2amYS7Tmeb_g/ls.jpg'
+  pic_url: 'https://s3-media1.fl.yelpcdn.com/bphoto/Y6vIRdiXaZ2amYS7Tmeb_g/ls.jpg',
+  address: '625 8th Ave #201, New York, NY 10018',
+  phone: '(212) 564-6030'
 )
 
 b11 = Business.create!(
@@ -107,7 +127,9 @@ b11 = Business.create!(
   lat: 40.748434,
   lng: -73.988383,
   category: 'beauty',
-  pic_url: 'https://s3-media4.fl.yelpcdn.com/bphoto/s0JgcsrDlIEnH-lFjmY13A/ls.jpg'
+  pic_url: 'https://s3-media4.fl.yelpcdn.com/bphoto/s0JgcsrDlIEnH-lFjmY13A/ls.jpg',
+  address: '1265 Broadway, New York, NY 10001',
+  phone: '(917) 409-0378'
 )
 
 

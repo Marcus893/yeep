@@ -181,7 +181,7 @@ h2 {
 
 
 .homepage {
-  background-image: url('/assets/restaurant.jpg');
+  background-image: url('https://www.wien.info/media/images/41993-das-loft-sofitel-so-vienna-19to1.jpeg');
   background-size: cover;
   background-position: center;
   height: 600px;
@@ -539,10 +539,6 @@ select {
   margin-right: 7px;
 }
 
-.price-tag {
-  font-size: 16px;
-}
-
 .info-right {
   height: 100px;
   margin-top: 30px;
@@ -561,7 +557,7 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
 }
 
 .map-and-pic {
@@ -633,16 +629,16 @@ select {
   display: flex;
 }
 
-.img {
+.img-box {
   width: 100%;
   transition: transform .2s;
   overflow: hidden;
   box-shadow: 0px 5px 10px rgba(0,0,0,0.15);
 }
 
-.img img {
-  width: 1000px;
-  height: 250px;
+.img-box img {
+  width: 100%;
+  height: 100%;
 }
 
 .business-lowerhalf {

@@ -48,7 +48,7 @@ class Center extends React.Component {
       </div>
       <div className="center-container">
         <div className="city-nav">
-          <h1 className="city-name">Yelp Brooklyn</h1>
+          <h1 className="city-name">Yeep Brooklyn</h1>
         </div>
         <div className="hot-businesses-container">
           <h3 className="header3">Hot & New Businesses</h3>

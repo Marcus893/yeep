@@ -17,6 +17,13 @@ class FilterForm extends React.Component {
     );
   }
 
+  handleClick(cate, updateFilter){
+    return e => (
+      updateFilter("category", cate),
+      this.props.history.push('/search')
+    );
+  }
+
  render() {
     return (<div>
       <div className="nav-container">
@@ -31,13 +38,13 @@ class FilterForm extends React.Component {
         <div className="nav-lower">
           <div className="lower-inner-container">
             <div className="tags">
-              <a href="#/search">
+              <a onClick={this.handleClick("restaurants", this.props.updateFilter)}>
                 <h3><i className="fa fa-cutlery"></i>Restaurant</h3>
               </a>
-              <a href="#/search">
+              <a onClick={this.handleClick("nightlife", this.props.updateFilter)}>
                 <h3><i className="fa fa-glass"></i>Nightlife</h3>
               </a>
-              <a href="#/search">
+              <a onClick={this.handleClick("home service", this.props.updateFilter)}>
                 <h3><i className="fa fa-wrench"></i>Home Services</h3>
               </a>
             </div>

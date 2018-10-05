@@ -13,7 +13,8 @@ class IndexItem extends React.Component {
   }
 
   render() {
-    const { average_rating, body, pic_url, name, category } = this.props.business;
+    const { average_rating, body, pic_url, name, category, address, phone } = this.props.business;
+    const num = this.props.business.reviews.length
     return (
       <li className="business-index-item" >
         <div className="index-item-info">
@@ -26,20 +27,20 @@ class IndexItem extends React.Component {
                 <h1><a href={`#/businesses/${this.props.business.id}`}>{name}</a></h1>
                 <section className="review">
                   <div className="star"></div>
-                  <span className="review-count">{average_rating} reviews</span>
+                  <span className="review-count">{num} { num <= 1 ? 'review' : 'reviews' }</span>
                 </section>
                 <section className="price-tag">
                   <span>$$ {category}</span>
                 </section>
               </div>
               <div className="info-right">
-                <span>(737) 934-3874</span>
-                <span>838 Peanut St</span>
-                <span>New York, NY</span>
+                <span>{phone}</span>
+                <span>{address}</span>
               </div>
             </div>
             <div className='info-bottom'>
-              <p>Great place to visit, will definitely... <a href={`#/businesses/${this.props.business.businessId}`}>read more</a></p>
+
+              <p>{this.props.business.reviews[0].body.slice(0, 30)}...<a href={`#/businesses/${this.props.business.businessId}`}>read more</a></p>
             </div>
           </div>
         </div>
