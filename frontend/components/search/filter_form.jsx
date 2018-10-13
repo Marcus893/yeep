@@ -21,6 +21,7 @@ class FilterForm extends React.Component {
     return e => (
       updateFilter("category", cate),
       this.props.history.push('/search')
+
     );
   }
 
@@ -29,7 +30,7 @@ class FilterForm extends React.Component {
       <div className="nav-container">
         <div className="nav-upper">
           <div className="upper-inner-container">
-            <a href="#/"><h2>yeep</h2></a>
+            <a href="#/"><h2 style={{color: 'white', padding: '5px'}}>Yeep</h2></a>
             <div className="search-bar-container">
               <SearchBar category={this.props.category} updateFilter={this.props.updateFilter} />
             </div>
@@ -38,13 +39,13 @@ class FilterForm extends React.Component {
         <div className="nav-lower">
           <div className="lower-inner-container">
             <div className="tags">
-              <a onClick={this.handleClick("restaurants", this.props.updateFilter)}>
+              <a style={{cursor: 'pointer'}} onClick={this.handleClick("restaurants", this.props.updateFilter)}>
                 <h3><i className="fa fa-cutlery"></i>Restaurant</h3>
               </a>
-              <a onClick={this.handleClick("nightlife", this.props.updateFilter)}>
+              <a style={{cursor: 'pointer'}} onClick={this.handleClick("nightlife", this.props.updateFilter)}>
                 <h3><i className="fa fa-glass"></i>Nightlife</h3>
               </a>
-              <a onClick={this.handleClick("home service", this.props.updateFilter)}>
+              <a style={{cursor: 'pointer'}} onClick={this.handleClick("home service", this.props.updateFilter)}>
                 <h3><i className="fa fa-wrench"></i>Home Services</h3>
               </a>
             </div>

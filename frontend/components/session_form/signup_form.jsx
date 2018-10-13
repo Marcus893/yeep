@@ -44,7 +44,7 @@ class SignupForm extends React.Component {
     return (
       <div>
         <nav className="loginNav">
-          <Link className="yeep" to="/">yeep</Link>
+          <Link style={{color: 'white'}} className="yeep" to="/">Yeep</Link>
         </nav>
         <div className="session-form-master">
           <div className="login-form-container">

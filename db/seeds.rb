@@ -22,40 +22,19 @@ b1 = Business.create!(
   phone: '(212) 679-6931'
 )
 
-b2 = Business.create!(
-  body: 'There\'s no cover.',
-  name: 'Rooftop 93',
-  lat: 40.717019,
-  lng: -73.995165,
-  category: 'nightlife',
-  pic_url: 'https://s3-media4.fl.yelpcdn.com/bphoto/mA3457kUSZwEEB7g0EEvLQ/ls.jpg',
-  address: '93 Bowery, New York, NY 10002',
-  phone: '(212) 966-9033'
-)
 
-b3 = Business.create!(
+b2 = Business.create!(
   body: 'UN square, amazing sushi',
   name: 'Sushi Ryusei',
   lat: 40.748378,
   lng: -73.975209,
-  category: 'restaurant',
+  category: 'restaurants',
   pic_url: 'https://cdn.vox-cdn.com/uploads/chorus_image/image/38664864/miami-lure-fishbar-sushi-414.0.jpg',
   address: '216 E 39th St, New York, NY 10016',
   phone: '(212) 983-8880'
 )
 
-b4 = Business.create!(
-  body: 'Don\'t miss the shrimp and the sliders',
-  name: 'Holy Ground',
-  lat: 40.716095,
-  lng: -74.008585,
-  category: 'restaurant',
-  pic_url: 'https://s3-media1.fl.yelpcdn.com/bphoto/wrOGPch2IZZ0xc0nJfzt8Q/ls.jpg',
-  address: '112 Reade St, New York, NY 10013',
-  phone: '(646) 882-0666'
-)
-
-b5 = Business.create!(
+b3 = Business.create!(
   body: 'cheap and fast home services',
   name: 'Handy',
   lat: 40.764979,
@@ -64,6 +43,29 @@ b5 = Business.create!(
   pic_url: 'https://pas-wordpress-media.s3.amazonaws.com/content/uploads/2018/01/cleaning-service.jpg',
   address: '60 2nd Ave, New York, NY 10022',
   phone: '(718) 427-4640'
+)
+
+b4 = Business.create!(
+  body: 'Don\'t miss the shrimp and the sliders',
+  name: 'Holy Ground',
+  lat: 40.716095,
+  lng: -74.008585,
+  category: 'restaurants',
+  pic_url: 'https://s3-media1.fl.yelpcdn.com/bphoto/wrOGPch2IZZ0xc0nJfzt8Q/ls.jpg',
+  address: '112 Reade St, New York, NY 10013',
+  phone: '(646) 882-0666'
+)
+
+
+b5 = Business.create!(
+  body: 'There\'s no cover.',
+  name: 'Rooftop 93',
+  lat: 40.717019,
+  lng: -73.995165,
+  category: 'nightlife',
+  pic_url: 'https://s3-media4.fl.yelpcdn.com/bphoto/mA3457kUSZwEEB7g0EEvLQ/ls.jpg',
+  address: '93 Bowery, New York, NY 10002',
+  phone: '(212) 966-9033'
 )
 
 b6 = Business.create!(

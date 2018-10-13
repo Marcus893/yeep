@@ -15,7 +15,7 @@ const Greeting = ({currentUser, logout, category, updateFilter, history}) => {
 
     <div className="main-page">
       <div className="homepage">
-      
+
         <nav className="auth">
           <div className="write-a-review">
             <Link className="review-btn" to="/writeareview">Write a Review</Link>
@@ -33,13 +33,13 @@ const Greeting = ({currentUser, logout, category, updateFilter, history}) => {
         </div>
         <div className="tags-container">
           <div className="tags">
-            <a onClick={handleClick("restaurants", updateFilter)}>
+            <a style={{cursor: 'pointer'}} onClick={handleClick("restaurants", updateFilter)}>
               <h3><i className="fa fa-cutlery"></i>Restaurant</h3>
             </a>
-            <a onClick={handleClick("nightlife", updateFilter)}>
+            <a style={{cursor: 'pointer'}} onClick={handleClick("nightlife", updateFilter)}>
               <h3><i className="fa fa-glass"></i>Nightlife</h3>
             </a>
-            <a onClick={handleClick("home service", updateFilter)}>
+            <a style={{cursor: 'pointer'}} onClick={handleClick("home service", updateFilter)}>
               <h3><i className="fa fa-wrench"></i>Home Services</h3>
             </a>
           </div>
@@ -47,7 +47,7 @@ const Greeting = ({currentUser, logout, category, updateFilter, history}) => {
       </div>
       <div className="center-container">
         <div className="city-nav">
-          <h1 className="city-name">Yeep Brooklyn</h1>
+          <h1 className="city-name">Yeep New York</h1>
         </div>
         <div className="hot-businesses-container">
           <h3 className="header3">Hot & New Businesses</h3>
@@ -105,22 +105,22 @@ const Greeting = ({currentUser, logout, category, updateFilter, history}) => {
         <div className="main-categories">
           <h3 className="header3">Browse Business By category</h3>
           <div className="category-boxes-container">
-            <div className="category-box" onClick={handleClick("restaurants", updateFilter)}>
+            <div style={{cursor: 'pointer'}} className="category-box" onClick={handleClick("restaurants", updateFilter)}>
               <img className="icon" src="https://s3-media1.fl.yelpcdn.com/assets/srv0/homepage/80b92cd513f0/assets/img/categories/72x72_restaurants.png" /><h3>Restaurants</h3>
             </div>
-            <div className="category-box" onClick={handleClick("shopping", updateFilter)}>
+            <div style={{cursor: 'pointer'}} className="category-box" onClick={handleClick("shopping", updateFilter)}>
               <img className="icon" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/homepage/ad1f85392c04/assets/img/categories/72x72_shopping.png" /><h3>Shopping</h3>
             </div>
-            <div className="category-box" onClick={handleClick("nightlife", updateFilter)}>
+            <div style={{cursor: 'pointer'}} className="category-box" onClick={handleClick("nightlife", updateFilter)}>
               <img className="icon" src="https://s3-media1.fl.yelpcdn.com/assets/srv0/homepage/4ee31d03d5b2/assets/img/categories/72x72_nightlife.png" /><h3>Nightlife</h3>
             </div>
-            <div className="category-box" onClick={handleClick("beauty", updateFilter)}>
+            <div style={{cursor: 'pointer'}} className="category-box" onClick={handleClick("beauty", updateFilter)}>
               <img className="icon" src="https://s3-media1.fl.yelpcdn.com/assets/srv0/homepage/dda5bcbe7e6c/assets/img/categories/72x72_beauty.png" /><h3>Beauty</h3>
             </div>
-            <div className="category-box" onClick={handleClick("auto", updateFilter)}>
+            <div style={{cursor: 'pointer'}} className="category-box" onClick={handleClick("auto", updateFilter)}>
               <img className="icon" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/homepage/59b42d70fa94/assets/img/categories/72x72_automotive.png" /><h3>Auto</h3>
             </div>
-            <div className="category-box" onClick={handleClick("home service", updateFilter)}>
+            <div style={{cursor: 'pointer'}} className="category-box" onClick={handleClick("home service", updateFilter)}>
               <img className="icon" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/homepage/52d0e24aea08/assets/img/categories/72x72_home_services.png" /><h3>HomeService</h3>
             </div>
           </div>

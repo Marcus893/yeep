@@ -1,9 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import StarRating from './star_rating';
 
 const Review = ({ review, author }) => {
   const { rating, body } = review;
   const { img_url, firstname, lastname } = author;
+  var ts = new Date();
   return (
     <div className="business-page">
       <ul>
@@ -20,12 +22,12 @@ const Review = ({ review, author }) => {
                 <div>
                   <i className="fa fa-star"></i>
                 </div>
-                <span>32</span>
+                <span>{Math.floor(Math.random() * 100)}</span>
                 <span className="light-weight">reviews</span>
               </section>
               <section className="photo-count">
                 <i className="fa fa-camera"></i>
-                <span>18</span>
+                <span>{Math.floor(Math.random() * 100)}</span>
                 <span className="light-weight">photos</span>
               </section>
             </div>
@@ -33,8 +35,8 @@ const Review = ({ review, author }) => {
           <div className="review-info">
             <div className="review-content">
               <div className="rate">
-                <div className="star"></div>
-                <span className="date">4/7/2017</span>
+                <StarRating rating={rating} />
+                <span className="date"> {ts.toLocaleDateString()}</span>
               </div>
               <p className="body">{body}</p>
             </div>

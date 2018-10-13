@@ -83,7 +83,7 @@ h2 {
   position: absolute;
   justify-content: flex-end;
   top: 30px;
-  right: 150px;
+  right: 420px;
 }
 
 .auth {
@@ -454,19 +454,22 @@ select {
   width: 100%;
   height: 64px;
   background-color: #d32323;
+  justify-content: center;
 }
 
 .nav-lower {
   width: 100%;
   height: 27px;
   background-color: #bd1f1f;
+  justify-content: center;
 }
 
 .upper-inner-container {
   width: 960px;
+  height: 50px;
   margin: 0 auto;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
 }
 
@@ -483,6 +486,7 @@ select {
 }
 
 .lower-inner-container {
+  height: 27px;
   width: 960px;
   display: flex;
   margin: 0 auto;
@@ -513,6 +517,7 @@ select {
   height: 112px;
   align-items: center;
   line-height: 1.3125em;
+  justify-content: space-between;
 }
 
 .info-left {
@@ -525,18 +530,13 @@ select {
   width: 500px;
 }
 
-.review {
+.review-under-name {
   display: flex;
   line-height: 24px;
   font-size: 16px;
   margin-bottom: 10px;
-}
-
-.star {
-  height: 18px;
-  width: 132px;
-  background: url(https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png) 0 194px;
-  margin-right: 7px;
+  width: 250px;
+  justify-content: space-between;
 }
 
 .info-right {
@@ -616,21 +616,26 @@ select {
 }
 
 .pic-container {
-  width: 71%;
+  width: 30%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+.pic-container img {
+  width: 180px;
+  height: 180px;
+  margin-right: 15px;
+  object-fit: fill;
+}
+
 .pic-box {
   width: 660px;
   height: 220px;
-  position: absolute;
   display: flex;
 }
 
 .img-box {
-  width: 100%;
   transition: transform .2s;
   overflow: hidden;
   box-shadow: 0px 5px 10px rgba(0,0,0,0.15);
@@ -666,13 +671,6 @@ select {
 
 .review-list {
   list-style: none;
-}
-
-.review {
-  margin: 0;
-  padding: 18px 0;
-  border-bottom: 1px solid #e6e6e6;
-  padding-bottom: 17px;
 }
 
 .review-container {
@@ -731,13 +729,6 @@ select {
   align-items: center;
 }
 
-.review-info {
-  height: auto;
-  padding: 0 0 0 15px;
-  box-sizing: border-box;
-  width: 62.5%;
-}
-
 .review-content {
   min-height: 135px;
 }
@@ -747,6 +738,7 @@ select {
   align-items: center;
   width: auto;
   margin: 6px 0;
+  justify-content: space-between;
 }
 
 .date {
@@ -894,14 +886,14 @@ dl {
   display: flex;
 }
 
-.pic-container {
+/* .picture-container {
   width: 210px;
   height: 210px;
   border-radius: 4px;
   position: relative;
   overflow: hidden;
   margin-right: 18px;
-}
+} */
 
 .info-container {
   width: 402px;

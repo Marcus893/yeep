@@ -22,7 +22,7 @@ class SearchBar extends React.Component {
   render() {
     return (<form className="search-bar"  onSubmit={this.handleSubmit('category', this.props.updateFilter)} >
       <span className="header">Find</span>
-      <input className="keywords" type="text" value={this.state.category} placeholder="restaurant, nightlife, dry cleaning..." onChange={this.handleChange}/>
+      <input className="keywords" type="text" value={this.state.category} placeholder="restaurants, nightlife, dry cleaning, auto..." onChange={this.handleChange}/>
       <span className="header">Near</span>
       <input type="text" className="location" placeholder="Civic Center, Manhattan, NY" />
       <button type="submit" className="submit">

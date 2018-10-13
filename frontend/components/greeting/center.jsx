@@ -34,13 +34,13 @@ class Center extends React.Component {
         </div>
         <div className="tags-container">
           <div className="tags">
-            <a onClick={this.handleClick("restaurants", this.props.updateFilter)}>
+            <a style={{cursor: 'pointer'}} onClick={this.handleClick("restaurants", this.props.updateFilter)}>
               <h3><i className="fa fa-cutlery"></i>Restaurant</h3>
             </a>
-            <a onClick={this.handleClick("nightlife", this.props.updateFilter)}>
+            <a style={{cursor: 'pointer'}} onClick={this.handleClick("nightlife", this.props.updateFilter)}>
               <h3><i className="fa fa-glass"></i>Nightlife</h3>
             </a>
-            <a onClick={this.handleClick("home service", this.props.updateFilter)}>
+            <a style={{cursor: 'pointer'}} onClick={this.handleClick("home service", this.props.updateFilter)}>
               <h3><i className="fa fa-wrench"></i>Home Services</h3>
             </a>
           </div>
@@ -48,7 +48,7 @@ class Center extends React.Component {
       </div>
       <div className="center-container">
         <div className="city-nav">
-          <h1 className="city-name">Yeep Brooklyn</h1>
+          <h1 className="city-name">Yeep New York</h1>
         </div>
         <div className="hot-businesses-container">
           <h3 className="header3">Hot & New Businesses</h3>
@@ -80,7 +80,7 @@ class Center extends React.Component {
                 <div className="pub-stars"></div>
                 <p className="reviews-counter">17 reviews</p>
                 <p className="price-counter">$</p>
-                <a className="category-link" href="#/search?Restaurant">Restaurant</a>
+                <a className="category-link" href="#/search?Restaurants">Restaurant</a>
                 <p className="address">160 E 38th St, New York, NY 10016</p>
                 <p className="fire"><i className="fa fa-fire"></i>  opened 5 weeks ago</p>
               </div>
@@ -106,22 +106,22 @@ class Center extends React.Component {
         <div className="main-categories">
           <h3 className="header3">Browse Business By category</h3>
             <div className="category-boxes-container">
-              <div className="category-box" onClick={this.handleClick("restaurants", this.props.updateFilter)}>
+              <div style={{cursor: 'pointer'}} className="category-box" onClick={this.handleClick("restaurants", this.props.updateFilter)}>
                 <img className="icon" src="https://s3-media1.fl.yelpcdn.com/assets/srv0/homepage/80b92cd513f0/assets/img/categories/72x72_restaurants.png" /><h3>Restaurants</h3>
               </div>
-              <div className="category-box" onClick={this.handleClick("shopping", this.props.updateFilter)}>
+              <div style={{cursor: 'pointer'}} className="category-box" onClick={this.handleClick("shopping", this.props.updateFilter)}>
                 <img className="icon" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/homepage/ad1f85392c04/assets/img/categories/72x72_shopping.png" /><h3>Shopping</h3>
               </div>
-              <div className="category-box" onClick={this.handleClick("nightlife", this.props.updateFilter)}>
+              <div style={{cursor: 'pointer'}} className="category-box" onClick={this.handleClick("nightlife", this.props.updateFilter)}>
                 <img className="icon" src="https://s3-media1.fl.yelpcdn.com/assets/srv0/homepage/4ee31d03d5b2/assets/img/categories/72x72_nightlife.png" /><h3>Nightlife</h3>
               </div>
-              <div className="category-box" onClick={this.handleClick("beauty", this.props.updateFilter)}>
+              <div style={{cursor: 'pointer'}} className="category-box" onClick={this.handleClick("beauty", this.props.updateFilter)}>
                 <img className="icon" src="https://s3-media1.fl.yelpcdn.com/assets/srv0/homepage/dda5bcbe7e6c/assets/img/categories/72x72_beauty.png" /><h3>Beauty</h3>
               </div>
-              <div className="category-box" onClick={this.handleClick("auto", this.props.updateFilter)}>
+              <div style={{cursor: 'pointer'}} className="category-box" onClick={this.handleClick("auto", this.props.updateFilter)}>
                 <img className="icon" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/homepage/59b42d70fa94/assets/img/categories/72x72_automotive.png" /><h3>Auto</h3>
               </div>
-              <div className="category-box" onClick={this.handleClick("home service", this.props.updateFilter)}>
+              <div style={{cursor: 'pointer'}} className="category-box" onClick={this.handleClick("home service", this.props.updateFilter)}>
                 <img className="icon" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/homepage/52d0e24aea08/assets/img/categories/72x72_home_services.png" /><h3>HomeService</h3>
               </div>
             </div>

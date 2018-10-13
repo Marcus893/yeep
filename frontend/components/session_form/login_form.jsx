@@ -40,7 +40,7 @@ class LoginForm extends React.Component {
     return (
       <div>
         <nav className="loginNav">
-          <Link className="yeep" to="/">yeep</Link>
+          <Link style={{color: 'white'}} className="yeep" to="/">Yeep</Link>
         </nav>
         <div className="session-form-master">
           <div className="login-form-container">
@@ -48,7 +48,7 @@ class LoginForm extends React.Component {
               <h2 className="heading">Log In to Yeep</h2>
               <p className="subheading">
                 New to Yeep? &nbsp;
-            
+
                 <Link to="/signup">Sign up</Link>
               </p>
               <p className="legal-copy">By logging in, you agree to Yeep's Terms of Service and Private Policy.</p>

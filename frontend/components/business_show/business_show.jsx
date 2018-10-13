@@ -5,6 +5,8 @@ import ReviewFormContainer from './review_form_container';
 import { ProtectedRoute } from '../../util/route_util';
 import { ReviewLink } from '../../util/review_util';
 import ReviewListItemContainer from './review_list_item_container';
+import StarRating from './star_rating';
+import SearchBar from '../search/search_bar';
 
 
 // business, businessId, fetchBusiness, reviews, authors
@@ -50,30 +52,22 @@ class BusinessShow extends React.Component {
       <div className="nav-container">
         <div className="nav-upper">
           <div className="upper-inner-container">
-            <a href="#/"><h2>yeep</h2></a>
+            <a href="#/"><h2 style={{color: 'white', padding: '5px'}}>Yeep</h2></a>
             <div className="search-bar-container">
-              <form className="search-bar">
-                <span className="header">Find</span>
-                <input type="text" className="keywords" placeholder="restaurant, nightlife, dry cleaning..." />
-                <span className="header">Near</span>
-                <input type="text" className="location" placeholder="Civic Center, Manhattan, NY" />
-                <Link type="submit" className="submit" to="/search">
-                  <i className="fa fa-search"></i>
-                </Link>
-              </form>
+              <SearchBar category={this.props.business.category} updateFilter={this.props.updateFilter} />
             </div>
           </div>
         </div>
         <div className="nav-lower">
           <div className="lower-inner-container">
             <div className="tags">
-              <a onClick={this.handleClick("restaurants", this.props.updateFilter)}>
+              <a style={{cursor: 'pointer'}} onClick={this.handleClick("restaurants", this.props.updateFilter)}>
                 <h3><i className="fa fa-cutlery"></i>Restaurant</h3>
               </a>
-              <a onClick={this.handleClick("nightlife", this.props.updateFilter)}>
+              <a style={{cursor: 'pointer'}} onClick={this.handleClick("nightlife", this.props.updateFilter)}>
                 <h3><i className="fa fa-glass"></i>Nightlife</h3>
               </a>
-              <a onClick={this.handleClick("home service", this.props.updateFilter)}>
+              <a style={{cursor: 'pointer'}} onClick={this.handleClick("home service", this.props.updateFilter)}>
                 <h3><i className="fa fa-wrench"></i>Home Services</h3>
               </a>
             </div>
@@ -86,8 +80,8 @@ class BusinessShow extends React.Component {
             <div className="business-info">
               <div className="info-left">
                 <h1>{this.props.business.name}</h1>
-                <section className="review">
-                  <div className="star"></div>
+                <section className="review-under-name">
+                  <StarRating rating={this.props.business.average_rating} />
                   <span>{this.props.reviews.length} {this.props.reviews.length <= 1 ? 'review' : 'reviews' }</span>
                 </section>
               </div>
@@ -97,7 +91,7 @@ class BusinessShow extends React.Component {
                   <ReviewLink
                     component={ReviewFormContainer}
                     to={`/businesses/${this.props.businessId}/review`}
-                    label="Write a Review" />
+                    label="Write A Review" />
                   <ProtectedRoute
                     path="/businesses/:businessId/review"
                     component={ReviewFormContainer}
@@ -146,13 +140,13 @@ class BusinessShow extends React.Component {
                   </section>
                 </div>
               </div>
-              <div className="pic-container">
+
                 <div className="pic-box">
                   <div className="img-box">
                     <img src={this.props.business.pic_url} />
                   </div>
                 </div>
-              </div>
+
             </div>
           </div>
         </div>
