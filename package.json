@@ -26,8 +26,8 @@
     "test": "test"
   },
   "engines": {
-    "node": "10.6.0",
-    "npm": "6.1.0"
+    "node": "8.9.0",
+    "npm": "6.4.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
