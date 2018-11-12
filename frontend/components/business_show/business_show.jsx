@@ -21,17 +21,17 @@ class BusinessShow extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchBusiness(this.props.businessId);
+    this.props.fetchBusiness(this.props.match.params.businessId);
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.business.id != nextProps.match.params.businessId) {
+    if (this.props.match.params.businessId !== nextProps.match.params.businessId) {
       this.props.fetchBusiness(nextProps.match.params.businessId);
     }
   }
 
   reviewList(reviews, authors) {
-    return this.props.reviews.map(review => {
+    return this.props.reviews.reverse().map(review => {
     return <ReviewListItemContainer
       review={review}
       key={review.id}
@@ -143,7 +143,9 @@ class BusinessShow extends React.Component {
 
                 <div className="pic-box">
                   <div className="img-box">
-                    <img src={this.props.business.pic_url} />
+                    <img src={this.props.business.pic_url[0]} />
+                    <img src={this.props.business.pic_url[1]} />
+                    <img src={this.props.business.pic_url[2]} />
                   </div>
                 </div>
 

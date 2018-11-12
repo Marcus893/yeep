@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Center from './center';
 import SearchBar from '../search/search_bar';
 
-const Greeting = ({currentUser, logout, category, updateFilter, history}) => {
+const Greeting = ({currentUser, logout, category, updateFilter, history, businesses}) => {
 
   const handleClick = (cate, updateFilter) => {
     return e => (
@@ -54,7 +54,7 @@ const Greeting = ({currentUser, logout, category, updateFilter, history}) => {
           <div className="new-biz-container">
             <div  className="biz-box">
               <div className="photo-box">
-                <a href="#/businesses/1">
+                <a href={`#/businesses/1`}>
                   <img className="biz-img" src="http://www.stphilips.us/wp-content/uploads/2018/08/pub-theology-image.jpg" />
                 </a>
               </div>

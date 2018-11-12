@@ -4,13 +4,13 @@ class CreateBusinesses < ActiveRecord::Migration[5.2]
       t.string :name, null: false
       t.float :lat
       t.float :lng
-      t.text :body
-      t.string :pic_url
+      t.string :body
+      t.text :pic_url, array: true, default: []
       t.string :category
       t.string :address
       t.string :phone
 
-      t.timestamps 
+      t.timestamps
     end
   end
 end
