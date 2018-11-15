@@ -1,18 +1,79 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Center from './center';
 import SearchBar from '../search/search_bar';
 
-const Greeting = ({currentUser, logout, category, updateFilter, history, businesses}) => {
+class Greeting extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      className: "background1",
+      link: "https://www.wien.info/media/images/41993-das-loft-sofitel-so-vienna-19to1.jpeg"
+    };
+    this.update = this.update.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+  }
 
-  const handleClick = (cate, updateFilter) => {
+  componentDidMount() {
+    this.intervalId = setTimeout(this.update, 5000);
+  }
+
+  componentWillUpdate() {
+    this.intervalId = setTimeout(this.update, 5000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.intervalId);
+  }
+
+  update() {
+    if(this.state.className === "background1") {
+      this.setState({
+        className: "background2",
+        link: "http://airchal.com/wp-content/uploads/2014/07/Shoppingcenter-720x460.png"
+      });
+    } else if(this.state.className === "background2") {
+      this.setState({
+        className: "background3",
+        link: "https://i.kinja-img.com/gawker-media/image/upload/s--qYyqZXyq--/c_scale,f_auto,fl_progressive,q_80,w_800/cxrzfcgg8ywh50pd7pbk.jpg"
+      });
+    } else if(this.state.className === "background3") {
+      this.setState({
+        className: "background4",
+        link: "https://www.discotech.me/wp-content/uploads/2014/12/omnia_header.jpg"
+      });
+    } else if(this.state.className === "background4") {
+      this.setState({
+        className: "background5",
+        link: "http://sf2.mariefranceasia.com/wp-content/uploads/sites/7/2016/04/feature-4-750x410.jpg"
+      });
+    } else if(this.state.className === "background5") {
+      this.setState({
+        className: "background1",
+        link: "http://www.ujecdent.com/wp-content/uploads/2018/05/luxury-hotel-rooms_luxury_hotel_room_1920x1080_480118.jpg"
+      });
+    }
+  }
+
+  handleClick(cate, updateFilter) {
     return e => (
       updateFilter("category", cate),
-      history.push('/search')
+      this.props.history.push('/search')
     );
   }
-  const sessionLinks = () => (
 
+  render() {
+    const isLoggedIn = this.props.currentUser ? true : false;
+    let button1;
+    let button2;
+
+    if(isLoggedIn) {
+      button1 = <h2 className="header-name">Hi {this.props.currentUser.firstname}</h2>;
+      button2 = <button className="loginbtn" onClick={this.props.logout}>Log Out</button>;
+    } else {
+      button1 = <Link className="loginbtn" to="/login">Log In</Link>;
+      button2 = <Link className="signupbtn" to="/signup">Sign Up</Link>;
+    }
+    return (
     <div className="main-page">
       <div className="homepage">
 
@@ -21,25 +82,25 @@ const Greeting = ({currentUser, logout, category, updateFilter, history, busines
             <Link className="review-btn" to="/writeareview">Write a Review</Link>
           </div>
           <div className="login-signup">
-            <Link className="loginbtn" to="/login">Log In</Link>
-            <Link className="signupbtn" to="/signup">Sign Up</Link>
+            {button1}
+            {button2}
           </div>
         </nav>
         <div className="logo-container">
           <Link className="logo" to="/">Yeep</Link>
         </div>
         <div className="search-container">
-          <SearchBar category={category} updateFilter={updateFilter} />
+          <SearchBar category={this.props.category} updateFilter={this.props.updateFilter} />
         </div>
         <div className="tags-container">
           <div className="tags">
-            <a style={{cursor: 'pointer'}} onClick={handleClick("restaurants", updateFilter)}>
+            <a style={{cursor: 'pointer'}} onClick={this.handleClick("restaurants", this.props.updateFilter)}>
               <h3><i className="fa fa-cutlery"></i>Restaurant</h3>
             </a>
-            <a style={{cursor: 'pointer'}} onClick={handleClick("nightlife", updateFilter)}>
+            <a style={{cursor: 'pointer'}} onClick={this.handleClick("nightlife", this.props.updateFilter)}>
               <h3><i className="fa fa-glass"></i>Nightlife</h3>
             </a>
-            <a style={{cursor: 'pointer'}} onClick={handleClick("home service", updateFilter)}>
+            <a style={{cursor: 'pointer'}} onClick={this.handleClick("home service", this.props.updateFilter)}>
               <h3><i className="fa fa-wrench"></i>Home Services</h3>
             </a>
           </div>
@@ -63,7 +124,7 @@ const Greeting = ({currentUser, logout, category, updateFilter, history, busines
                 <div className="pub-stars"></div>
                 <p className="reviews-counter">4 reviews</p>
                 <p className="price-counter">$</p>
-                <a className="category-link" onClick={handleClick("nightlife", updateFilter)}>Nightlife</a>
+                <a className="category-link" onClick={this.handleClick("nightlife", this.props.updateFilter)}>Nightlife</a>
                 <p className="address">138 E 28th St, New York, NY 10021</p>
                 <p className="fire"><i className="fa fa-fire"></i>  opened 3 weeks ago</p>
               </div>
@@ -79,7 +140,7 @@ const Greeting = ({currentUser, logout, category, updateFilter, history, busines
                 <div className="pub-stars"></div>
                 <p className="reviews-counter">17 reviews</p>
                 <p className="price-counter">$</p>
-                <a className="category-link" onClick={handleClick("restaurant", updateFilter)}>Restaurant</a>
+                <a className="category-link" onClick={this.handleClick("restaurant", this.props.updateFilter)}>Restaurant</a>
                 <p className="address">160 E 38th St, New York, NY 10016</p>
                 <p className="fire"><i className="fa fa-fire"></i>  opened 5 weeks ago</p>
               </div>
@@ -95,7 +156,7 @@ const Greeting = ({currentUser, logout, category, updateFilter, history, busines
                 <div className="pub-stars"></div>
                 <p className="reviews-counter">8 reviews</p>
                 <p className="price-counter">$</p>
-                <a className="category-link" onClick={handleClick("home service", updateFilter)}>HomeService</a>
+                <a className="category-link" onClick={this.handleClick("home service", this.props.updateFilter)}>HomeService</a>
                 <p className="address">Serving New York and the Surrounding Area</p>
                 <p className="fire"><i className="fa fa-fire"></i>  opened 8 weeks ago</p>
               </div>
@@ -105,22 +166,22 @@ const Greeting = ({currentUser, logout, category, updateFilter, history, busines
         <div className="main-categories">
           <h3 className="header3">Browse Business By category</h3>
           <div className="category-boxes-container">
-            <div style={{cursor: 'pointer'}} className="category-box" onClick={handleClick("restaurants", updateFilter)}>
+            <div style={{cursor: 'pointer'}} className="category-box" onClick={this.handleClick("restaurants", this.props.updateFilter)}>
               <img className="icon" src="https://s3-media1.fl.yelpcdn.com/assets/srv0/homepage/80b92cd513f0/assets/img/categories/72x72_restaurants.png" /><h3>Restaurants</h3>
             </div>
-            <div style={{cursor: 'pointer'}} className="category-box" onClick={handleClick("shopping", updateFilter)}>
+            <div style={{cursor: 'pointer'}} className="category-box" onClick={this.handleClick("shopping", this.props.updateFilter)}>
               <img className="icon" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/homepage/ad1f85392c04/assets/img/categories/72x72_shopping.png" /><h3>Shopping</h3>
             </div>
-            <div style={{cursor: 'pointer'}} className="category-box" onClick={handleClick("nightlife", updateFilter)}>
+            <div style={{cursor: 'pointer'}} className="category-box" onClick={this.handleClick("nightlife", this.props.updateFilter)}>
               <img className="icon" src="https://s3-media1.fl.yelpcdn.com/assets/srv0/homepage/4ee31d03d5b2/assets/img/categories/72x72_nightlife.png" /><h3>Nightlife</h3>
             </div>
-            <div style={{cursor: 'pointer'}} className="category-box" onClick={handleClick("beauty", updateFilter)}>
+            <div style={{cursor: 'pointer'}} className="category-box" onClick={this.handleClick("beauty", this.props.updateFilter)}>
               <img className="icon" src="https://s3-media1.fl.yelpcdn.com/assets/srv0/homepage/dda5bcbe7e6c/assets/img/categories/72x72_beauty.png" /><h3>Beauty</h3>
             </div>
-            <div style={{cursor: 'pointer'}} className="category-box" onClick={handleClick("auto", updateFilter)}>
+            <div style={{cursor: 'pointer'}} className="category-box" onClick={this.handleClick("auto", this.props.updateFilter)}>
               <img className="icon" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/homepage/59b42d70fa94/assets/img/categories/72x72_automotive.png" /><h3>Auto</h3>
             </div>
-            <div style={{cursor: 'pointer'}} className="category-box" onClick={handleClick("home service", updateFilter)}>
+            <div style={{cursor: 'pointer'}} className="category-box" onClick={this.handleClick("home service",this.props.updateFilter)}>
               <img className="icon" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/homepage/52d0e24aea08/assets/img/categories/72x72_home_services.png" /><h3>HomeService</h3>
             </div>
           </div>
@@ -128,8 +189,7 @@ const Greeting = ({currentUser, logout, category, updateFilter, history, busines
       </div>
     </div>
   );
-
-  return currentUser ? <Center currentUser={currentUser} history={history} logout={logout} category={category} updateFilter={updateFilter} /> : sessionLinks();
-};
+}
+}
 
 export default Greeting;

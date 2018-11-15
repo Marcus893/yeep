@@ -6,7 +6,7 @@ import BusinessMap from '../business_map/business_map';
 const Search = ({ businesses, category, updateFilter }) => (
   <div className="user-pane">
     <div className="upper-bar">
-      <FilterForm category={category} updateFilter={updateFilter} />
+      <FilterForm category={category} updateFilter={updateFilter} businesses={businesses}/>
     </div>
     <div className="main-content">
       <BusinessIndex businesses={businesses} />
