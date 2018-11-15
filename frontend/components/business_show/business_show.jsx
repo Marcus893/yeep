@@ -52,7 +52,7 @@ class BusinessShow extends React.Component {
       <div className="nav-container">
         <div className="nav-upper">
           <div className="upper-inner-container">
-            <a href="#/"><h2 style={{color: 'white', padding: '5px'}}>Yeep</h2></a>
+            <a href="#/"><h2 style={{color: 'white', margin: '15px'}}>Yeep</h2></a>
             <div className="search-bar-container">
               <SearchBar category={this.props.business.category} updateFilter={this.props.updateFilter} />
             </div>
@@ -110,6 +110,7 @@ class BusinessShow extends React.Component {
                           businessId={this.props.businessId}
                           singleBusiness={true}
                           fetchBusiness={this.props.fetchBusiness}
+                          business={this.props.business}
                         />
                       </div>
                     </div>

@@ -40,7 +40,7 @@ class LoginForm extends React.Component {
     return (
       <div>
         <nav className="loginNav">
-          <Link style={{color: 'white'}} className="yeep" to="/">Yeep</Link>
+          <Link style={{color: 'white', margin: '15px'}} className="yeep" to="/">Yeep</Link>
         </nav>
         <div className="session-form-master">
           <div className="login-form-container">

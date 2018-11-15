@@ -8,17 +8,26 @@ const getCoordsObj = latLng => ({
   lng: latLng.lng()
 });
 
-const mapOptions = {
-  center: {
-    lat: 40.748493,
-    lng: -73.985950
-  },
-  zoom: 12
-};
 
 class BusinessMap extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   componentDidMount() {
     const map = this.refs.map;
+    let mapOptions;
+    if(this.props.singleBusiness) {
+      mapOptions = {
+        center: {lat: this.props.business.lat, lng: this.props.business.lng},
+        zoom: 14
+      };
+    } else {
+      mapOptions = {
+        center: {lat: 40.748493, lng: -73.985950},
+        zoom: 12
+      };
+    }
     this.map = new google.maps.Map(map, mapOptions);
     this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick.bind(this));
     if(this.props.singleBusiness) {
@@ -55,8 +64,11 @@ class BusinessMap extends React.Component {
   }
 
   handleMarkerClick(business) {
-    
-    this.props.history.push(`businesses/${business.id}`);
+    if(this.props.match.path == "/search"){
+      this.props.history.push(`businesses/${business.id}`);
+    } else {
+      window.open(`https://www.google.com/maps/place/${business.address}`);
+    }
   }
 
   handleClick(coords) {

@@ -30,7 +30,7 @@ class FilterForm extends React.Component {
       <div className="nav-container">
         <div className="nav-upper">
           <div className="upper-inner-container">
-            <a href="#/"><h2 style={{color: 'white', padding: '5px'}}>Yeep</h2></a>
+            <a href="#/"><h2 style={{color: 'white', margin: '15px'}}>Yeep</h2></a>
             <div className="search-bar-container">
               <SearchBar category={this.props.category} updateFilter={this.props.updateFilter} />
             </div>
