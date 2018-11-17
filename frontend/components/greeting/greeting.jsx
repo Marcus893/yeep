@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SearchBar from '../search/search_bar';
+import BigBar from './big_bar';
 
 class Greeting extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      className: "background1",
-      link: "https://www.wien.info/media/images/41993-das-loft-sofitel-so-vienna-19to1.jpeg"
+      className: "background1"
     };
     this.update = this.update.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -28,28 +27,23 @@ class Greeting extends React.Component {
   update() {
     if(this.state.className === "background1") {
       this.setState({
-        className: "background2",
-        link: "http://airchal.com/wp-content/uploads/2014/07/Shoppingcenter-720x460.png"
+        className: "background2"
       });
     } else if(this.state.className === "background2") {
       this.setState({
-        className: "background3",
-        link: "https://i.kinja-img.com/gawker-media/image/upload/s--qYyqZXyq--/c_scale,f_auto,fl_progressive,q_80,w_800/cxrzfcgg8ywh50pd7pbk.jpg"
+        className: "background3"
       });
     } else if(this.state.className === "background3") {
       this.setState({
-        className: "background4",
-        link: "https://www.discotech.me/wp-content/uploads/2014/12/omnia_header.jpg"
+        className: "background4"
       });
     } else if(this.state.className === "background4") {
       this.setState({
-        className: "background5",
-        link: "http://sf2.mariefranceasia.com/wp-content/uploads/sites/7/2016/04/feature-4-750x410.jpg"
+        className: "background5"
       });
     } else if(this.state.className === "background5") {
       this.setState({
-        className: "background1",
-        link: "http://www.ujecdent.com/wp-content/uploads/2018/05/luxury-hotel-rooms_luxury_hotel_room_1920x1080_480118.jpg"
+        className: "background1"
       });
     }
   }
@@ -75,7 +69,7 @@ class Greeting extends React.Component {
     }
     return (
     <div className="main-page">
-      <div className="homepage">
+      <div className={this.state.className}>
 
         <nav className="auth">
           <div className="write-a-review">
@@ -90,7 +84,7 @@ class Greeting extends React.Component {
           <Link className="logo" to="/">Yeep</Link>
         </div>
         <div className="search-container">
-          <SearchBar category={this.props.category} updateFilter={this.props.updateFilter} />
+          <BigBar category={this.props.category} updateFilter={this.props.updateFilter} />
         </div>
         <div className="tags-container">
           <div className="tags">

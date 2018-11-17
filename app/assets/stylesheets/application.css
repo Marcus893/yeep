@@ -180,7 +180,7 @@ h2 {
 }
 
 
-.homepage {
+.background1 {
   background-image: url('https://www.wien.info/media/images/41993-das-loft-sofitel-so-vienna-19to1.jpeg');
   background-size: cover;
   background-position: center;
@@ -188,6 +188,43 @@ h2 {
   justify-content: space-between;
   margin: 0 auto;
 }
+
+.background2 {
+  background-image: url("http://airchal.com/wp-content/uploads/2014/07/Shoppingcenter-720x460.png");
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.background3 {
+  background-image: url("https://i.kinja-img.com/gawker-media/image/upload/s--qYyqZXyq--/c_scale,f_auto,fl_progressive,q_80,w_800/cxrzfcgg8ywh50pd7pbk.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.background4 {
+  background-image: url("http://sf2.mariefranceasia.com/wp-content/uploads/sites/7/2016/04/feature-4-750x410.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.background5 {
+  background-image: url("https://www.discotech.me/wp-content/uploads/2014/12/omnia_header.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
 
 .loginNav {
   height: 64px;
@@ -942,7 +979,7 @@ dl {
 }
 
 .top-left {
-  padding: 0 15px;
+  width: 700px;
 }
 
 .top-left h1 {

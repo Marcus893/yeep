@@ -6,14 +6,14 @@ export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
 
 export const receiveBusinesses = businesses => ({
   type: RECEIVE_BUSINESSES,
-  businesses,
+  businesses
 });
 
 export const receiveBusiness = ({ business, reviews, authors }) => ({
   type: RECEIVE_BUSINESS,
   business,
   reviews,
-  authors,
+  authors
 });
 
 export const receiveReview = ({ review, average_rating, author }) => ({

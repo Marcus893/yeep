@@ -16,8 +16,8 @@ class BusinessShow extends React.Component {
     super(props);
     this.state = {
       businesses: { [this.props.businessId]: this.props.business }
-
   };
+  this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
@@ -49,31 +49,9 @@ class BusinessShow extends React.Component {
 
 
     return (<div className="single-business-show">
-      <div className="nav-container">
-        <div className="nav-upper">
-          <div className="upper-inner-container">
-            <a href="#/"><h2 style={{color: 'white', margin: '15px'}}>Yeep</h2></a>
-            <div className="search-bar-container">
+
               <SearchBar category={this.props.business.category} updateFilter={this.props.updateFilter} />
-            </div>
-          </div>
-        </div>
-        <div className="nav-lower">
-          <div className="lower-inner-container">
-            <div className="tags">
-              <a style={{cursor: 'pointer'}} onClick={this.handleClick("restaurants", this.props.updateFilter)}>
-                <h3><i className="fa fa-cutlery"></i>Restaurant</h3>
-              </a>
-              <a style={{cursor: 'pointer'}} onClick={this.handleClick("nightlife", this.props.updateFilter)}>
-                <h3><i className="fa fa-glass"></i>Nightlife</h3>
-              </a>
-              <a style={{cursor: 'pointer'}} onClick={this.handleClick("home service", this.props.updateFilter)}>
-                <h3><i className="fa fa-wrench"></i>Home Services</h3>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+
       <div className="business-container">
         <div className="business-elements">
           <div className="business-show">

@@ -2,9 +2,14 @@ class Api::BusinessesController < ApplicationController
   before_action :require_logged_in, only: [:create]
 
   def index
-    businesses = businesses ? Business.in_bounds(bounds) : Business.all
-    businesses = businesses.where(category: params[:category])
+    businesses = bounds ? Business.in_bounds(bounds) : Business.all
+    if params[:category]
+      businesses = businesses.where(category: params[:category])
+    end
+
+
     @businesses = businesses.includes(:reviews)
+
     render :index
   end
 

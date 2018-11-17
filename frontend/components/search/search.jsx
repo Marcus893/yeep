@@ -1,22 +1,58 @@
 import React from 'react';
-import FilterForm from './filter_form';
-import BusinessIndex from './business_index';
+import BusinessIndexItem from './business_index_item';
 import BusinessMap from '../business_map/business_map';
+import {Link} from 'react-router-dom';
+import SearchBar from './search_bar';
 
-const Search = ({ businesses, category, updateFilter }) => (
-  <div className="user-pane">
-    <div className="upper-bar">
-      <FilterForm category={category} updateFilter={updateFilter} businesses={businesses}/>
-    </div>
-    <div className="main-content">
-      <BusinessIndex businesses={businesses} />
-      <div className="right-map">
-        <div className="map-box">
-          <BusinessMap businesses={businesses} updateFilter={updateFilter} singleBusiness={false} />
+class Search extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      category: props.category.slice(0),
+    };
+  }
+
+  handleChange(filter, updateFilter) {
+    return e => (
+      updateFilter(filter, e.currentTarget.value)
+    );
+  }
+
+  handleClick(cate, updateFilter){
+    return e => (
+      updateFilter("category", cate),
+      this.props.history.push('/search')
+
+    );
+  }
+
+
+  render() {
+    return (<div className="user-pane">
+        <div className="upper-bar">
+
+          <SearchBar category={this.state.category} updateFilter={this.props.updateFilter} businesses={this.props.businesses} />
+
+          <div className="top-content-container">
+            <div className="top-content">
+              <h1>Best {this.state.category} in New York</h1>
+            </div>
+          </div>
+        </div>
+        <div className="main-content">
+          <div className="business-list">
+            {this.props.businesses.map(business => (
+              <BusinessIndexItem business={business} key={business.id} />
+            ))}
+          </div>
+          <div className="right-map">
+            <div className="map-box">
+              <BusinessMap businesses={this.props.businesses} updateFilter={this.props.updateFilter} singleBusiness={false} />
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-);
-
+    );
+  }
+}
 export default Search;

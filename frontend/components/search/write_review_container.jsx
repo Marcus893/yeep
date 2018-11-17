@@ -3,7 +3,7 @@ import { updateFilter } from '../../actions/filter_actions';
 import WriteReview from './write_review';
 import { fetchBusinesses } from '../../actions/business_actions';
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state, ownProps) => ({
   category: state.ui.filters.category,
   businesses: Object.values(state.entities.businesses)
 });

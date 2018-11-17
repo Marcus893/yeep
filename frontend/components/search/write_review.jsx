@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import SearchBar from './search_bar';
+import BusinessSquare from './business_square';
 
 class WriteReview extends React.Component {
   constructor(props){
@@ -9,6 +10,10 @@ class WriteReview extends React.Component {
       category: props.category.slice(0),
     };
     this.handleChange = this.handleChange.bind(this);
+  }
+
+  componentDidMount() {
+    this.props.fetchBusinesses();
   }
 
   handleSubmit(filter, updateFilter) {
@@ -24,34 +29,19 @@ class WriteReview extends React.Component {
   }
 
  render() {
+   let businesses;
+   if(this.props.businesses) {
+     businesses = this.props.businesses.slice(0, 8).map((business, idx) => (
+       <BusinessSquare key={business.id} business={business} idx={idx} />
+     ));
+   } else {
+     businesses = <div />
+   }
     return (
       <div className="user-pane">
         <div className="upper-bar">
-          <div className="nav-container">
-            <div className="nav-upper">
-              <div className="upper-inner-container">
-                <a href="#/"><h2 style={{color: 'white', margin: '15px'}}>Yeep</h2></a>
-                <div className="search-bar-container">
+
                   <SearchBar category={this.props.category} updateFilter={this.props.updateFilter} />
-                </div>
-              </div>
-            </div>
-            <div className="nav-lower">
-              <div className="lower-inner-container">
-                <div className="tags">
-                  <a href="#/search">
-                    <h3><i className="fa fa-cutlery"></i>Restaurant</h3>
-                  </a>
-                  <a href="#/search">
-                    <h3><i className="fa fa-glass"></i>Nightlife</h3>
-                  </a>
-                  <a href="#/search">
-                    <h3><i className="fa fa-wrench"></i>Home Services</h3>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
 
             <div className="top-container">
               <div className="top-left">
@@ -79,7 +69,11 @@ class WriteReview extends React.Component {
 
             </div>
 
-          <div className="white-space"></div>
+          <div className="down-container">
+            <h2>Been to these businesses recently?</h2>
+            <div className="square-container">{businesses}</div>
+          </div>
+
           </div>
         </div>);
   }

@@ -10,7 +10,14 @@ class Business < ApplicationRecord
         .where("lng < ?", bounds[:northEast][:lng])
   end
 
+  def self.search(businesses, search)
+    if search
+      arr = businesses.select {|biz| biz.category.downcase == search.downcase || biz.category.downcase.split(" ").include?(search.downcase)}
+    end
+    arr.uniq 
+  end
+
   def average_rating
     reviews.average(:rating)
-  end 
+  end
 end

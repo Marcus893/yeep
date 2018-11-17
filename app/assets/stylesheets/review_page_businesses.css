@@ -1,0 +1,43 @@
+.down-container h2 {
+  color: red;
+  width: 960px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.square-container {
+  width: 960px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.entire-thing {
+  display: flex;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.info-right-wrapper {
+  width: 300px;
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+.info-right-wrapper h3 {
+  font-size: 15px;
+  font-weight: lighter;
+  color: black;
+}
+
+.image-link img {
+  height: 150px;
+  width: 150px;
+}
+
+.name-link {
+  color: #0073bb;
+}

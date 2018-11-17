@@ -2,19 +2,17 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 
-class SearchBar extends React.Component {
+class BigBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {category: ""};
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleClick = this.handleClick.bind(this);
   }
 
   handleSubmit(filter, updateFilter) {
     return e => (
       updateFilter(filter, this.state.category),
-      this.props.history.push(`/search/${this.state.category}`)
+      this.props.history.push("/search")
     );
   }
 
@@ -32,11 +30,7 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className="nav-container">
-          <div className="nav-upper">
-            <div className="upper-inner-container">
-              <a href="#/"><h2 style={{color: 'white', margin: '15px'}}>Yeep</h2></a>
+
               <div className="search-bar-container">
                 <form className="search-bar"  onSubmit={this.handleSubmit('category', this.props.updateFilter)} >
                   <span className="header">Find</span>
@@ -48,27 +42,9 @@ class SearchBar extends React.Component {
                   </button>
                 </form>
               </div>
-            </div>
-          </div>
-          <div className="nav-lower">
-            <div className="lower-inner-container">
-              <div className="tags">
-                <a style={{cursor: 'pointer'}} onClick={this.handleClick("restaurants", this.props.updateFilter)}>
-                  <h3><i className="fa fa-cutlery"></i>Restaurant</h3>
-                </a>
-                <a style={{cursor: 'pointer'}} onClick={this.handleClick("nightlife", this.props.updateFilter)}>
-                  <h3><i className="fa fa-glass"></i>Nightlife</h3>
-                </a>
-                <a style={{cursor: 'pointer'}} onClick={this.handleClick("home service", this.props.updateFilter)}>
-                  <h3><i className="fa fa-wrench"></i>Home Services</h3>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
   );
   }
 }
 
-export default withRouter(SearchBar);
+export default withRouter(BigBar);
