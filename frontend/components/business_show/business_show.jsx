@@ -119,12 +119,11 @@ class BusinessShow extends React.Component {
                   </section>
                 </div>
               </div>
-
                 <div className="pic-box">
                   <div className="img-box">
-                    <img src={this.props.business.pic_url[0]} />
-                    <img src={this.props.business.pic_url[1]} />
-                    <img src={this.props.business.pic_url[2]} />
+                    <img src={this.props.business.photos[0]} />
+                    <img src={this.props.photos[1]} />
+                    <img src={this.props.photos[2]} />
                   </div>
                 </div>
 

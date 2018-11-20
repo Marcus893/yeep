@@ -5,11 +5,13 @@ import BusinessShow from './business_show';
 import { updateFilter } from '../../actions/filter_actions';
 
 const mapStateToProps = (state, { match }) => {
+  debugger
   const businessId = parseInt(match.params.businessId);
   const business = selectBusiness(state.entities, businessId);
   const reviews = selectReviewsForBusiness(state.entities, business);
   const authors = state.entities.users;
-  return { businessId, business, reviews, authors};
+  const photos = state.entities.photos;
+  return { businessId, business, reviews, authors, photos};
 };
 
 const mapDispatchToProps = dispatch => ({

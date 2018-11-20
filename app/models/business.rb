@@ -3,6 +3,12 @@ class Business < ApplicationRecord
 
   has_many :reviews
 
+  has_many :uploads
+
+  has_many :photos,
+  through: :uploads,
+  source: :photo
+
   def self.in_bounds(bounds)
     self.where("lat < ?", bounds[:northEast][:lat])
         .where("lat > ?", bounds[:southWest][:lat])
@@ -14,7 +20,7 @@ class Business < ApplicationRecord
     if search
       arr = businesses.select {|biz| biz.category.downcase == search.downcase || biz.category.downcase.split(" ").include?(search.downcase)}
     end
-    arr.uniq 
+    arr.uniq
   end
 
   def average_rating

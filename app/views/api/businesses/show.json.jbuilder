@@ -12,7 +12,17 @@ end
 
   json.authors do
     json.set! review.author.id do
-      json.partial! 'api/users/user', user: review.author 
+      json.partial! 'api/users/user', user: review.author
     end
   end
 end
+
+json.photos do
+  @business.uploads.each do |up|
+    json.set! up.id do
+      json.url url_for(up.photo)
+      json.user_id up.user_id
+      json.business_id up.business_id
+    end
+  end
+end 

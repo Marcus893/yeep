@@ -9,11 +9,12 @@ export const receiveBusinesses = businesses => ({
   businesses
 });
 
-export const receiveBusiness = ({ business, reviews, authors }) => ({
+export const receiveBusiness = ({ business, reviews, authors, photos }) => ({
   type: RECEIVE_BUSINESS,
   business,
   reviews,
-  authors
+  authors,
+  photos
 });
 
 export const receiveReview = ({ review, average_rating, author }) => ({

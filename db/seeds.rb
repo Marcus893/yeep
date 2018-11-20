@@ -10,6 +10,8 @@
 Business.delete_all
 User.delete_all
 Review.delete_all
+Upload.delete_all
+
 
 b1 = Business.create!(
   body: 'nice cozy pub',
@@ -169,7 +171,7 @@ b14 = Business.create!(
 
 b15 = Business.create!(
   body: 'Missing Paris from your recent trip to France? Never been but looking for the cheapest hour long trip to France you can find in NYC? This restaurant is your ticket to an immersive experience.',
-  name: 'Amélie',
+  name: 'Amelie',
   lat: 40.732596,
   lng: -73.997721,
   category: 'restaurants',
@@ -331,7 +333,7 @@ u2 = User.create!(
 u3 = User.create!(
   firstname: 'Bob',
   lastname: 'Hiss',
-  email: '39e9ri@gmail.com',
+  email: '094ui@gmail.com',
   zipcode: 837998,
   password: '938473',
   img_url: "http://www.sayelbatimes.com/wp-content/uploads/2015/02/nicki-minaj.jpg"
@@ -800,3 +802,5 @@ Review.create!(
   A little note for the management staff at birch box... regardless of how much inventory needs to be stocked, acknowledging your guest will not only help your sales for the day but also get rid of the inventory that your staff was so keen on getting placed on the sales floor.",
   rating: 1
 )
+
+load 'db/seeds/upload_seeds.rb'
