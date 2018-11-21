@@ -7,5 +7,5 @@ export const selectReviewsForBusiness = ({ businesses, reviews }, business ) => 
 };
 
 export const asArray = ({ businesses }) => (
-  Object.keys(businesses).map(key => businesses[key])
+  Object.values(businesses)
 );

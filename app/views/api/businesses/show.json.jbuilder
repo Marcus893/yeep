@@ -1,6 +1,5 @@
 json.business do
   json.partial! '/api/businesses/business', business: @business
-  json.reviewIds @business.reviews.pluck(:id)
 end
 
 @business.reviews.includes(:author).each do |review|
@@ -25,4 +24,4 @@ json.photos do
       json.business_id up.business_id
     end
   end
-end 
+end

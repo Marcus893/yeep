@@ -47,7 +47,6 @@ class BusinessShow extends React.Component {
 
   render() {
 
-
     return (<div className="single-business-show">
 
               <SearchBar category={this.props.business.category} updateFilter={this.props.updateFilter} />
@@ -121,9 +120,9 @@ class BusinessShow extends React.Component {
               </div>
                 <div className="pic-box">
                   <div className="img-box">
-                    <img src={this.props.business.photos[0]} />
-                    <img src={this.props.photos[1]} />
-                    <img src={this.props.photos[2]} />
+                    <img src={this.props.photos[0] ? this.props.photos[0].url : ""} />
+                    <img src={this.props.photos[1] ? this.props.photos[1].url : ""} />
+                    <img src={this.props.photos[2] ? this.props.photos[2].url : ""} />
                   </div>
                 </div>
 
