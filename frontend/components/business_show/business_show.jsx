@@ -5,6 +5,7 @@ import ReviewFormContainer from './review_form_container';
 import { ProtectedRoute } from '../../util/route_util';
 import { ReviewLink } from '../../util/review_util';
 import ReviewListItemContainer from './review_list_item_container';
+import ImgBox from './img_box';
 import StarRating from './star_rating';
 import SearchBar from '../search/search_bar';
 
@@ -118,13 +119,9 @@ class BusinessShow extends React.Component {
                   </section>
                 </div>
               </div>
-                <div className="pic-box">
-                  <div className="img-box">
-                    <img src={this.props.photos[0] ? this.props.photos[0].url : ""} />
-                    <img src={this.props.photos[1] ? this.props.photos[1].url : ""} />
-                    <img src={this.props.photos[2] ? this.props.photos[2].url : ""} />
-                  </div>
-                </div>
+
+                  <ImgBox photos={this.props.photos} />
+                
 
             </div>
           </div>
