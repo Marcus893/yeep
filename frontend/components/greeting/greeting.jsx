@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import BigBar from './big_bar';
+import GreetingBusinesses from './greeting_businesses';
 
 class Greeting extends React.Component {
   constructor(props) {
@@ -13,6 +14,8 @@ class Greeting extends React.Component {
   }
 
   componentDidMount() {
+    this.props.fetchBusinesses();
+
     this.intervalId = setTimeout(this.update, 5000);
   }
 
@@ -59,6 +62,7 @@ class Greeting extends React.Component {
     const isLoggedIn = this.props.currentUser ? true : false;
     let button1;
     let button2;
+    let businesses;
 
     if(isLoggedIn) {
       button1 = <h2 className="header-name">Hi {this.props.currentUser.firstname}</h2>;
@@ -67,6 +71,15 @@ class Greeting extends React.Component {
       button1 = <Link className="loginbtn" to="/login">Log In</Link>;
       button2 = <Link className="signupbtn" to="/signup">Sign Up</Link>;
     }
+
+    if(this.props.businesses) {
+      businesses = this.props.businesses.slice(0, 3).map(business => (
+        <GreetingBusinesses key={business.id} business={business} />
+      ));
+    } else {
+      businesses = <div />;
+    }
+
     return (
     <div className="main-page">
       <div className={this.state.className}>
@@ -107,54 +120,7 @@ class Greeting extends React.Component {
         <div className="hot-businesses-container">
           <h3 className="header3">Hot & New Businesses</h3>
           <div className="new-biz-container">
-            <div  className="biz-box">
-              <div className="photo-box">
-                <a href={`#/businesses/1`}>
-                  <img className="biz-img" src="http://www.stphilips.us/wp-content/uploads/2018/08/pub-theology-image.jpg" />
-                </a>
-              </div>
-              <div className="info-box">
-                <a className="small-header" href="#/businesses/1">Fizgerald Pub</a>
-                <div className="pub-stars"></div>
-                <p className="reviews-counter">4 reviews</p>
-                <p className="price-counter">$</p>
-                <a className="category-link" onClick={this.handleClick("nightlife", this.props.updateFilter)}>Nightlife</a>
-                <p className="address">138 E 28th St, New York, NY 10021</p>
-                <p className="fire"><i className="fa fa-fire"></i>  opened 3 weeks ago</p>
-              </div>
-            </div>
-            <div  className="biz-box">
-              <div className="photo-box">
-                <a href="#/businesses/2">
-                  <img className="biz-img" src="https://bergenmama.com/images/uploads/made/images/uploads/Shumi_Sushi_and_Japanese_Restaurant_in_Ridgewood_NJ_740_385_c1.jpg" />
-                </a>
-              </div>
-              <div className="info-box">
-                <a className="small-header" href="#/businesses/2">Sushi Ryusei</a>
-                <div className="pub-stars"></div>
-                <p className="reviews-counter">17 reviews</p>
-                <p className="price-counter">$</p>
-                <a className="category-link" onClick={this.handleClick("restaurant", this.props.updateFilter)}>Restaurant</a>
-                <p className="address">160 E 38th St, New York, NY 10016</p>
-                <p className="fire"><i className="fa fa-fire"></i>  opened 5 weeks ago</p>
-              </div>
-            </div>
-            <div  className="biz-box">
-              <div className="photo-box">
-                <a href="#/businesses/3">
-                  <img className="biz-img" src="http://www.qualitycommercialcleaning.net/wp-content/uploads/2017/09/broomberg-home-cleaning-service.jpg" />
-                </a>
-              </div>
-              <div className="info-box">
-                <a className="small-header" href="#/businesses/3">Handy</a>
-                <div className="pub-stars"></div>
-                <p className="reviews-counter">8 reviews</p>
-                <p className="price-counter">$</p>
-                <a className="category-link" onClick={this.handleClick("home service", this.props.updateFilter)}>HomeService</a>
-                <p className="address">Serving New York and the Surrounding Area</p>
-                <p className="fire"><i className="fa fa-fire"></i>  opened 8 weeks ago</p>
-              </div>
-            </div>
+            {businesses}
           </div>
         </div>
         <div className="main-categories">

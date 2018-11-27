@@ -2,12 +2,11 @@ class Api::BusinessesController < ApplicationController
   before_action :require_logged_in, only: [:create]
 
   def index
-    businesses = bounds ? Business.in_bounds(bounds) : Business.all
+
+    businesses = params[:bounds] ? Business.in_bounds(params[:bounds]) : Business.all
     if params[:category]
       businesses = businesses.where(category: params[:category])
     end
-
-
     @businesses = businesses.includes(:reviews)
 
     render :index
@@ -25,11 +24,7 @@ class Api::BusinessesController < ApplicationController
   private
 
   def business_params
-    params.require(:business).permit(:lat, :lng, :body, :pic_url, :name, :category, :address, :phone)
-  end
-
-  def bounds
-    params[:bounds]
+    params.require(:business).permit(:lat, :lng, :body, :pic_url, :name, :category, :address, :phone, :bounds)
   end
 
 end

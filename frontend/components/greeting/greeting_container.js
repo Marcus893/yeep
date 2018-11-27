@@ -7,17 +7,19 @@ import { fetchBusinesses } from '../../actions/business_actions';
 
 
 const mapStateToProps = (state) => {
-  return {
-    currentUser: state.entities.users[state.session.id],
-    category: state.ui.filters.category,
-    businesses: Object.values(state.entities.businesses)
-  };
+
+  const currentUser = state.entities.users[state.session.id];
+  const category = state.ui.filters.category;
+  const businesses = Object.values(state.entities.businesses);
+
+  return { currentUser, category, businesses };
 };
 
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
   updateFilter: (filter, value) => dispatch(updateFilter(filter, value)),
   fetchBusinesses: () => dispatch(fetchBusinesses())
+
 });
 
 

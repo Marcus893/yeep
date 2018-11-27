@@ -10,7 +10,7 @@ const mapStateToProps = (state, { match }) => {
   const business = selectBusiness(state.entities, businessId);
   const reviews = Object.values(state.entities.reviews).filter(review => review.business_id == business.id);
   const authors = state.entities.users;
-  const photos = Object.values(state.entities.photos).filter(photo => photo.business_id == business.id);;
+  const photos = Object.values(state.entities.photos).filter(photo => photo.business_id == business.id);
 
   return { businessId, business, reviews, authors, photos};
 };

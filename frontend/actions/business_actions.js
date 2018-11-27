@@ -30,9 +30,14 @@ export const createReview = review => dispatch => (
   ))
 );
 
-export const fetchBusinesses = filters => {
+export const fetchBusinesses = filters => dispatch => (
+  APIUtil.fetchBusinesses(filters).then(businesses => dispatch(receiveBusinesses(businesses)))
+);
+
+
+export const requestBusinessesIndex = () => {
   return dispatch => {
-  return APIUtil.fetchBusinesses(filters).then(businesses => (
+    return APIUtil.fetchBusinessesIndex().then(businesses => (
       dispatch(receiveBusinesses(businesses))
     ));
   };
