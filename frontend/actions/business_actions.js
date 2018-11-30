@@ -35,14 +35,6 @@ export const fetchBusinesses = filters => dispatch => (
 );
 
 
-export const requestBusinessesIndex = () => {
-  return dispatch => {
-    return APIUtil.fetchBusinessesIndex().then(businesses => (
-      dispatch(receiveBusinesses(businesses))
-    ));
-  };
-};
-
 export const fetchBusiness = id => dispatch => (
   APIUtil.fetchBusiness(id).then(payload => (
     dispatch(receiveBusiness(payload))

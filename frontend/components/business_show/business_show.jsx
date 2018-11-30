@@ -4,13 +4,13 @@ import BusinessMap from '../business_map/business_map';
 import ReviewFormContainer from './review_form_container';
 import { ProtectedRoute } from '../../util/route_util';
 import { ReviewLink } from '../../util/review_util';
-import ReviewListItemContainer from './review_list_item_container';
 import ImgBox from './img_box';
 import StarRating from './star_rating';
 import SearchBar from '../search/search_bar';
+import { withRouter } from 'react-router-dom';
 
 
-// business, businessId, fetchBusiness, reviews, authors
+// business, businessId, fetchBusiness, reviews, users
 
 class BusinessShow extends React.Component {
   constructor(props) {
@@ -23,6 +23,7 @@ class BusinessShow extends React.Component {
 
   componentDidMount() {
     this.props.fetchBusiness(this.props.match.params.businessId);
+
   }
 
   componentWillReceiveProps(nextProps) {
@@ -31,13 +32,6 @@ class BusinessShow extends React.Component {
     }
   }
 
-  reviewList(reviews, authors) {
-    return this.props.reviews.reverse().map(review => {
-    return <ReviewListItemContainer
-      review={review}
-      key={review.id}
-      author={this.props.authors[review.author_id]}
-    />})}
 
   handleClick(cate, updateFilter){
       return e => (
@@ -47,6 +41,7 @@ class BusinessShow extends React.Component {
     }
 
   render() {
+    var ts = new Date();
 
     return (<div className="single-business-show">
 
@@ -121,7 +116,7 @@ class BusinessShow extends React.Component {
               </div>
 
                   <ImgBox photos={this.props.photos} />
-                
+
 
             </div>
           </div>
@@ -132,7 +127,48 @@ class BusinessShow extends React.Component {
         <div className="business-reviews">
           <h2>Recommended Reviews<span> for {this.props.business.name}</span></h2>
             <div className="review-list">
-              {this.reviewList(this.props.reviews, this.props.authors)}
+              {this.props.reviews.slice(0).reverse().map(review => {
+
+                return (
+                  <div className="business-page">
+                    <ul>
+                      <li className="review">
+                        <div className="review-container">
+                          <div className="user-info">
+                            <div className="profile-img">
+                              <img src={this.props.users[review.author_id] ? this.props.users[review.author_id].img_url : null} />
+                            </div>
+                          </div>
+                          <div className="info">
+                            <section className="name"><a>{this.props.users[review.author_id] ? this.props.users[review.author_id].firstname : null} {this.props.users[review.author_id] ? this.props.users[review.author_id].lastname.slice(0,1) : null}.</a></section>
+                            <section className="review-count">
+                              <div>
+                                <i className="fa fa-star"></i>
+                              </div>
+                              <span>{Math.floor(Math.random() * 100)}</span>
+                              <span className="light-weight">reviews</span>
+                            </section>
+                            <section className="photo-count">
+                              <i className="fa fa-camera"></i>
+                              <span>{Math.floor(Math.random() * 100)}</span>
+                              <span className="light-weight">photos</span>
+                            </section>
+                          </div>
+                        </div>
+                        <div className="review-info">
+                          <div className="review-content">
+                            <div className="rate">
+                              <StarRating rating={review.rating} />
+                              <span className="date"> {ts.toLocaleDateString()}</span>
+                            </div>
+                            <p className="body">{review.body}</p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                )})
+              }
             </div>
         </div>
         <div className="sidebar">
@@ -264,4 +300,4 @@ class BusinessShow extends React.Component {
 }
 }
 
-export default BusinessShow;
+export default withRouter(BusinessShow);

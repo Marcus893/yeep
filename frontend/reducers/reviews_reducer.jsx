@@ -1,5 +1,6 @@
 import merge from 'lodash/merge';
 import { RECEIVE_BUSINESS, RECEIVE_REVIEW } from '../actions/business_actions';
+import { RECEIVE_ALL_REVIEWS } from '../actions/review_actions';
 
 const reviewsReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -9,6 +10,8 @@ const reviewsReducer = (state = {}, action) => {
     case RECEIVE_REVIEW:
       const { review } = action;
       return merge({}, state, { [review.id]: review });
+    case RECEIVE_ALL_REVIEWS:
+      return action.reviews;
     default:
       return state;
   }

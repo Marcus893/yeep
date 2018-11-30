@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import BigBar from './big_bar';
 import GreetingBusinesses from './greeting_businesses';
+import GreetingReviews from './greeting_reviews';
 
 class Greeting extends React.Component {
   constructor(props) {
@@ -15,7 +16,7 @@ class Greeting extends React.Component {
 
   componentDidMount() {
     this.props.fetchBusinesses();
-
+    this.props.fetchAllReviews();
     this.intervalId = setTimeout(this.update, 5000);
   }
 
@@ -63,6 +64,7 @@ class Greeting extends React.Component {
     let button1;
     let button2;
     let businesses;
+    let reviews;
 
     if(isLoggedIn) {
       button1 = <h2 className="header-name">Hi {this.props.currentUser.firstname}</h2>;
@@ -78,6 +80,14 @@ class Greeting extends React.Component {
       ));
     } else {
       businesses = <div />;
+    }
+
+    if(this.props.reviews) {
+      reviews = this.props.reviews.map((review, idx) => (
+        <GreetingReviews key={idx} review={review} />
+      ));
+    } else {
+      reviews = <div />;
     }
 
     return (
@@ -123,6 +133,12 @@ class Greeting extends React.Component {
             {businesses}
           </div>
         </div>
+
+        <div className="greeting-review-container">
+            <h3 className="header3">Recent Activities</h3>
+            <div className="greeting-review">{reviews}</div>
+        </div>
+
         <div className="main-categories">
           <h3 className="header3">Browse Business By category</h3>
           <div className="category-boxes-container">

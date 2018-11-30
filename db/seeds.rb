@@ -19,7 +19,7 @@ b1 = Business.create!(
   lat: 40.740067,
   lng: -73.982470,
   category: 'nightlife',
-  pic_url: ["https://www.chelseapub.ca/public/images/gallery/dd4c40bd83bda793d99d6be019825787.jpg", "https://s3-media2.fl.yelpcdn.com/bphoto/l2opukqe0FiQs9jTHgrHKA/o.jpg", "https://s3-media4.fl.yelpcdn.com/bphoto/7QD970QvxM-emiIO7Zddhg/ls.jpg"],
+  pic_url: ["https://i2-prod.mirror.co.uk/incoming/article102241.ece/ALTERNATES/s615/pub-generic-pic-rex-features-282356997.jpg", "https://s3-media2.fl.yelpcdn.com/bphoto/l2opukqe0FiQs9jTHgrHKA/o.jpg", "https://s3-media4.fl.yelpcdn.com/bphoto/7QD970QvxM-emiIO7Zddhg/ls.jpg"],
   address: '336 3rd Ave, New York, NY 10010',
   phone: '(212) 679-6931'
 )
@@ -384,22 +384,22 @@ u8 = User.create!(
   img_url: "https://ewedit.files.wordpress.com/2015/01/jennifer-lawrence_240.jpg"
 )
 
-Review.create!(
-  business_id: b1.id,
-  author_id: u1.id,
-  body: "I would recommend this spot for those are looking for a good happy hour. The food is good although it is pricy for its quality lol. Still to kill hunger once you drink. Also music is okay. Even though it's an irish bar,  I think they can add more trap music because I see lots of younger than older people here. Nevertheless, they have lots of TVs for different sporting events thats going around. I would recommend.",
-  rating: 4
-)
 
 Review.create!(
-  business_id: b1.id,
-  author_id: u4.id,
-  body: "
-I've often walked by here, and it looked appealing so I stopped in for a sandwich and drink. 24 hours later, I'm still praying to my porcelain throne.
-
-Don't eat the chicken sandwich.",
-  rating: 1
+  business_id: b12.id,
+  author_id: u3.id,
+  body: "Went to the grand opening which was awesome, so I decided come back this past weekend with a few friends, and had an amazing time! The staff is incredible and was very accommodating to  all of our requests. I love the atmosphere, vibes, and the music. It's a lot different from all of the other nightclubs and bars in the city, and in a VERY good way! 5* I would highly recommend!",
+  rating: 5
 )
+
+
+Review.create!(
+  business_id: b14.id,
+  author_id: u2.id,
+  body: "What an incredible night! We came to celebrate my niece's 21st birthday (intimate group) and Martija, Amanda , and Juan made this an incredible night.  The service was impeccable- they were so attentive and made sure her day was special (even bringing out brownies at the end and singing happy birthday). Btw brownies were warm and also semi sweet. Just simply delicioso. As always the fish tacos are excellent and the ambience perfect.  Thank you Christina (corporate) for making this a memorable night.",
+  rating: 5
+)
+
 
 Review.create!(
   business_id: b1.id,
@@ -418,14 +418,14 @@ Review.create!(
   rating: 5
 )
 
-Review.create!(
-  business_id: b2.id,
-  author_id: u3.id,
-  body: "
-Nice rooftop lounge with both indoor and outdoor seating right smack in the middle of Chinatown, formerly where Silver Palace stood if I'm not mistaken. Decor is contemporary with great lively choice of music. Patrons are dressed to impress. The views of the city from the outdoor rooftop is spectacular. Expect to pay a pretty penny for drinks here, with cocktails at $15 a pop, and $10 for a bottled beer, excluding tip. Wait times for ordering drinks and using the bathroom can get pretty long during peak hours. On a positive note, there's no cover. Here's a tip: if the hotel asks, tell them you're staying at the hotel, and take the elevator to the rooftop. Otherwise, they send you through the restaurant next door, where a long line usually forms.
 
-I'd suggest coming here with a group of friends to open bottle service by the rooftop, which is probably your best bet for a fun filled weekend night.",
-  rating: 5
+
+Review.create!(
+  business_id: b26.id,
+  author_id: u3.id,
+  body: "Hmm... not sure what the bad reviews are about. I like this store, if you get a Birchbox in the mail, then that is exactly how this place is.  Only more items to purchase either in sample size or regular sizes.  Yes, the service here varies.  At times, the staff are super friendly and other times they just ignore you.  Whatever, I like looking around and if I need help and they continue to ignore me or give me an attitude then that's when I have a problem.  Also, if you have an appointment and miss it, expect that your name will be put on the bottom of the list.  That is just how it is, if you do not want that to happen then arrive on time for your appointment.
+  Cute Birchbox store, will definitely keep coming when I am around.",
+  rating: 3
 )
 
 
@@ -436,15 +436,11 @@ Review.create!(
   rating: 4
 )
 
+
 Review.create!(
-  business_id: b3.id,
-  author_id: u5.id,
-  body: "Absolutely delicious!
-Started with the aga tofu appetizer and it was the best I have ever eaten. Sake suggested by the server was soft, smooth, a bit fruity as requested, and chilled perfectly.
-The chirashi as the main course: surprising variety of very fresh sushi plated beautifully! First time my chirashi came with eggplant: great addition! Loved how the sushi rice was decorated with roe on top. The wasabi was obviously made from scratch as was the jalapeño relish.
-Completed the meal with Mochi ice cream:  vanilla, strawberry and green tea. The Mochi had a balanced blend of softness and texture with the sweet fresh ice cream in the center.
-My server was excellent, kind, and attentive! She even brought a cup of hot tea at the end just in case, and it hit the spot. Thank you!
-Definitely recommend dining here!",
+  business_id: b17.id,
+  author_id: u7.id,
+  body: "I cannot day enough good things about Damian and his team! I am relocating to NY from another state and needed my apartment repainted in a very short timeframe. I was only in town for 2 days to get estimates and my original painter cancelled on me. I contacted Damian after seeing his great reviews and he met me the very next day to assess my apartment. He was extremely through during our meeting and in the estimate he provided. I felt very confident in his expertise after our meeting and hired his team. They just wrapped up work on my apartment and it looks amazing! They have a high attention to detail and are very high quality. I have included before and after pictures below for reference. Thank you Damian!",
   rating: 5
 )
 
@@ -582,11 +578,12 @@ Review.create!(
 )
 
 Review.create!(
-  business_id: b12.id,
-  author_id: u3.id,
-  body: "Went to the grand opening which was awesome, so I decided come back this past weekend with a few friends, and had an amazing time! The staff is incredible and was very accommodating to  all of our requests. I love the atmosphere, vibes, and the music. It's a lot different from all of the other nightclubs and bars in the city, and in a VERY good way! 5* I would highly recommend!",
-  rating: 5
+  business_id: b1.id,
+  author_id: u1.id,
+  body: "I would recommend this spot for those are looking for a good happy hour. The food is good although it is pricy for its quality lol. Still to kill hunger once you drink. Also music is okay. Even though it's an irish bar,  I think they can add more trap music because I see lots of younger than older people here. Nevertheless, they have lots of TVs for different sporting events thats going around. I would recommend.",
+  rating: 4
 )
+
 
 Review.create!(
   business_id: b13.id,
@@ -632,11 +629,16 @@ Review.create!(
 )
 
 Review.create!(
-  business_id: b14.id,
-  author_id: u2.id,
-  body: "What an incredible night! We came to celebrate my niece's 21st birthday (intimate group) and Martija, Amanda , and Juan made this an incredible night.  The service was impeccable- they were so attentive and made sure her day was special (even bringing out brownies at the end and singing happy birthday). Btw brownies were warm and also semi sweet. Just simply delicioso. As always the fish tacos are excellent and the ambience perfect.  Thank you Christina (corporate) for making this a memorable night.",
-  rating: 5
+  business_id: b1.id,
+  author_id: u4.id,
+  body: "
+I've often walked by here, and it looked appealing so I stopped in for a sandwich and drink. 24 hours later, I'm still praying to my porcelain throne.
+
+Don't eat the chicken sandwich.",
+  rating: 1
 )
+
+
 
 Review.create!(
   business_id: b15.id,
@@ -687,9 +689,14 @@ Review.create!(
 )
 
 Review.create!(
-  business_id: b17.id,
-  author_id: u7.id,
-  body: "I cannot day enough good things about Damian and his team! I am relocating to NY from another state and needed my apartment repainted in a very short timeframe. I was only in town for 2 days to get estimates and my original painter cancelled on me. I contacted Damian after seeing his great reviews and he met me the very next day to assess my apartment. He was extremely through during our meeting and in the estimate he provided. I felt very confident in his expertise after our meeting and hired his team. They just wrapped up work on my apartment and it looks amazing! They have a high attention to detail and are very high quality. I have included before and after pictures below for reference. Thank you Damian!",
+  business_id: b3.id,
+  author_id: u5.id,
+  body: "Absolutely delicious!
+Started with the aga tofu appetizer and it was the best I have ever eaten. Sake suggested by the server was soft, smooth, a bit fruity as requested, and chilled perfectly.
+The chirashi as the main course: surprising variety of very fresh sushi plated beautifully! First time my chirashi came with eggplant: great addition! Loved how the sushi rice was decorated with roe on top. The wasabi was obviously made from scratch as was the jalapeño relish.
+Completed the meal with Mochi ice cream:  vanilla, strawberry and green tea. The Mochi had a balanced blend of softness and texture with the sweet fresh ice cream in the center.
+My server was excellent, kind, and attentive! She even brought a cup of hot tea at the end just in case, and it hit the spot. Thank you!
+Definitely recommend dining here!",
   rating: 5
 )
 
@@ -785,12 +792,16 @@ Review.create!(
 )
 
 Review.create!(
-  business_id: b26.id,
+  business_id: b2.id,
   author_id: u3.id,
-  body: "Hmm... not sure what the bad reviews are about. I like this store, if you get a Birchbox in the mail, then that is exactly how this place is.  Only more items to purchase either in sample size or regular sizes.  Yes, the service here varies.  At times, the staff are super friendly and other times they just ignore you.  Whatever, I like looking around and if I need help and they continue to ignore me or give me an attitude then that's when I have a problem.  Also, if you have an appointment and miss it, expect that your name will be put on the bottom of the list.  That is just how it is, if you do not want that to happen then arrive on time for your appointment.
-  Cute Birchbox store, will definitely keep coming when I am around.",
-  rating: 3
+  body: "
+Nice rooftop lounge with both indoor and outdoor seating right smack in the middle of Chinatown, formerly where Silver Palace stood if I'm not mistaken. Decor is contemporary with great lively choice of music. Patrons are dressed to impress. The views of the city from the outdoor rooftop is spectacular. Expect to pay a pretty penny for drinks here, with cocktails at $15 a pop, and $10 for a bottled beer, excluding tip. Wait times for ordering drinks and using the bathroom can get pretty long during peak hours. On a positive note, there's no cover. Here's a tip: if the hotel asks, tell them you're staying at the hotel, and take the elevator to the rooftop. Otherwise, they send you through the restaurant next door, where a long line usually forms.
+
+I'd suggest coming here with a group of friends to open bottle service by the rooftop, which is probably your best bet for a fun filled weekend night.",
+  rating: 5
 )
+
+
 
 Review.create!(
   business_id: b26.id,

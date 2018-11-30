@@ -1,0 +1,92 @@
+.greeting-review-container {
+  width: 960px;
+}
+
+.greeting-review {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.activity-review-container {
+  width: 300px;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  margin-top: 50px;
+  height: fit-content;
+}
+
+.activity-user {
+  display: flex;
+  margin: 10px;
+  border-bottom: 1px solid #e6e6e6;
+  height: 40px;
+  justify-content: flex-start;
+}
+
+.review-user-pic {
+  width: 30px;
+  height: 30px;
+}
+
+.review-user-info {
+  margin-top: -20px;
+  margin-left: 10px;
+}
+
+.review-user-info p {
+  margin-top: -20px;
+
+}
+
+.review-user-name {
+  color: #0073bb;
+}
+
+.review-biz-pic {
+  border-bottom: 1px solid #e6e6e6;
+  margin: 10px;
+  height: 300px;
+}
+
+.activity-review-body {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.review-biz-pic img {
+  width: 250px;
+  height: 250px;
+  margin-left: 15px;
+}
+
+.greeting-review-rating {
+  margin-left: 10px;
+}
+
+
+.activity-review-wrapper {
+  margin: 10px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.greeting-review-icon {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5px;
+}
+
+.three-icons {
+  display: flex;
+  width: 100px;
+  justify-content: space-between;
+  margin-left: -70px;
+  font-size: 25px;
+  color: #666;
+}
+
+.one-icon {
+  font-size: 25px;
+  color: #666;
+  margin-right: -70px;
+}
