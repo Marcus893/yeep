@@ -1,3 +1,11 @@
+.recent-activities-header {
+  color: #D32323;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 40px;
+}
+
 .greeting-review-container {
   width: 960px;
 }
@@ -6,6 +14,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: -30px;
 }
 
 .activity-review-container {
@@ -89,4 +98,20 @@
   font-size: 25px;
   color: #666;
   margin-right: -70px;
+}
+
+.orange {
+  color: orange;
+}
+
+.blue {
+  color: blue;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
 }

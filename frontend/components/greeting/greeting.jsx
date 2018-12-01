@@ -135,7 +135,7 @@ class Greeting extends React.Component {
         </div>
 
         <div className="greeting-review-container">
-            <h3 className="header3">Recent Activities</h3>
+            <h3 className="recent-activities-header">Recent Activities</h3>
             <div className="greeting-review">{reviews}</div>
         </div>
 

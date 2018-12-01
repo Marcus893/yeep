@@ -4,7 +4,43 @@ import StarRating from "../business_show/star_rating";
 
 
 class GreetingReviews extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isBlueActive: false,
+      isGreenActive: false,
+      isOrangeActive: false,
+      isRedActive: false
+    };
+    this.onBlueClick = this.onBlueClick.bind(this)
+    this.onGreenClick = this.onGreenClick.bind(this)
+    this.onOrangeClick = this.onOrangeClick.bind(this)
+    this.onRedClick = this.onRedClick.bind(this)
+  }
 
+  onBlueClick() {
+    this.setState({
+      isBlueActive: !this.state.isBlueActive
+    })
+  }
+
+  onGreenClick() {
+    this.setState({
+      isGreenActive: !this.state.isGreenActive
+    })
+  }
+
+  onOrangeClick() {
+    this.setState({
+      isOrangeActive: !this.state.isOrangeActive
+    })
+  }
+
+  onRedClick() {
+    this.setState({
+      isRedActive: !this.state.isRedActive
+    })
+  }
 
   render() {
     const review = this.props.review;
@@ -35,18 +71,18 @@ class GreetingReviews extends React.Component {
 
         <div className="activity-review-wrapper">
           <StarRating rating={review.rating} />
-          <div className="activity-review-body">{review.body}</div>
+          <div className="activity-review-body">{review.body.length > 200 ? review.body.slice(0, 200) + " ......" : review.body }<Link to={`/businesses/${business.id}`}>View More</Link></div>
         </div>
 
         <div className="greeting-review-icon">
           <div className="three-icons">
-            <i className="fa fa-check-circle-o" aria-hidden="true"></i>
-            <i className="fa fa-smile-o" aria-hidden="true"></i>
-            <i className="fa fa-star-o" aria-hidden="true"></i>
+            <i onClick={this.onOrangeClick} className={this.state.isOrangeActive ? 'fa fa-check-circle-o orange' : 'fa fa-check-circle-o'} aria-hidden="true"></i>
+            <i onClick={this.onBlueClick} className={this.state.isBlueActive ? "fa fa-smile-o blue" : "fa fa-smile-o"} aria-hidden="true"></i>
+            <i onClick={this.onGreenClick} className={this.state.isGreenActive ? "fa fa-star-o green" : "fa fa-star-o"} aria-hidden="true"></i>
           </div>
 
           <div className="one-icon">
-            <i className="fa fa-thumbs-o-up" aria-hidden="true"></i>
+            <i onClick={this.onRedClick} className={this.state.isRedActive ? "fa fa-thumbs-o-up red" : "fa fa-thumbs-o-up"} aria-hidden="true"></i>
           </div>
         </div>
       </div>
