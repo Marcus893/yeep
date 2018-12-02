@@ -9,7 +9,7 @@ This app is a yelp clone aim at having the same functionalities and styling as y
 The frontend web application was written in JavaScript's react library for reuseable and modular code. It was used in conjunction with the Redux framework to add in the benefits of a unidirectional data flow which made the application easier to debug. The backend was built in rails to handle data receiving from the frontend, and the data is stored in PostgreSQL.
 
 
-## features
+## Features
 
 ![screenshot from 2018-12-01 22-17-48](https://user-images.githubusercontent.com/38970716/49335274-804b3480-f5b8-11e8-8b48-071d56b72dbf.png)
 1.  Refreshing and modular layout by utilizing react component on the business page, user can click on the marker on the map to be taken to the google map route page, or toggle around the image slider to see different uploaded pictures. By clicking on the review button user will be taken to a review form; he can then select how many stars he wants to give the business, also leave comments below. After submitting the review the business page would rerender and shows the new review on top of the review section.
