@@ -16,9 +16,7 @@ The frontend web application was written in JavaScript's react library for reuse
 
 ![screenshot from 2018-12-01 20-28-05](https://user-images.githubusercontent.com/38970716/49335334-8beb2b00-f5b9-11e8-9e0c-68c11a8d8254.png)
 2. Architected an image slider from scratch to make the user experience more smooth and authentic; the slider autocenters on the middle image, combined with visual CSS effect. User can also upload images himself, by clicking on the "upload photo" button, the page redirects to the upload page where user can drag and drop images from his local files. New uploaded photos will be added to the front of the slider. Show in the screenshots below.
-![screenshot from 2018-12-01 18-30-48](https://user-images.githubusercontent.com/38970716/49335388-98bc4e80-f5ba-11e8-870f-4d5aafc9eadb.png)
-
-![screenshot from 2018-12-01 18-30-00](https://user-images.githubusercontent.com/38970716/49335392-affb3c00-f5ba-11e8-9e64-98dc2da866c2.png)
+![screenshot from 2018-12-01 18-30-48](https://user-images.githubusercontent.com/38970716/49335388-98bc4e80-f5ba-11e8-870f-4d5aafc9eadb.png)![screenshot from 2018-12-01 18-30-00](https://user-images.githubusercontent.com/38970716/49335392-affb3c00-f5ba-11e8-9e64-98dc2da866c2.png)
 
 3. filtering using longitude, latitude and booundries to make searched businesses show up in the map. The database was designed to require every business to contain its coordinates. Then an event listener and the google maps API were used to retrieve the northeastern and southwestern bounds of the map. Once the bounds were received, an ajax request was made to retrieve all the businesses within the maps bounds through the filter and markers manager. Finally, the updated state would trigger a re-render of the businesses index and the index would populate with the available listings in the specified area, seamlessly in real time.
 
