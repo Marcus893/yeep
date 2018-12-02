@@ -3,7 +3,7 @@
 [Live](https://firstyeep.herokuapp.com/)
 
 ## Summary
-This app is a yelp clone aim at having the same functionalities as yelp, users can signup/login as well as search for businessses they are interested in. The maps give the locations of the businesses and the reviews on the business page summarize how good or bad the business is.
+This app is a yelp clone aim at having the same functionalities and styling as yelp, users can signup/login as well as search for businessses they are interested in by categories. The map gives the locations of the businesses; the reviews and ratings on the business page summarize how good or bad the business is. User can also log in to post a review for a business and upload a photo.
 
 ## Technology
 The frontend web application was written in JavaScript's react library for reuseable and modular code. It was used in conjunction with the Redux framework to add in the benefits of a unidirectional data flow which made the application easier to debug. The backend was built in rails to handle data receiving from the frontend, and the data is stored in PostgreSQL.
