@@ -10,9 +10,16 @@ The frontend web application was written in JavaScript's react library for reuse
 
 
 ## features
-1. used a react package to render the star rating system and made the user experience more smooth and authentic, the user can click on the review button on the business page and be taken to a review form; he or she can then select how many stars they want to give the business, and also leave comments below. After submitting the review the business page would rerender and shows the new review only when the user is logged in, which prevents unlogged in users to submit reviews.
-![screenshot from 2018-10-01 11-17-01](https://user-images.githubusercontent.com/38970716/46299002-69fc0a80-c56e-11e8-9606-fae9e89c33da.png)
 
-2. filtering using longitude, latitude and booundries to make relevant businesses show up in the map within the boundries while without showing other irrelevant businesses the user didn't search for. The database was designed to require every business to contain its coordinates. Then an event listener and the google maps API were used to retrieve the northeastern and southwestern bounds of the map. Once the bounds were received, an ajax request was made to retrieve all the businesses within the maps bounds through the filter and markers manager. Finally, the updated state would trigger a re-render of the businesses index and the index would populate with the available listings in the specified area, seamlessly in real time.
+![screenshot from 2018-12-01 22-17-48](https://user-images.githubusercontent.com/38970716/49335274-804b3480-f5b8-11e8-8b48-071d56b72dbf.png)
+1.  Refreshing and modular layout by utilizing react component on the business page, user can click on the marker on the map to be taken to the google map route page, or toggle around the image slider to see different uploaded pictures. By clicking on the review button user will be taken to a review form; he can then select how many stars he wants to give the business, also leave comments below. After submitting the review the business page would rerender and shows the new review on top of the review section.
+
+![screenshot from 2018-12-01 20-28-05](https://user-images.githubusercontent.com/38970716/49335334-8beb2b00-f5b9-11e8-9e0c-68c11a8d8254.png)
+2. Architected an image slider from scratch to make the user experience more smooth and authentic; the slider autocenters on the middle image, combined with visual CSS effect. User can also upload images himself, by clicking on the "upload photo" button, the page redirects to the upload page where user can drag and drop images from his local files. New uploaded photos will be added to the front of the slider. Show in the screenshots below.
+![screenshot from 2018-12-01 18-30-48](https://user-images.githubusercontent.com/38970716/49335388-98bc4e80-f5ba-11e8-870f-4d5aafc9eadb.png)
+
+![screenshot from 2018-12-01 18-30-00](https://user-images.githubusercontent.com/38970716/49335392-affb3c00-f5ba-11e8-9e64-98dc2da866c2.png)
+
+3. filtering using longitude, latitude and booundries to make relevant businesses show up in the map within the boundries while without showing other irrelevant businesses the user didn't search for. The database was designed to require every business to contain its coordinates. Then an event listener and the google maps API were used to retrieve the northeastern and southwestern bounds of the map. Once the bounds were received, an ajax request was made to retrieve all the businesses within the maps bounds through the filter and markers manager. Finally, the updated state would trigger a re-render of the businesses index and the index would populate with the available listings in the specified area, seamlessly in real time.
 ![screenshot from 2018-10-01 11-15-54](https://user-images.githubusercontent.com/38970716/46299048-85671580-c56e-11e8-9006-aac22c93a386.png)
 
