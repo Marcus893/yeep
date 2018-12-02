@@ -8,7 +8,7 @@ class Greeting extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      className: "background1"
+      classname: "background1"
     };
     this.update = this.update.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -17,37 +17,35 @@ class Greeting extends React.Component {
   componentDidMount() {
     this.props.fetchBusinesses();
     this.props.fetchAllReviews();
-    this.intervalId = setTimeout(this.update, 5000);
-  }
-
-  componentWillUpdate() {
-    this.intervalId = setTimeout(this.update, 5000);
+    this.intervalId = setInterval(this.update, 3000);
   }
 
   componentWillUnmount() {
     clearInterval(this.intervalId);
   }
 
+
+
   update() {
-    if(this.state.className === "background1") {
+    if(this.state.classname === "background1") {
       this.setState({
-        className: "background2"
+        classname: "background2"
       });
-    } else if(this.state.className === "background2") {
+    } else if(this.state.classname === "background2") {
       this.setState({
-        className: "background3"
+        classname: "background3"
       });
-    } else if(this.state.className === "background3") {
+    } else if(this.state.classname === "background3") {
       this.setState({
-        className: "background4"
+        classname: "background4"
       });
-    } else if(this.state.className === "background4") {
+    } else if(this.state.classname === "background4") {
       this.setState({
-        className: "background5"
+        classname: "background5"
       });
-    } else if(this.state.className === "background5") {
+    } else if(this.state.classname === "background5") {
       this.setState({
-        className: "background1"
+        classname: "background1"
       });
     }
   }
@@ -92,7 +90,7 @@ class Greeting extends React.Component {
 
     return (
     <div className="main-page">
-      <div className={this.state.className}>
+      <div className={this.state.classname}>
 
         <nav className="auth">
           <div className="write-a-review">

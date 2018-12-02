@@ -569,6 +569,9 @@ select {
   height: 100px;
   margin-top: 30px;
   left: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 .reviewbtn {
@@ -584,6 +587,99 @@ select {
   justify-content: center;
   align-items: center;
 
+}
+
+.upload-photo-btn {
+  height: 30px;
+  width: 120px;
+  margin-top: 5px;
+}
+
+.upload-photo-btn a {
+  color: #666;
+}
+
+.half-line {
+  max-width: 80%;
+  margin: 18px auto;
+  border: none;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid transparent;
+  text-align: center;
+}
+
+.drop {
+  width: 936px;
+  margin: 50px auto;
+  padding: 120px 0;
+  box-sizing: border-box;
+  border: 5px dashed #999;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.upload-box button {
+  height: 35px;
+  width: 130px;
+  border: 1px solid #8d0005;
+  background-color: #d32323;
+  color: white;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+}
+
+.another {
+  color: #0073bb;
+  font-size: 14px;
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.preview {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.preview img {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 30px;
+}
+
+.upload-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.upload-btn button {
+  text-align: center;
+  height: 34px;
+  width: 134px;
+  border: 1px solid #8d0005;
+  background-color: #d32323;
+  color: white;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  border-radius: 3px;
+  margin-bottom: 25px;
+}
+
+.upload-pic {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+}
+
+.single-pic p {
+  color: #999;
+  font-weight: normal;
+  width: 170px;
 }
 
 .map-and-pic {
@@ -970,15 +1066,6 @@ dl {
   display: flex;
 }
 
-/* .picture-container {
-  width: 210px;
-  height: 210px;
-  border-radius: 4px;
-  position: relative;
-  overflow: hidden;
-  margin-right: 18px;
-} */
-
 .info-container {
   width: 402px;
   height: 210px;
@@ -990,16 +1077,17 @@ dl {
   margin-bottom: 20px;
 }
 
-.info-left {
+.information-left {
   width: 250px;
   height: auto;
 }
 
-.info-right {
+.information-right {
   display: flex;
   flex-direction: column;
   text-align: right;
   font-size: 14px;
+  margin-top: 30px;
 }
 
 .info-bottom {

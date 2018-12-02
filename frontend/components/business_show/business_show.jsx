@@ -70,6 +70,14 @@ class BusinessShow extends React.Component {
                     component={ReviewFormContainer}
                   />
                 </div>
+                  <button className='upload-photo-btn'>
+                    <Link to={`/businesses/${this.props.businessId}/add_photo`}>
+
+                        <i className="fa fa-camera-retro" aria-hidden="true"></i>
+                        Add Photo
+                    
+                    </Link>
+                  </button>
               </div>
             </div>
             <div className="map-and-pic">
@@ -115,7 +123,7 @@ class BusinessShow extends React.Component {
                 </div>
               </div>
 
-                  <ImgBox photos={this.props.photos} />
+                  <ImgBox photos={this.props.photos.slice(0).reverse()} />
 
 
             </div>

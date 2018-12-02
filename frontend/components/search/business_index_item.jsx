@@ -25,7 +25,7 @@ class IndexItem extends React.Component {
           </div>
           <div className="info-container">
             <div className="info-top">
-              <div className="info-left">
+              <div className="information-left">
                 <h1><a href={`#/businesses/${this.props.business.id}`}>{name}</a></h1>
                 <section>
                   <StarRating rating={this.props.business.average_rating} />
@@ -33,7 +33,7 @@ class IndexItem extends React.Component {
                   <span>$$ {category}</span>
                 </section>
               </div>
-              <div className="info-right">
+              <div className="information-right">
                 <span>{phone}</span>
                 <span>{address}</span>
               </div>

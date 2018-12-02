@@ -9,6 +9,7 @@ import SearchContainer from './search/search_container';
 import BusinessShowContainer from './business_show/business_show_container';
 import ReviewFormContainer from './business_show/review_form_container';
 import WriteReviewContainer from './search/write_review_container';
+import UploadContainer from './upload/upload_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
@@ -16,6 +17,7 @@ const App = () => (
     <AuthRoute exact path="/login" component={LoginFormContainer} />
     <AuthRoute exact path="/signup" component={SignupFormContainer} />
     <Route exact path="/businesses/:businessId" component={BusinessShowContainer} />
+    <ProtectedRoute exact path="/businesses/:businessId/add_photo" component={UploadContainer} />
     <Route exact path="/search" component={SearchContainer} />
     <Route exact path="/" component={GreetingContainer} />
     <ProtectedRoute exact path="/businesses/:businessId/review" component={ReviewFormContainer} />
