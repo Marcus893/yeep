@@ -19,7 +19,7 @@ b1 = Business.create!(
   lat: 40.740067,
   lng: -73.982470,
   category: 'nightlife',
-  pic_url: ["https://i2-prod.mirror.co.uk/incoming/article102241.ece/ALTERNATES/s615/pub-generic-pic-rex-features-282356997.jpg", "https://s3-media2.fl.yelpcdn.com/bphoto/l2opukqe0FiQs9jTHgrHKA/o.jpg", "https://s3-media4.fl.yelpcdn.com/bphoto/7QD970QvxM-emiIO7Zddhg/ls.jpg"],
+  pic_url: "https://i2-prod.mirror.co.uk/incoming/article102241.ece/ALTERNATES/s615/pub-generic-pic-rex-features-282356997.jpg",
   address: '336 3rd Ave, New York, NY 10010',
   phone: '(212) 679-6931'
 )
@@ -31,7 +31,7 @@ b2 = Business.create!(
   lat: 40.748378,
   lng: -73.975209,
   category: 'restaurants',
-  pic_url: ["https://cdn.vox-cdn.com/uploads/chorus_image/image/38664864/miami-lure-fishbar-sushi-414.0.jpg", "https://s3-media2.fl.yelpcdn.com/bphoto/XafguJKo8IHJZY3fAgK-ag/ls.jpg", "https://s3-media2.fl.yelpcdn.com/bphoto/bmx2oObtubmcdZK-9_ZLSw/ls.jpg"],
+  pic_url: "https://cdn.vox-cdn.com/uploads/chorus_image/image/38664864/miami-lure-fishbar-sushi-414.0.jpg",
   address: '216 E 39th St, New York, NY 10016',
   phone: '(212) 983-8880'
 )
@@ -42,7 +42,7 @@ b3 = Business.create!(
   lat: 40.764979,
   lng: -73.977895,
   category: 'home service',
-  pic_url: ["https://pas-wordpress-media.s3.amazonaws.com/content/uploads/2018/01/cleaning-service.jpg", "https://s3-media1.fl.yelpcdn.com/bphoto/igqh6sv2QrzT8OeaWlHPgg/ls.jpg", "https://s3-media4.fl.yelpcdn.com/bphoto/fqYEqRwVdh7HDVztwszxig/o.jpg"],
+  pic_url: "https://pas-wordpress-media.s3.amazonaws.com/content/uploads/2018/01/cleaning-service.jpg",
   address: '60 2nd Ave, New York, NY 10022',
   phone: '(718) 427-4640'
 )
@@ -53,7 +53,7 @@ b4 = Business.create!(
   lat: 40.716095,
   lng: -74.008585,
   category: 'restaurants',
-  pic_url: ["https://s3-media1.fl.yelpcdn.com/bphoto/wrOGPch2IZZ0xc0nJfzt8Q/ls.jpg", "https://s3-media2.fl.yelpcdn.com/bphoto/DEg2xTS--6ENrmAz-A6OXA/ls.jpg", "https://s3-media2.fl.yelpcdn.com/bphoto/X7u-h6qM9EMxqvcR5FXP0w/ls.jpg"],
+  pic_url: "https://s3-media1.fl.yelpcdn.com/bphoto/wrOGPch2IZZ0xc0nJfzt8Q/ls.jpg",
   address: '112 Reade St, New York, NY 10013',
   phone: '(646) 882-0666'
 )
@@ -65,7 +65,7 @@ b5 = Business.create!(
   lat: 40.717019,
   lng: -73.995165,
   category: 'nightlife',
-  pic_url: ["https://s3-media4.fl.yelpcdn.com/bphoto/mA3457kUSZwEEB7g0EEvLQ/ls.jpg", "https://s3-media2.fl.yelpcdn.com/bphoto/Bi8aBZTHtwsGPtOCKbV7pA/o.jpg", "https://s3-media1.fl.yelpcdn.com/bphoto/f3yzLFvpj_8tviiCPJPsOA/o.jpg"],
+  pic_url: "https://s3-media4.fl.yelpcdn.com/bphoto/mA3457kUSZwEEB7g0EEvLQ/ls.jpg",
   address: '93 Bowery, New York, NY 10002',
   phone: '(212) 966-9033'
 )
@@ -76,7 +76,7 @@ b6 = Business.create!(
   lat: 40.758359,
   lng: -73.93170,
   category: 'home service',
-  pic_url: ["http://wecleandubai.com/wp-content/uploads/2018/08/15-Most-Neglected-Areas-to-Clean-in-Business-Environment.jpg", "https://s3-media3.fl.yelpcdn.com/bphoto/hN_oCyyyeuZa9fW85K7-sg/ls.jpg", "https://s3-media3.fl.yelpcdn.com/bphoto/4PR5T3s3JcwP4Xvz_XOi9g/o.jpg"],
+  pic_url: "http://wecleandubai.com/wp-content/uploads/2018/08/15-Most-Neglected-Areas-to-Clean-in-Business-Environment.jpg",
   address: '247 W 38th St #601, New York, NY 10018',
   phone: '(212) 876-1000'
 )
@@ -87,7 +87,7 @@ b7 = Business.create!(
   lat: 40.775893,
   lng: -73.958990,
   category: 'home service',
-  pic_url: ["https://www.maids.com/media/1255/bigstock-197197558.jpg", "https://s3-media4.fl.yelpcdn.com/bphoto/Jh7aIWeJMTjww9sSv6Ziag/o.jpg", "https://s3-media3.fl.yelpcdn.com/bphoto/nXGwJ5tnQaBv4a1QqY4UiQ/o.jpg"],
+  pic_url: "https://www.maids.com/media/1255/bigstock-197197558.jpg",
   address: '322 8th Ave, New York, NY 10001',
   phone: '(212) 255-5025'
 )
@@ -98,7 +98,7 @@ b8 = Business.create!(
   lat: 40.711222,
   lng: -74.006211,
   category: 'dry cleaning',
-  pic_url: ["https://s3-media2.fl.yelpcdn.com/bphoto/0QhM6FZgIZD8GNUj-0iTOw/ls.jpg", "https://s3-media1.fl.yelpcdn.com/bphoto/tPLu23O_Yp2GKnRywg2rBw/ls.jpg", "https://s3-media1.fl.yelpcdn.com/bphoto/oJrqvDlqIoZUgPmURHWk7w/o.jpg"],
+  pic_url: "https://s3-media2.fl.yelpcdn.com/bphoto/0QhM6FZgIZD8GNUj-0iTOw/ls.jpg",
   address: '140 Nassau St, New York, NY 10038',
   phone: '(212) 608-0111'
 )
@@ -109,7 +109,7 @@ b9 = Business.create!(
   lat: 40.764102,
   lng: -73.997508,
   category: 'auto',
-  pic_url: ["https://s3-media4.fl.yelpcdn.com/bphoto/Mxz_Ml6dIZYoDymTGuj0Qg/ls.jpg", "https://s3-media1.fl.yelpcdn.com/bphoto/AWA1s_Mo4imiGzJuod5sNQ/ls.jpg", "https://s3-media4.fl.yelpcdn.com/bphoto/1almdEYS3o3B6HmjAQubHw/o.jpg"],
+  pic_url: "https://s3-media4.fl.yelpcdn.com/bphoto/Mxz_Ml6dIZYoDymTGuj0Qg/ls.jpg",
   address: '621 W 46th St, New York, NY 10036',
   phone: '(212) 255-8939'
 )
@@ -120,7 +120,7 @@ b10 = Business.create!(
   lat: 40.758745,
   lng: -73.985923,
   category: 'shopping',
-  pic_url: ["https://s3-media1.fl.yelpcdn.com/bphoto/Y6vIRdiXaZ2amYS7Tmeb_g/ls.jpg", "https://s3-media1.fl.yelpcdn.com/bphoto/w8fZmheS1aQs548UzEjFUA/ls.jpg", "https://s3-media2.fl.yelpcdn.com/bphoto/kz9jLmk8R0vthjJ2JNAEyQ/ls.jpg"],
+  pic_url: "https://s3-media1.fl.yelpcdn.com/bphoto/Y6vIRdiXaZ2amYS7Tmeb_g/ls.jpg",
   address: '625 8th Ave #201, New York, NY 10018',
   phone: '(212) 564-6030'
 )
@@ -131,7 +131,7 @@ b11 = Business.create!(
   lat: 40.748434,
   lng: -73.988383,
   category: 'beauty',
-  pic_url: ["https://s3-media4.fl.yelpcdn.com/bphoto/s0JgcsrDlIEnH-lFjmY13A/ls.jpg", "https://s3-media4.fl.yelpcdn.com/bphoto/cdsTnjw_3SgajCotzrgxnQ/o.jpg", "https://s3-media1.fl.yelpcdn.com/bphoto/iScTdjRdEhH6TutvnykvWA/o.jpg"],
+  pic_url: "https://s3-media4.fl.yelpcdn.com/bphoto/s0JgcsrDlIEnH-lFjmY13A/ls.jpg",
   address: '1265 Broadway, New York, NY 10001',
   phone: '(917) 409-0378'
 )
@@ -142,7 +142,7 @@ b12 = Business.create!(
   lat: 40.741745,
   lng: -74.005805,
   category: 'nightlife',
-  pic_url: ["https://s3-media3.fl.yelpcdn.com/bphoto/m3TMipU55pL9JkmBP-d6Ow/ls.jpg", "https://s3-media2.fl.yelpcdn.com/bphoto/H4lQS-jsHcTqumDNOiEOqg/ls.jpg", "https://s3-media2.fl.yelpcdn.com/bphoto/S50PdwCBgdea5x1GHW3hiA/o.jpg"],
+  pic_url: "https://s3-media3.fl.yelpcdn.com/bphoto/m3TMipU55pL9JkmBP-d6Ow/ls.jpg",
   address: '408 W 15th St New York, NY 10011',
   phone: '(917) 648-0376'
 )
@@ -153,7 +153,7 @@ b13 = Business.create!(
   lat: 40.759784,
   lng: -73.996469,
   category: 'nightlife',
-  pic_url: ["https://s3-media1.fl.yelpcdn.com/bphoto/B6b9gCEEnVQiQJ_1BORivg/ls.jpg", "https://s3-media2.fl.yelpcdn.com/bphoto/zPb4xjvKEN7BcFUgw2YBAQ/ls.jpg", "https://s3-media4.fl.yelpcdn.com/bphoto/2ITYF8BPLnBgAqByDe6cEQ/ls.jpg"],
+  pic_url: "https://s3-media1.fl.yelpcdn.com/bphoto/B6b9gCEEnVQiQJ_1BORivg/ls.jpg",
   address: '512 W 42nd St New York, NY 10036',
   phone: '(212) 644-8227'
 )
@@ -164,7 +164,7 @@ b14 = Business.create!(
   lat: 40.768337,
   lng: -73.982511,
   category: 'nightlife',
-  pic_url: ["https://s3-media1.fl.yelpcdn.com/bphoto/ki2uUjnyl1Bd0GYHxS5NBQ/ls.jpg", "https://s3-media1.fl.yelpcdn.com/bphoto/K1QcdF49F8BYIP_ft_6FGA/ls.jpg", "https://s3-media4.fl.yelpcdn.com/bphoto/_eUiJ-VATyDu3Azxqb9sXA/ls.jpg"],
+  pic_url: "https://s3-media1.fl.yelpcdn.com/bphoto/ki2uUjnyl1Bd0GYHxS5NBQ/ls.jpg",
   address: '10 Columbus Cir New York, NY 10019',
   phone: '(212) 823-9770'
 )
@@ -175,7 +175,7 @@ b15 = Business.create!(
   lat: 40.732596,
   lng: -73.997721,
   category: 'restaurants',
-  pic_url: ["https://s3-media3.fl.yelpcdn.com/bphoto/vmFY7h5byVrl5b1u97iWrg/ls.jpg", "https://s3-media4.fl.yelpcdn.com/bphoto/2MWEmUwrR3U9ijB3Q3mJkA/ls.jpg", "https://s3-media1.fl.yelpcdn.com/bphoto/mUpgURXCbfa_l77CBFGUjw/ls.jpg"],
+  pic_url: "https://s3-media3.fl.yelpcdn.com/bphoto/vmFY7h5byVrl5b1u97iWrg/ls.jpg",
   address: '22 W 8th St New York, NY 10011',
   phone: '(212) 533-2962'
 )
@@ -186,7 +186,7 @@ b16 = Business.create!(
   lat: 40.756910,
   lng: -73.980649,
   category: 'restaurants',
-  pic_url: ["https://s3-media1.fl.yelpcdn.com/bphoto/ll-cLUXkbZmG_0ZbJqz6BA/ls.jpg", "https://s3-media4.fl.yelpcdn.com/bphoto/Z9GgFLcE4nEuARtkxQgCWQ/ls.jpg", "https://s3-media1.fl.yelpcdn.com/bphoto/rV5swL7Unk9aDRBQaVwStA/ls.jpg"],
+  pic_url: "https://s3-media1.fl.yelpcdn.com/bphoto/ll-cLUXkbZmG_0ZbJqz6BA/ls.jpg",
   address: '43 W 46th St New York, NY 10036',
   phone: '(646) 791-7171'
 )
@@ -197,7 +197,7 @@ b17 = Business.create!(
   lat: 40.750208,
   lng: -73.984592,
   category: 'restaurants',
-  pic_url: ["https://s3-media4.fl.yelpcdn.com/bphoto/MGxDmG4c8tEZOfhQOmMw5w/ls.jpg", "https://s3-media3.fl.yelpcdn.com/bphoto/ZHA_DAnyhJ0eXonNEizFHA/ls.jpg", "https://s3-media4.fl.yelpcdn.com/bphoto/D25NVNM5PYouD-EQQZ8jQw/ls.jpg"],
+  pic_url: "https://s3-media4.fl.yelpcdn.com/bphoto/MGxDmG4c8tEZOfhQOmMw5w/ls.jpg",
   address: '13 W 36th St New York, NY 10018',
   phone: '(646) 692-9912'
 )
@@ -208,7 +208,7 @@ b18 = Business.create!(
   lat: 40.744599,
   lng: -73.987534,
   category: 'home service',
-  pic_url: ["https://s3-media4.fl.yelpcdn.com/bphoto/b2WVhk8pMaPrLlXQPpsSNw/ls.jpg", "https://s3-media3.fl.yelpcdn.com/bphoto/Ph3z7Eef2iiPetCOw9hJ_w/ls.jpg", "https://s3-media3.fl.yelpcdn.com/bphoto/5uKEgltazPCczc_G0TP8uA/ls.jpg"],
+  pic_url: "https://s3-media4.fl.yelpcdn.com/bphoto/b2WVhk8pMaPrLlXQPpsSNw/ls.jpg",
   address: '244 5th Ave New York, NY 10001',
   phone: '(212) 724-6837'
 )
@@ -219,7 +219,7 @@ b18 = Business.create!(
   lat: 40.749926,
   lng: -73.973027,
   category: 'home service',
-  pic_url: ["https://s3-media1.fl.yelpcdn.com/bphoto/Dx8BKxYYUfMcryugPVnchQ/ls.jpg", "https://s3-media4.fl.yelpcdn.com/bphoto/bZm3lrc2nN5Ns3yQRTIUiQ/o.jpg", "https://s3-media4.fl.yelpcdn.com/bphoto/DIJYqI3pjac9fAByPSVeQg/o.jpg"],
+  pic_url: "https://s3-media1.fl.yelpcdn.com/bphoto/Dx8BKxYYUfMcryugPVnchQ/ls.jpg",
   address: '220 E 42nd St New York, NY 10017',
   phone: '(646) 522-6232'
 )
@@ -230,7 +230,7 @@ b19 = Business.create!(
   lat: 40.753669,
   lng: -73.969073,
   category: 'dry cleaning',
-  pic_url: ["https://s3-media1.fl.yelpcdn.com/bphoto/2TSaFMhkjSjDU1iQDoGV_g/o.jpg", "https://s3-media3.fl.yelpcdn.com/bphoto/gs9YIoT6UnhU28gUnsWVNw/o.jpg", "https://s3-media2.fl.yelpcdn.com/bphoto/myrL09alh4SrilTLU2pQsw/o.jpg"],
+  pic_url: "https://s3-media1.fl.yelpcdn.com/bphoto/2TSaFMhkjSjDU1iQDoGV_g/o.jpg",
   address: '301 E 48th St New York, NY 10017',
   phone: '(212) 935-2411'
 )
@@ -241,7 +241,7 @@ b20 = Business.create!(
   lat: 40.738337,
   lng: -73.984573,
   category: 'dry cleaning',
-  pic_url: ["https://s3-media3.fl.yelpcdn.com/bphoto/yYbdCazFLCELuRzYQ8mRHQ/o.jpg", "https://s3-media4.fl.yelpcdn.com/bphoto/_4s7mAaYHVzGSQUPF9wbBQ/o.jpg", "https://s3-media2.fl.yelpcdn.com/bphoto/-jKnw-vbMO6TYrtKqivcdg/o.jpg"],
+  pic_url: "https://s3-media3.fl.yelpcdn.com/bphoto/yYbdCazFLCELuRzYQ8mRHQ/o.jpg",
   address: '144 E 22nd St New York, NY 10010',
   phone: '(212) 780-9888'
 )
@@ -252,7 +252,7 @@ b21 = Business.create!(
   lat: 40.818623,
   lng: -73.955055,
   category: 'auto',
-  pic_url: ["https://s3-media3.fl.yelpcdn.com/bphoto/hCn4GEE540fCShj2s-IA5A/o.jpg", "https://s3-media1.fl.yelpcdn.com/bphoto/UY03tuFiA4s48eaLBDjaFg/o.jpg", "https://s3-media2.fl.yelpcdn.com/bphoto/HmG4y4n6nJEZM2WQOfWDbA/o.jpg"],
+  pic_url: "https://s3-media3.fl.yelpcdn.com/bphoto/hCn4GEE540fCShj2s-IA5A/o.jpg",
   address: '547 W 133rd St New York, NY 10027',
   phone: '(347) 966-7771'
 )
@@ -263,7 +263,7 @@ b22 = Business.create!(
   lat: 40.762091,
   lng: -73.995020,
   category: 'auto',
-  pic_url: ["https://s3-media2.fl.yelpcdn.com/bphoto/RVev-GF-6cwDgqbtCegvnw/o.jpg", "https://s3-media1.fl.yelpcdn.com/bphoto/yql6BdxrAse67lhfxk8lYQ/o.jpg", "https://s3-media2.fl.yelpcdn.com/bphoto/DxvE2S8lDaOCCh54avOAeg/o.jpg"],
+  pic_url: "https://s3-media2.fl.yelpcdn.com/bphoto/RVev-GF-6cwDgqbtCegvnw/o.jpg",
   address: '517 W 45th St Manhattan, NY 10036',
   phone: '(646) 460-9026'
 )
@@ -274,7 +274,7 @@ b23 = Business.create!(
   lat: 40.746917,
   lng: -73.983367,
   category: 'shopping',
-  pic_url: ["https://s3-media1.fl.yelpcdn.com/bphoto/6tu6nBX1zk4s-FAw3BInSQ/o.jpg", "https://s3-media3.fl.yelpcdn.com/bphoto/nFS74vz1Ficd3I4RxG7mVw/o.jpg", "https://s3-media4.fl.yelpcdn.com/bphoto/WGtMrJVi2IA3tyXOxmdbmg/o.jpg"],
+  pic_url: "https://s3-media1.fl.yelpcdn.com/bphoto/6tu6nBX1zk4s-FAw3BInSQ/o.jpg",
   address: '167 Madison Ave New York, NY 10016',
   phone: '(347) 761-2262'
 )
@@ -285,7 +285,7 @@ b24 = Business.create!(
   lat: 40.729713,
   lng: -73.957366,
   category: 'shopping',
-  pic_url: ["https://s3-media1.fl.yelpcdn.com/bphoto/-zwMH7CZnbogAJu_IlgEug/o.jpg", "https://s3-media3.fl.yelpcdn.com/bphoto/5_N0oZIU1OYo2nLiooED5A/o.jpg", "https://s3-media3.fl.yelpcdn.com/bphoto/KBIRa7G8IIXXL_rEAWp-pw/o.jpg"],
+  pic_url: "https://s3-media1.fl.yelpcdn.com/bphoto/-zwMH7CZnbogAJu_IlgEug/o.jpg",
   address: '140 Franklin St Brooklyn, NY 11222',
   phone: '(718) 349-0203'
 )
@@ -296,7 +296,7 @@ b25 = Business.create!(
   lat: 40.725938,
   lng: -73.987508,
   category: 'beauty',
-  pic_url: ["https://s3-media2.fl.yelpcdn.com/bphoto/XbBwmimDhHvYC5Te9arTwQ/o.jpg", "https://s3-media2.fl.yelpcdn.com/bphoto/RcKmNpLcKxkkHVGZGGECKw/o.jpg", "https://s3-media4.fl.yelpcdn.com/bphoto/HRKi97Uye2K9vHlHaO7nOw/o.jpg"],
+  pic_url: "https://s3-media2.fl.yelpcdn.com/bphoto/XbBwmimDhHvYC5Te9arTwQ/o.jpg",
   address: '336 E 5th St New York, NY 10003',
   phone: '(212) 837-2199'
 )
@@ -307,7 +307,7 @@ b26 = Business.create!(
   lat: 40.725291,
   lng: -74.001060,
   category: 'beauty',
-  pic_url: ["https://s3-media4.fl.yelpcdn.com/bphoto/7x8zP12Zu1XgQ24bhOMpMg/o.jpg", "https://s3-media1.fl.yelpcdn.com/bphoto/m1D651jDhzPQWj5rFh-RtQ/o.jpg", "https://s3-media3.fl.yelpcdn.com/bphoto/zfUwG66AYmktLTI33NaKJw/o.jpg"],
+  pic_url: "https://s3-media4.fl.yelpcdn.com/bphoto/7x8zP12Zu1XgQ24bhOMpMg/o.jpg", 
   address: '433 W Broadway New York, NY 10012',
   phone: '(646) 589-8500'
 )

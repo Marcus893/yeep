@@ -13,7 +13,7 @@ class BusinessSquare extends React.Component {
     return (
       <div className="entire-thing">
         <div className="img-wrapper">
-          <Link className="image-link" to={`/businesses/${this.props.business.id}`}><img src={this.props.business.pic_url[0]} /></Link>
+          <Link className="image-link" to={`/businesses/${this.props.business.id}`}><img src={this.props.business.pic_url} /></Link>
         </div>
         <div className="info-right-wrapper">
           <Link className="name-link" to={`/businesses/${this.props.business.id}`}>{this.props.business.name}</Link>

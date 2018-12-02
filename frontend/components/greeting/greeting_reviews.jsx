@@ -61,7 +61,7 @@ class GreetingReviews extends React.Component {
 
         <div className="review-biz-pic">
           <Link to={`/businesses/${business.id}`}>
-            <img src={business.pic_url[2]} />
+            <img src={business.pic_url} />
           </Link>
 
           <Link to={`/businesses/${business.id}`}>

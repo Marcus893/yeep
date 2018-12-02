@@ -21,7 +21,7 @@ class IndexItem extends React.Component {
       <li className="business-index-item" >
         <div className="index-item-info">
           <div className="pic-container" style={{cursor: 'pointer'}} onClick={this.handleClick}>
-            <img src={this.props.business.pic_url[0]} />
+            <img src={this.props.business.pic_url} />
           </div>
           <div className="info-container">
             <div className="info-top">

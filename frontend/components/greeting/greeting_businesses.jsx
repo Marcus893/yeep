@@ -12,7 +12,7 @@ class GreetingBusinesses extends React.Component {
       <div className="biz-box">
         <div className="photo-box">
           <Link to={`/businesses/${business.id}`}>
-            <img className="biz-img" src={business.pic_url[0]} />
+            <img className="biz-img" src={business.pic_url} />
           </Link>
         </div>
         <div className="info-box">

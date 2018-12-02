@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 2018_11_18_012904) do
     t.float "lat"
     t.float "lng"
     t.string "body"
-    t.text "pic_url", default: [], array: true
+    t.string "pic_url"
     t.string "category"
     t.string "address"
     t.string "phone"
