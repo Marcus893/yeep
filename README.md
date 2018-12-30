@@ -22,6 +22,8 @@ Filtering using longitude, latitude and booundries to make searched businesses s
 
 ![screenshot from 2018-12-01 20-27-45](https://user-images.githubusercontent.com/38970716/49335430-4c254300-f5bb-11e8-8a32-b6ab34858281.png)![screenshot from 2018-12-01 20-26-47](https://user-images.githubusercontent.com/38970716/49335434-5cd5b900-f5bb-11e8-8e5e-e9bc35f8ad67.png)
 
+
+## Code Showcase
 Dynamically autocentering the business location on the map if there's only one business in the props, otherwise render all the businesses with center at midtown manhattan.
 
 ```Javascript
